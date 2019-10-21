@@ -66,7 +66,7 @@ class App extends Component {
             <>
                
                     
-                        <FooterNav/>
+                     
                 
                
                {/* <Route path="/show/:showId" component={ShowPageNav} />*/}

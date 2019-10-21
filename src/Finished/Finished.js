@@ -3,6 +3,7 @@ import React from 'react'
 
 import ShowListNav from '../ShowListNav/ShowListNav'
 import ApiContext from '../ApiContext/ApiContext'
+import FooterNav from '../FooterNav/FooterNav'
 
 
 
@@ -13,8 +14,12 @@ export default class Finished extends React.Component {
 
 
   render() {
-    return <ShowListNav></ShowListNav>
-    
+    return (
+      <div className='NoteListMain__button-container'>
+      <ShowListNav></ShowListNav>
+      <FooterNav></FooterNav>
+      </div>
+    )
   
   }
 }

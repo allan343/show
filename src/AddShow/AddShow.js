@@ -2,6 +2,8 @@ import React from 'react';
 
 
 import ApiContext from '../ApiContext/ApiContext'
+import WatchingLog from '../WatchingLog/WatchingLog'
+
 
 class AddShow extends React.Component {
  
@@ -42,6 +44,13 @@ class AddShow extends React.Component {
            
           };
       }
+
+      setProgress() {
+       
+        <WatchingLog></WatchingLog>
+       
+      }
+
 
       static contextType = ApiContext;
 
@@ -136,7 +145,7 @@ fetch(`https://evening-eyrie-15844.herokuapp.com/folders`,{headers:{'content-typ
         <button type="reset" className="folder__button">
             Cancel
         </button>
-        <button type="submit" className="folder__button">
+        <button type="submit" className="folder__button" onClick={watchingLog} >
             Save
         </button>
        </div>
