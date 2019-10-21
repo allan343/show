@@ -11,13 +11,14 @@ export default class WatchingLog extends React.Component {
   static contextType = ApiContext;
 
   setProgress() {
-    <Progress></Progress>
+   // <Progress></Progress>
   }
 
   render() {
     return(
       <div className='NoteListMain__button-container'>
   <div>
+    {/*
   <ButtonToolbar>
     <Button variant="primary" size="lg">
       To Watch
@@ -29,7 +30,7 @@ export default class WatchingLog extends React.Component {
       Finish
     </Button>
   </ButtonToolbar>
-
+    */}
  
 </div>
     </div>

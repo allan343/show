@@ -40,14 +40,16 @@ class AddShow extends React.Component {
               language: {
                 value: '',
                 touched: false
-              }
-           
+              },
+              watching:false
+
+             
           };
       }
 
       setProgress() {
        
-        <WatchingLog></WatchingLog>
+        this.setState({watching:true})
        
       }
 
@@ -145,9 +147,10 @@ fetch(`https://evening-eyrie-15844.herokuapp.com/folders`,{headers:{'content-typ
         <button type="reset" className="folder__button">
             Cancel
         </button>
-        <button type="submit" className="folder__button" onClick={watchingLog} >
+        <button type="submit" className="folder__button" onClick={this.setProgress} >
             Save
         </button>
+        {this.state.watching?<WatchingLog/>:""}
        </div>
 </form>
 
