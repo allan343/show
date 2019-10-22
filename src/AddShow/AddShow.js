@@ -47,7 +47,7 @@ class AddShow extends React.Component {
           };
       }
 
-      setProgress() {
+      setProgress = () => {
        
         this.setState({watching:true})
        

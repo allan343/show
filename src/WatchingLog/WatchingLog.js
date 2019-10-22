@@ -10,27 +10,35 @@ import Progress from '../Progress/Progress'
 export default class WatchingLog extends React.Component {
   static contextType = ApiContext;
 
-  setProgress() {
-   // <Progress></Progress>
+  constructor(props) {
+    super(props);
+    this.state = {
+      watching:false
+
+    }
+  }
+  setProgress = () =>{
+    this.setState({watching:true})
   }
 
   render() {
     return(
       <div className='NoteListMain__button-container'>
   <div>
-    {/*
-  <ButtonToolbar>
-    <Button variant="primary" size="lg">
-      To Watch
-    </Button>
-    <Button variant="secondary" size="lg" onClick={this.setProgress}>
-      Watching
-    </Button>
-    <Button variant="secondary" size="lg">
-      Finish
-    </Button>
-  </ButtonToolbar>
-    */}
+    
+
+<button type="submit" className="folder__button">
+To Watch
+</button>
+   
+    <button type="submit" className="folder__button" onClick={this.setProgress}>
+Watching
+</button>
+    <button type="submit" className="folder__button">
+Finished
+</button>
+{this.state.watching?<Progress/>:""}
+    
  
 </div>
     </div>
