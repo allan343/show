@@ -13,7 +13,7 @@ import ApiContext from '../ApiContext/ApiContext'
 class App extends Component {
     state = {
         shows: [],
-      
+        finishedShows: []
     };
 
     componentDidMount() {
@@ -44,20 +44,65 @@ class App extends Component {
     
     handleDeleteShow = showId => {
         this.setState({
-            notes: this.state.show.filter(show => show.id != showId)
+            shows: this.state.show.filter(show => show.id != showId)
+        });
+    };
+
+    handleDeleteFinishedShow = showId => {
+        this.setState({
+            finishedShows: this.state.finishedShow.filter(show => show.id != showId)
         });
     };
 
  
 
-    handleAddShow = (showName,showId) => {
-        console.log("folder here");
-        this.state.shows.push({name:showName,id:showId});
+    handleAddShow = (showObject) => {
+      
+        this.state.shows.push(showObject);
         this.setState({
             shows: this.state.shows
         });
     };
+
+    handleAddFinishedShow = (id) => {
+      let show = this.handleGetShow(id)
+        this.handleDeleteShow(id)
+        this.state.finishedShows.push(show);
+        this.setState({
+            shows: this.state.shows,
+            finishedShows: this.state.shows
+        });
+    };
+
+    handleGetShow = (id) => {
     
+        this.state.shows.find(function(show) { 
+            return show.id === id; 
+          }); 
+    };
+    
+    handleGetFinishedShow = (id) => {
+    
+        this.state.finishedShows.find(function(show) { 
+            return show.id === id; 
+          }); 
+    };
+    
+    handleUpdateShow = (showObject,showId) => {
+       let show= this.state.shows.find(show => show.id === showId)
+       for(let key in show)
+       {
+            show[key]=showObject[key] }
+
+    };
+
+    handleUpdateFinishedShow = (showObject,showId) => {
+        let show= this.state.finishedShows.find(show => show.id === showId)
+        for(let key in show)
+        {
+             show[key]=showObject[key] }
+ 
+     };
     
   
  // to watch, finished, organize
@@ -120,9 +165,15 @@ class App extends Component {
     render() {
         const value = {
             shows: this.state.shows,
-        
-            deleteShow: this.handleDeleteShow,
+            finishedShows: this.state.finishedShows,
             addShow: this.handleAddShow,
+            addFinishedShow: this.handleAddFinishedShow,
+            deleteShow: this.handleDeleteShow,
+            deleteFinishedShow: this.handleDeleteFinishedShow,
+            getShow: this.handleGetShow,
+            getFinishedShow: this.handleGetFinishedShow,
+            updateShow: this.handeUpdateShow,
+            updateFinishedShow: this.handeUpdateFinishedShow
         };
         return (
 

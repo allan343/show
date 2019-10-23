@@ -10,6 +10,7 @@ class AddShow extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+          id: null,
            name: {
                 value: '',
                 touched: false
@@ -41,16 +42,39 @@ class AddShow extends React.Component {
                 value: '',
                 touched: false
               },
+              toWatch:true,
+               
+              
+              Watching:  false,
+               
+         
+              Finish: false,
+
               watching:false
 
              
           };
       }
 
-      setProgress = () => {
-       
+      setProgress = (e) => {
+       e.preventDefault()
         this.setState({watching:true})
        
+        let show = {
+          id:Math.random()+'',
+          name: this.state.name.value,
+          airDate: this.state.airDate.value,
+          startDate: this.state.startDate.value,
+          genre: this.state.genre.value,
+          seasons: this.state.seasons.value,
+          description: this.state.description.value,
+          language: this.state.language.value
+        }
+        this.context.AddShow(show)
+       this.setState({
+        id:show.id
+
+       })
       }
 
 
@@ -147,10 +171,10 @@ fetch(`https://evening-eyrie-15844.herokuapp.com/folders`,{headers:{'content-typ
         <button type="reset" className="folder__button">
             Cancel
         </button>
-        <button type="submit" className="folder__button" onClick={this.setProgress} >
+        <button type="submit" className="folder__button" onSubmit={this.setProgress} >
             Save
         </button>
-        {this.state.watching?<WatchingLog/>:""}
+        {this.state.watching?<WatchingLog id={this.state.id}/>:""}
        </div>
 </form>
 

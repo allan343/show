@@ -17,9 +17,30 @@ export default class WatchingLog extends React.Component {
 
     }
   }
-  setProgress = () =>{
+  setWatching = () =>{
     this.setState({watching:true})
+    let show = this.context.getShow()
+    show.toWatch= false
+    show.watching= true
+    show.finish=false
+   this.context.updateShow(show, show.id)
   }
+
+  setToWatch = () =>{
+   let show = this.context.getShow()
+    show.toWatch= true
+    show.watching= false
+    show.finish=false
+   this.context.updateShow(show, show.id)
+  }
+
+  setShowFinish = () =>{
+    let show = this.context.getShow()
+     show.toWatch= false
+     show.watching= false
+     show.finish=true
+    this.context.updateShow(show, show.id)
+   }
 
   render() {
     return(
@@ -27,14 +48,14 @@ export default class WatchingLog extends React.Component {
   <div>
     
 
-<button type="submit" className="folder__button">
+<button type="submit" className="folder__button" onClick={this.setToWatch}>
 To Watch
 </button>
    
     <button type="submit" className="folder__button" onClick={this.setProgress}>
 Watching
 </button>
-    <button type="submit" className="folder__button">
+    <button type="submit" className="folder__button" onClick={this.setShowFinish}>
 Finished
 </button>
 {this.state.watching?<Progress/>:""}
