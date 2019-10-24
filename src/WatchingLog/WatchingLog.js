@@ -55,7 +55,7 @@ export default class WatchingLog extends React.Component {
 To Watch
 </button>
    
-    <button type="submit" className="folder__button" onClick={this.setProgress}>
+    <button type="submit" className="folder__button" onClick={this.setWatching}>
 Watching
 </button>
     <button type="submit" className="folder__button" onClick={this.setShowFinish}>
