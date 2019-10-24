@@ -12,7 +12,7 @@ export default class WatchingLog extends React.Component {
   
   constructor(props) {
     super(props);
-    id=this.props.id
+   let id=this.props.id
     this.state = {
       watching:false,
       id:id
@@ -22,7 +22,7 @@ export default class WatchingLog extends React.Component {
   setWatching = () =>{
   
     this.setState({watching:true})
-    let show = this.context.getShow(id)
+    let show = this.context.getShow(this.state.id)
     show.toWatch= false
     show.watching= true
     show.finish=false
@@ -30,7 +30,7 @@ export default class WatchingLog extends React.Component {
   }
 
   setToWatch = () =>{
-   let show = this.context.getShow(id)
+   let show = this.context.getShow(this.state.id)
     show.toWatch= true
     show.watching= false
     show.finish=false
@@ -38,7 +38,7 @@ export default class WatchingLog extends React.Component {
   }
 
   setShowFinish = () =>{
-    let show = this.context.getShow(id)
+    let show = this.context.getShow(this.state.id)
      show.toWatch= false
      show.watching= false
      show.finish=true
