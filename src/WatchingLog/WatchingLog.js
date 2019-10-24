@@ -9,17 +9,20 @@ import Progress from '../Progress/Progress'
 
 export default class WatchingLog extends React.Component {
   static contextType = ApiContext;
-
+  
   constructor(props) {
     super(props);
+    id=this.props.id
     this.state = {
-      watching:false
+      watching:false,
+      id:id
 
     }
   }
   setWatching = () =>{
+  
     this.setState({watching:true})
-    let show = this.context.getShow()
+    let show = this.context.getShow(id)
     show.toWatch= false
     show.watching= true
     show.finish=false
@@ -27,7 +30,7 @@ export default class WatchingLog extends React.Component {
   }
 
   setToWatch = () =>{
-   let show = this.context.getShow()
+   let show = this.context.getShow(id)
     show.toWatch= true
     show.watching= false
     show.finish=false
@@ -35,7 +38,7 @@ export default class WatchingLog extends React.Component {
   }
 
   setShowFinish = () =>{
-    let show = this.context.getShow()
+    let show = this.context.getShow(id)
      show.toWatch= false
      show.watching= false
      show.finish=true
