@@ -110,32 +110,25 @@ class AddShow extends React.Component {
         return(
 <form className="folder" onSubmit = {(event)=>{
 event.preventDefault();
-console.log(event.target.name.value);
 
 
-fetch(`https://evening-eyrie-15844.herokuapp.com/folders`,{headers:{'content-type': 'application/json'},method:"POST",body:JSON.stringify({name:event.target.name.value})}) 
-.then(response => response.json())
-.then(responseJson => {
-  console.log("folder reaching");
-  if(responseJson.id && responseJson.name){
-    console.log("addingfolder");
-    this.context.addFolder(responseJson.name,responseJson.id);
-    console.log("addedfolder");
-    this.props.history.goBack()
-  }
-  
-  
-  this.setState({
-  error: null
-       });
-      }
-    ).catch(err => {
-      this.setState({
-        error: err.message
-      });
-    });
+this.setState({watching:true})
 
-  
+let show = {
+  id:Math.random()+'',
+  name: this.state.name.value,
+  airDate: this.state.airDate.value,
+  startDate: this.state.startDate.value,
+  genre: this.state.genre.value,
+  seasons: this.state.seasons.value,
+  description: this.state.description.value,
+  language: this.state.language.value
+}
+this.context.addShow(show)
+this.setState({
+id:show.id
+
+})
 
 
 
@@ -171,7 +164,7 @@ fetch(`https://evening-eyrie-15844.herokuapp.com/folders`,{headers:{'content-typ
         <button type="reset" className="folder__button">
             Cancel
         </button>
-        <button type="submit" className="folder__button" onSubmit={this.setProgress} >
+        <button type="submit" className="folder__button" >
             Save
         </button>
         {this.state.watching?<WatchingLog id={this.state.id}/>:""}
