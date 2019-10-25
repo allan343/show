@@ -13,6 +13,7 @@ import ApiContext from '../ApiContext/ApiContext'
 class App extends Component {
     state = {
         shows: [],
+        watchingShows: [],
         finishedShows: []
     };
 
@@ -57,7 +58,7 @@ class App extends Component {
  
 
     handleAddShow = (showObject) => {
-      
+        console.log("showOject " + showObject.id)
         this.state.shows.push(showObject);
         this.setState({
             shows: this.state.shows
@@ -75,15 +76,16 @@ class App extends Component {
     };
 
     handleGetShow = (id) => {
-    
-        this.state.shows.find(function(show) { 
-            return show.id === id; 
+    console.log("id is " +id)
+      return  this.state.shows.find(function(show) { 
+       return  show.id === id; 
           }); 
+      
     };
     
     handleGetFinishedShow = (id) => {
     
-        this.state.finishedShows.find(function(show) { 
+       return this.state.finishedShows.find(function(show) { 
             return show.id === id; 
           }); 
     };
@@ -172,8 +174,8 @@ class App extends Component {
             deleteFinishedShow: this.handleDeleteFinishedShow,
             getShow: this.handleGetShow,
             getFinishedShow: this.handleGetFinishedShow,
-            updateShow: this.handeUpdateShow,
-            updateFinishedShow: this.handeUpdateFinishedShow
+            updateShow: this.handleUpdateShow,
+            updateFinishedShow: this.handleUpdateFinishedShow
         };
         return (
 

@@ -124,11 +124,14 @@ let show = {
   description: this.state.description.value,
   language: this.state.language.value
 }
+console.log("adding "+ show.id)
 this.context.addShow(show)
+console.log(this.state.watching)
 this.setState({
 id:show.id
 
 })
+console.log("other id " +this.state.id)
 
 
 
