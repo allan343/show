@@ -106,7 +106,7 @@ class App extends Component {
  
      };
     
-  
+ 
  // to watch, finished, organize
     renderNavRoutes() {
         return (

@@ -50,7 +50,8 @@ class AddShow extends React.Component {
          
               Finish: false,
 
-              watching:false
+              watching:false,
+              currentSeason: 1
 
              
           };

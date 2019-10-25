@@ -64,7 +64,7 @@ Watching
     <button type="submit" className="folder__button" onClick={this.setShowFinish}>
 Finished
 </button>
-{this.state.watching?<Progress/>:""}
+{this.state.watching?<Progress id={this.state.id} />:""}
     
  
 </div>
