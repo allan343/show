@@ -82,27 +82,27 @@ class AddShow extends React.Component {
       static contextType = ApiContext;
 
       updateName(name) {
-        this.setState({name: name});
+        this.setState({name: {value:name,touched:true}});
       }
 
       updateAirDate(airDate) {
-        this.setState({airDate: airDate});
+        this.setState({airDate: {value:airDate,touched:true}});
       }
 
       updateStartDate(startDate) {
-        this.setState({startDate: startDate});
+        this.setState({startDate: {value:startDate,touched:true}});
       }
 
       updateGenre(genre) {
-        this.setState({genre: genre});
+        this.setState({genre: {value:genre,touched:true}});
       }
 
       updateSeasons(seasons) {
-        this.setState({seasons: seasons});
+        this.setState({seasons:{value:seasons,touched:true}});
       }
 
       updateDescription(description) {
-        this.setState({description: description});
+        this.setState({description: {value:description,touched:true}});
       }
    
     render(){
@@ -142,7 +142,7 @@ console.log("other id " +this.state.id)
        <div className="form-group">
          <label htmlFor="name">Name *</label>
          <input type="text" className="folder__control"
-           name="name" id="name" onChange={e => this.updateName(e.target.value)} value ={this.state.name}/>
+           name="name" id="name" onChange={e => this.updateName(e.target.value)} />
            
 
 <input type="text" className="folder__control"

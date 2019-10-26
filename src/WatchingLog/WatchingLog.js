@@ -34,6 +34,7 @@ export default class WatchingLog extends React.Component {
   setToWatch = () =>{
    let show = this.context.getShow(this.state.id)
    console.log(show)
+   console.log("array", this.context.shows)
     show.toWatch= true
     show.watching= false
     show.finish=false
@@ -42,6 +43,7 @@ export default class WatchingLog extends React.Component {
 
   setShowFinish = () =>{
     let show = this.context.getShow(this.state.id)
+    console.log("array", this.context.shows)
      show.toWatch= false
      show.watching= false
      show.finish=true
