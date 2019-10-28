@@ -7,7 +7,7 @@ import WatchingLog from '../WatchingLog/WatchingLog';
 import FooterNav from '../FooterNav/FooterNav';
 import ToWatch from '../ToWatch/ToWatch';
 import Finished from '../Finished/Finished';
-//import Organize from '../Organize/Organize';
+import Watching from '../Watching/Watching';
 import ApiContext from '../ApiContext/ApiContext'
 //import './App.css';
 
@@ -129,9 +129,9 @@ class App extends Component {
                         />
     <Route
                             
-                            key={'/organize'}
-                            exact path={'/'}
-                          //  component={Organize}
+                            key={'/watching'}
+                            exact path={'/watching'}
+                            component={Watching}
                         />
     
                         <Route

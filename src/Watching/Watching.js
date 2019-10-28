@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-import FinishedListNav from '../FinishedListNav/FinishedListNav'
+import WatchingListNav from '../WatchingListNav/WatchingListNav'
 import ApiContext from '../ApiContext/ApiContext'
 import FooterNav from '../FooterNav/FooterNav'
 
@@ -16,7 +16,7 @@ export default class Finished extends React.Component {
   render() {
     return (
       <div className='NoteListMain__button-container'>
-      <FinishedListNav></FinishedListNav>
+      <WatchingListNav></WatchingListNav>
       <FooterNav></FooterNav>
       </div>
     )

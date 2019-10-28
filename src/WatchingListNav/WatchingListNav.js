@@ -5,7 +5,7 @@ import ApiContext from '../ApiContext/ApiContext'
 import CircleButton from '../CircleButton/CircleButton'
 
 
-export default class ShowListNav extends React.Component {
+export default class WatchingListNav extends React.Component {
   static contextType = ApiContext;
 
 
@@ -13,8 +13,8 @@ export default class ShowListNav extends React.Component {
   
   
     const {  shows=[] } = this.context
-    let  toWatch = shows.filter(show=> show.toWatch)
-    console.log("toWatch", toWatch)
+    let  watching = shows.filter(show=> show.Watching)
+    console.log("watching", watching)
     return (
       <div className='ShowListNav'>
       
@@ -22,7 +22,7 @@ export default class ShowListNav extends React.Component {
         <ul className='ShowListNav__list'>
           {
          
-            toWatch.map(show =>
+            watching.map(show =>
             <li key={show.id}>
               <NavLink
                 className='ShowListNav__folder-link'

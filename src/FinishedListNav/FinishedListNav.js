@@ -1,24 +1,28 @@
 import React from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import ApiContext from '../ApiContext/ApiContext'
 import CircleButton from '../CircleButton/CircleButton'
-import ApiContext from '../ApiContext'
-import PropTypes from 'prop-types';
-import { countNotesForFolder } from '../notes-helpers'
 
 
-export default class OrganizeListNav extends React.Component {
+export default class FinishedListNav extends React.Component {
   static contextType = ApiContext;
 
 
-
   render() {
-
+  
+  
     const {  shows=[] } = this.context
+    let  finished = shows.filter(show=> show.Finish)
+    console.log("finished", finished)
     return (
-      <div className='OrganizeListNav'>
-        <ul className='OrganizeListNav__list'>
-          {shows.map(shows =>
+      <div className='ShowListNav'>
+      
+
+        <ul className='ShowListNav__list'>
+          {
+         
+            finished.map(show =>
             <li key={show.id}>
               <NavLink
                 className='ShowListNav__folder-link'
@@ -32,16 +36,16 @@ export default class OrganizeListNav extends React.Component {
             </li>
           )}
         </ul>
-        <div className='OrganizeListNav__button-wrapper'>
+        <div className='ShowListNav__button-wrapper'>
           <CircleButton
             tag={Link}
             to='/add-show'
             type='button'
-            className='OrganizeListNav__add-folder-button'
+            className='ShowListNav__add-folder-button'
           >
             <FontAwesomeIcon icon='plus' />
             <br />
-            Show
+            +
           </CircleButton>
         </div>
       </div>
@@ -49,8 +53,3 @@ export default class OrganizeListNav extends React.Component {
   }
 }
 
-NoteListNav.propTypes = {
-  key: PropTypes.string,
-  path: PropTypes.string
-
-}

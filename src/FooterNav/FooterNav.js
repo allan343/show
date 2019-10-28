@@ -28,6 +28,16 @@ export default class FooterNav extends React.Component {
                
               </NavLink>
               <NavLink
+                className='OrganizeListNav__folder-link'
+                to={`/watching`}
+              >
+                <span className='ShowListNav__num-notes'>
+               Watching
+                </span>
+               
+              </NavLink>
+
+              <NavLink
                 className='FinishListNav__folder-link'
                 to={`/finish`}
               >
@@ -36,15 +46,7 @@ export default class FooterNav extends React.Component {
                 </span>
                
               </NavLink>
-              <NavLink
-                className='OrganizeListNav__folder-link'
-                to={`/organize`}
-              >
-                <span className='ShowListNav__num-notes'>
-                Organize
-                </span>
-               
-              </NavLink>
+             
           
           
         
