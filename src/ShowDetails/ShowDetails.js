@@ -5,7 +5,7 @@ import ApiContext from '../ApiContext/ApiContext'
 import WatchingLog from '../WatchingLog/WatchingLog'
 
 
-class AddShow extends React.Component {
+class ShowDetails extends React.Component {
  
     constructor(props) {
         super(props);
@@ -39,6 +39,11 @@ class AddShow extends React.Component {
               },
            
               language: {
+                value: '',
+                touched: false
+              },
+
+              seasons: {
                 value: '',
                 touched: false
               },
@@ -104,11 +109,16 @@ class AddShow extends React.Component {
       updateDescription(description) {
         this.setState({description: {value:description,touched:true}});
       }
+
+      updateLanguage(language) {
+        this.setState({language: {value:language,touched:true}});
+      }
    
     render(){
      //throw "test";
         
         return(
+          <div>
 <form className="folder" onSubmit = {(event)=>{
 event.preventDefault();
 
@@ -144,7 +154,7 @@ console.log("other id " +this.state.id)
          <input type="text" className="folder__control"
            name="name" id="name" onChange={e => this.updateName(e.target.value)} />
            
-
+           <label htmlFor="name">Name2 *</label>
 <input type="text" className="folder__control"
            name="airDate" id="airDate" onChange={e => this.updateAirDate(e.target.value)} />
            
@@ -161,6 +171,9 @@ console.log("other id " +this.state.id)
             
 <input type="text" className="folder__control"
            name="description" id="description" onChange={e => this.updateDescription(e.target.value)} />
+
+<input type="text" className="folder__control"
+           name="language" id="description" onChange={e => this.updateLanguage(e.target.value)} />
             
 
         </div>
@@ -171,10 +184,11 @@ console.log("other id " +this.state.id)
         <button type="submit" className="folder__button" >
             Save
         </button>
-        {this.state.watching?<WatchingLog id={this.state.id}/>:""}
+       
        </div>
 </form>
-
+{this.state.watching?<WatchingLog id={this.state.id}/>:""}
+</div>
 )
     }
 }
@@ -182,4 +196,4 @@ console.log("other id " +this.state.id)
 
 
 
-export default AddShow;
+export default ShowDetails;

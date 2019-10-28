@@ -9,14 +9,18 @@ export default class ShowListNav extends React.Component {
   static contextType = ApiContext;
 
 
-
   render() {
-
+  
+  
     const {  shows=[] } = this.context
+    let results
     return (
       <div className='ShowListNav'>
+        { results = shows.filter(show=> show.toWatch)}
         <ul className='ShowListNav__list'>
-          {shows.map(show =>
+          {
+            
+            results.map(show =>
             <li key={show.id}>
               <NavLink
                 className='ShowListNav__folder-link'

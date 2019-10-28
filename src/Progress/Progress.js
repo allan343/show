@@ -12,21 +12,23 @@ export default class Progress extends React.Component {
   constructor(props) {
     super(props);
     let id=this.props.id
-    this.state = {
+   /*this.state = {
         currentSeason: {
             value: '',
             touched: false,
            
           },
           id:id
-        }
+        }*/
         }
       
         updateCurrentSeason(season) {
-          this.setState({currentSeason: season});
-          let show=this.context.getShow(this.state.id);
-          show.currentSeason= this.state.currentSeason;
-          this.context.updateShow(show, this.state.id)
+         // this.setState({currentSeason: season});
+          let show=this.context.getShow(this.props.id);
+          show.currentSeason= season;
+          this.context.updateShow(show, this.props.id)
+          console.log("season is ", season)
+          console.log("update Season", show)
         }
 
 

@@ -2,7 +2,8 @@ import React, {Component} from 'react';
 import {Route, Link} from 'react-router-dom';
 import ShowListNav from '../ShowListNav/ShowListNav';
 import Show from '../Show/show';
-import AddShow from '../AddShow/AddShow';
+import ShowDetails from '../ShowDetails/ShowDetails';
+import WatchingLog from '../WatchingLog/WatchingLog';
 import FooterNav from '../FooterNav/FooterNav';
 import ToWatch from '../ToWatch/ToWatch';
 import Finished from '../Finished/Finished';
@@ -13,8 +14,7 @@ import ApiContext from '../ApiContext/ApiContext'
 class App extends Component {
     state = {
         shows: [],
-        watchingShows: [],
-        finishedShows: []
+       
     };
 
     componentDidMount() {
@@ -109,59 +109,68 @@ class App extends Component {
  
  // to watch, finished, organize
     renderNavRoutes() {
-        return (
-            <>
-               
+      
+            return (
+                <>
+              
                     
-                     
-                
-               
-               {/* <Route path="/show/:showId" component={ShowPageNav} />*/}
-               
-                {/*<Route path="/add-note" component={NotePageNav} />*/}
-            </>
-        );
+              <Route
+                            
+                            key={'/'}
+                            exact path={'/'}
+                            component={ToWatch}
+                        />
+    
+    <Route
+                            
+                            key={'/finish'}
+                            exact path={'/finish'}
+                            component={Finished}
+                        />
+    <Route
+                            
+                            key={'/organize'}
+                            exact path={'/'}
+                          //  component={Organize}
+                        />
+    
+                        <Route
+                            
+                            key={'/show/:showId'}
+                            exact path={'/show/:showId'}
+                            component={Show}
+                        />
+                      <Route path="/add-show" render={
+                        (routeProps)=>{return <ShowDetails {...routeProps}>
+                            </ShowDetails>
+                        }} />
+                    
+                 
+                </>
+            );
+        
     }
 
     renderMainRoutes() {
+
         return (
             <>
           
-                
-          <Route
-                        
-                        key={'/'}
-                        exact path={'/'}
-                        component={ToWatch}
-                    />
+        <Route
+                            
+        key={'/WatchingLog/:showId'}
+        exact path={'/WatchingLog/:showId'}
+        component={WatchingLog}
+    />
 
-<Route
-                        
-                        key={'/finish'}
-                        exact path={'/finish'}
-                        component={Finished}
-                    />
-<Route
-                        
-                        key={'/organize'}
-                        exact path={'/'}
-                      //  component={Organize}
-                    />
-
-                    <Route
-                        
-                        key={'/show/:showId'}
-                        exact path={'/show/:showId'}
-                        component={Show}
-                    />
-                  <Route path="/add-show" render={
-                    (routeProps)=>{return <AddShow {...routeProps}>
-                        </AddShow>
-                    }} />
-                
-             
-            </>
-        );
+    <Route
+                            
+    key={'/ShowDetails/:showId'}
+    exact path={'/ShowDetails/:showId'}
+    component={ShowDetails}
+/>
+</>
+            );
     }
 
     render() {
@@ -181,13 +190,14 @@ class App extends Component {
 
             <ApiContext.Provider value={value}>
                 <div className="App">
-                    <nav className="App__nav">{this.renderNavRoutes()}</nav>
-                    <header className="App__header">
+                <header className="App__header">
                         <h1>
                             <Link to="/">Show App</Link>{' '}
                           
                         </h1>
                     </header>
+                    <nav className="App__nav">{this.renderNavRoutes()}</nav>
+                 
                     <main className="App__main">{this.renderMainRoutes()}</main>
                 </div>
             </ApiContext.Provider>

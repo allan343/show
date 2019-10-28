@@ -11,6 +11,6 @@ export default React.createContext({
   getShow: () =>{},
   getFinishedShow: () =>{},
   updateShow: ()=>{},
-  updateFinihsedShow: () =>{},
+  updateFinishedShow: () =>{},
  
 })
