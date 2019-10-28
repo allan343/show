@@ -13,13 +13,15 @@ export default class ShowListNav extends React.Component {
   
   
     const {  shows=[] } = this.context
-    let results
+    let  results = shows.filter(show=> show.toWatch)
+    console.log("results", results)
     return (
       <div className='ShowListNav'>
-        { results = shows.filter(show=> show.toWatch)}
+      
+
         <ul className='ShowListNav__list'>
           {
-            
+         
             results.map(show =>
             <li key={show.id}>
               <NavLink
