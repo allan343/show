@@ -13,7 +13,7 @@ export default class WatchingListNav extends React.Component {
   
   
     const {  shows=[] } = this.context
-    let  watching = shows.filter(show=> show.Watching)
+    let  watching = shows.filter(show=> show.watching)
     console.log("watching", watching)
     return (
       <div className='ShowListNav'>

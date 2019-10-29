@@ -13,7 +13,7 @@ export default class FinishedListNav extends React.Component {
   
   
     const {  shows=[] } = this.context
-    let  finished = shows.filter(show=> show.Finish)
+    let  finished = shows.filter(show=> show.finish)
     console.log("finished", finished)
     return (
       <div className='ShowListNav'>
