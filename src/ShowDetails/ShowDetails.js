@@ -152,31 +152,31 @@ console.log("other id " +this.state.id)
        <div className="form-group">
          <label htmlFor="name">Name *</label>
          <input type="text" className="folder__control"
-           name="name" id="name" onChange={e => this.updateName(e.target.value)} />
+           name="name" id="name" value = {this.state.name.value} onChange={e => this.updateName(e.target.value)} />
            
            <label htmlFor="name">Air Date *</label>
 <input type="text" className="folder__control"
-           name="airDate" id="airDate" onChange={e => this.updateAirDate(e.target.value)} />
+           name="airDate" id="airDate"  value = {this.state.airDate.value} onChange={e => this.updateAirDate(e.target.value)} />
            
            <label htmlFor="name">Start Date *</label>
 <input type="text" className="folder__control"
-           name="startDate" id="startDate" onChange={e => this.updateStartDate(e.target.value)} />
+           name="startDate" id="startDate" value = {this.state.startDate.value} onChange={e => this.updateStartDate(e.target.value)} />
            
            <label htmlFor="name">Genre *</label>
 <input type="text" className="folder__control"
-           name="genre" id="genre" onChange={e => this.updateGenre(e.target.value)} />
+           name="genre" id="genre"  value = {this.state.genre.value} onChange={e => this.updateGenre(e.target.value)} />
             
             <label htmlFor="name">Number Of Seasons *</label>
 <input type="text" className="folder__control"
-           name="seasons" id="seasons" onChange={e => this.updateSeasons(e.target.value)} />
+           name="seasons" id="seasons" value = {this.state.seasons.value} onChange={e => this.updateSeasons(e.target.value)} />
             
             <label htmlFor="name">Description *</label>
 <input type="text" className="folder__control"
-           name="description" id="description" onChange={e => this.updateDescription(e.target.value)} />
+           name="description" id="description" value = {this.state.description.value} onChange={e => this.updateDescription(e.target.value)} />
 
  <label htmlFor="name">Language *</label>
 <input type="text" className="folder__control"
-           name="language" id="language" onChange={e => this.updateLanguage(e.target.value)} />
+           name="language" id="language" value = {this.state.language.value} onChange={e => this.updateLanguage(e.target.value)} />
             
 
         </div>
