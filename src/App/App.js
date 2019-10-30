@@ -45,7 +45,7 @@ class App extends Component {
     
     handleDeleteShow = showId => {
         this.setState({
-            shows: this.state.show.filter(show => show.id != showId)
+            shows: this.state.shows.filter(show => show.id != showId)
         });
     };
 
@@ -58,6 +58,13 @@ class App extends Component {
  
 
     handleAddShow = (showObject) => {
+        if(this.state.shows.find((show)=>{
+                return show.id===showObject.id
+        })){
+         return this.handleUpdateShow(showObject,showObject.id)
+        }
+
+
         console.log("showOject " + showObject.id)
         this.state.shows.push(showObject);
         this.setState({
@@ -139,7 +146,12 @@ class App extends Component {
                             key={'/show/:showId'}
                             exact path={'/show/:showId'}
                             component={Show}
-                        />
+                       />
+                            <Route path="/ShowDetails/Edit/:showId" render={
+                        (routeProps)=>{return <ShowDetails {...this.handleGetShow(routeProps.match.params.showId)}  {...routeProps}>
+                            </ShowDetails>
+                        }} />
+
                       <Route path="/add-show" render={
                         (routeProps)=>{return <ShowDetails {...routeProps}>
                             </ShowDetails>

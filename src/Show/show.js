@@ -33,7 +33,7 @@ export default class Show extends React.Component {
            Update
           </Link>
           Details
-          <Link to={`/ShowDetails/${showId}`}>
+          <Link to={`/ShowDetails/Edit/${showId}`}>
            Edit
           </Link>
         </h2>

@@ -7,50 +7,56 @@ import WatchingLog from '../WatchingLog/WatchingLog'
 
 class ShowDetails extends React.Component {
  
+  static defaultProps = { 
+    id: Math.random()+'',
+    name: '',
+    airDate: '',
+    startDate:'',
+    genre:'',
+    seasons:'',
+  description:'',
+language: '',
+currentSeason: '1' };
+
     constructor(props) {
         super(props);
         this.state = {
-          id: null,
+          id: this.props.id,
            name: {
-                value: '',
+                value: this.props.name,
                 touched: false
               },
            
             airDate:    {
-                value: '',
+                value: this.props.airDate,
                 touched: false
               },
               startDate: {
-                value: '',
+                value: this.props.startDate,
                 touched: false
               },
               genre: {
-                value: '',
+                value: this.props.genre,
                 touched: false
               },
               seasons: {
-                value: '',
+                value: this.props.seasons,
                 touched: false
               },
            
               description: {
-                value: '',
+                value: this.props.description,
                 touched: false
               },
            
               language: {
-                value: '',
+                value: this.props.language,
                 touched: false
               },
 
-              seasons: {
-                value: '',
-                touched: false
-              },
-            
-
+      
               showSubmitted:false,
-              currentSeason: 1
+              currentSeason: this.props.currentSeason
 
              
           };
@@ -61,7 +67,7 @@ class ShowDetails extends React.Component {
         this.setState({showSubmitted:true})
        
         let show = {
-          id:Math.random()+'',
+          id:this.state.id,
           name: this.state.name.value,
           airDate: this.state.airDate.value,
           startDate: this.state.startDate.value,
@@ -148,26 +154,29 @@ console.log("other id " +this.state.id)
          <input type="text" className="folder__control"
            name="name" id="name" onChange={e => this.updateName(e.target.value)} />
            
-           <label htmlFor="name">Name2 *</label>
+           <label htmlFor="name">Air Date *</label>
 <input type="text" className="folder__control"
            name="airDate" id="airDate" onChange={e => this.updateAirDate(e.target.value)} />
            
-
+           <label htmlFor="name">Start Date *</label>
 <input type="text" className="folder__control"
            name="startDate" id="startDate" onChange={e => this.updateStartDate(e.target.value)} />
            
+           <label htmlFor="name">Genre *</label>
 <input type="text" className="folder__control"
            name="genre" id="genre" onChange={e => this.updateGenre(e.target.value)} />
             
-
+            <label htmlFor="name">Number Of Seasons *</label>
 <input type="text" className="folder__control"
            name="seasons" id="seasons" onChange={e => this.updateSeasons(e.target.value)} />
             
+            <label htmlFor="name">Description *</label>
 <input type="text" className="folder__control"
            name="description" id="description" onChange={e => this.updateDescription(e.target.value)} />
 
+ <label htmlFor="name">Language *</label>
 <input type="text" className="folder__control"
-           name="language" id="description" onChange={e => this.updateLanguage(e.target.value)} />
+           name="language" id="language" onChange={e => this.updateLanguage(e.target.value)} />
             
 
         </div>
