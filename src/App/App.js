@@ -147,6 +147,7 @@ class App extends Component {
                             exact path={'/show/:showId'}
                             component={Show}
                        />
+                       
                             <Route path="/ShowDetails/Edit/:showId" render={
                         (routeProps)=>{return <ShowDetails {...this.handleGetShow(routeProps.match.params.showId)}  {...routeProps}>
                             </ShowDetails>

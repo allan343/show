@@ -6,7 +6,8 @@ import WatchingLog from '../WatchingLog/WatchingLog'
 
 
 class ShowDetails extends React.Component {
- 
+  static contextType = ApiContext
+  
   static defaultProps = { 
     id: Math.random()+'',
     name: '',
@@ -19,6 +20,8 @@ language: '',
 currentSeason: '1' };
 
     constructor(props) {
+     
+
         super(props);
         this.state = {
           id: this.props.id,
@@ -65,7 +68,7 @@ currentSeason: '1' };
       setProgress = (e) => {
        e.preventDefault()
         this.setState({showSubmitted:true})
-       
+       console.log("huh?",this.context.shows)
         let show = {
           id:this.state.id,
           name: this.state.name.value,
@@ -77,6 +80,7 @@ currentSeason: '1' };
           language: this.state.language.value
         }
         this.context.AddShow(show)
+        console.log("wha??",this.context.shows)
        this.setState({
         id:show.id
 
@@ -84,7 +88,7 @@ currentSeason: '1' };
       }
 
 
-      static contextType = ApiContext;
+     
 
       updateName(name) {
         this.setState({name: {value:name,touched:true}});
@@ -124,9 +128,9 @@ event.preventDefault();
 
 
 this.setState({showSubmitted:true})
-
+console.log("showdetails submit", this.context.shows)
 let show = {
-  id:Math.random()+'',
+  id:this.state.id,
   name: this.state.name.value,
   airDate: this.state.airDate.value,
   startDate: this.state.startDate.value,
@@ -137,6 +141,7 @@ let show = {
 }
 console.log("adding "+ show.id)
 this.context.addShow(show)
+console.log("showdetails submit end", this.context.shows)
 console.log(this.state.showSubmitted)
 this.setState({
 id:show.id
