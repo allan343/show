@@ -47,15 +47,9 @@ class ShowDetails extends React.Component {
                 value: '',
                 touched: false
               },
-              toWatch:true,
-               
-              
-              Watching:  false,
-               
-         
-              Finish: false,
+            
 
-              watching:false,
+              showSubmitted:false,
               currentSeason: 1
 
              
@@ -64,7 +58,7 @@ class ShowDetails extends React.Component {
 
       setProgress = (e) => {
        e.preventDefault()
-        this.setState({watching:true})
+        this.setState({showSubmitted:true})
        
         let show = {
           id:Math.random()+'',
@@ -123,7 +117,7 @@ class ShowDetails extends React.Component {
 event.preventDefault();
 
 
-this.setState({watching:true})
+this.setState({showSubmitted:true})
 
 let show = {
   id:Math.random()+'',
@@ -137,7 +131,7 @@ let show = {
 }
 console.log("adding "+ show.id)
 this.context.addShow(show)
-console.log(this.state.watching)
+console.log(this.state.showSubmitted)
 this.setState({
 id:show.id
 
@@ -187,7 +181,7 @@ console.log("other id " +this.state.id)
        
        </div>
 </form>
-{this.state.watching?<WatchingLog id={this.state.id}/>:""}
+{this.state.showSubmitted?<WatchingLog id={this.state.id}/>:""}
 </div>
 )
     }
