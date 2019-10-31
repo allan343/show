@@ -3,6 +3,7 @@ import {Route, Link} from 'react-router-dom';
 import ShowListNav from '../ShowListNav/ShowListNav';
 import Show from '../Show/show';
 import ShowDetails from '../ShowDetails/ShowDetails';
+import EditShowDetails from '../EditShowDetails/EditShowDetails';
 import WatchingLog from '../WatchingLog/WatchingLog';
 import FooterNav from '../FooterNav/FooterNav';
 import ToWatch from '../ToWatch/ToWatch';
@@ -59,6 +60,7 @@ class App extends Component {
 
     handleAddShow = (showObject) => {
         if(this.state.shows.find((show)=>{
+            console.log("showid and show "+ show.id+ " "+ showObject)
                 return show.id===showObject.id
         })){
          return this.handleUpdateShow(showObject,showObject.id)
@@ -148,16 +150,22 @@ class App extends Component {
                             component={Show}
                        />
                        
-                            <Route path="/ShowDetails/Edit/:showId" render={
-                        (routeProps)=>{return <ShowDetails {...this.handleGetShow(routeProps.match.params.showId)}  {...routeProps}>
-                            </ShowDetails>
+                            <Route exact path="/ShowDetails/Edit/:showId" render={
+                        (routeProps)=>{return <EditShowDetails {...this.handleGetShow(routeProps.match.params.showId)}  {...routeProps}>
+                            </EditShowDetails>
                         }} />
 
-                      <Route path="/add-show" render={
+                      <Route exact path="/add-show" render={
                         (routeProps)=>{return <ShowDetails {...routeProps}>
                             </ShowDetails>
                         }} />
                     
+                  {/* <Route
+                            
+                            key={'/add-show'}
+                            exact path={'/add-show'}
+                  component={ShowDetails}*/}
+                       />
                  
                 </>
             );
