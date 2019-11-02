@@ -12,9 +12,8 @@ export default class ShowListNav extends React.Component {
   render() {
   
   
-    const {  shows=[] } = this.context
-    let  toWatch = shows.filter(show=> show.toWatch)
-    console.log("toWatch", toWatch)
+    const {  shows=[] } = this.props
+ 
     return (
       <div className='ShowListNav'>
       
@@ -22,7 +21,7 @@ export default class ShowListNav extends React.Component {
         <ul className='ShowListNav__list'>
           {
          
-            toWatch.map(show =>
+            shows.map(show =>
             <li key={show.id}>
               <NavLink
                 className='ShowListNav__folder-link'
