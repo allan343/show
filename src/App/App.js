@@ -177,12 +177,17 @@ class App extends Component {
         return (
             <>
           
-        <Route
+      {/* <Route
                             
         key={'/WatchingLog/:showId'}
         exact path={'/WatchingLog/:showId'}
         component={WatchingLog}
-    />
+      />*/}
+
+<Route exact path="/WatchingLog/:showId" render={
+                        (routeProps)=>{return <WatchingLog id={routeProps.match.params.showId}>
+                            </WatchingLog>
+                        }} />
 
     <Route
                             

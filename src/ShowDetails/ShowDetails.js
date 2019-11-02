@@ -9,7 +9,7 @@ class ShowDetails extends React.Component {
   static contextType = ApiContext
   
   static defaultProps = { 
-    id: Math.random()+'',
+    id: '',
     name: '',
     airDate: '',
     startDate:'',
@@ -24,7 +24,7 @@ currentSeason: '1' };
 
         super(props);
         this.state = {
-          id: this.props.id,
+          id: this.props.id||Math.random() +'',
            name: {
                 value: this.props.name,
                 touched: false
@@ -63,6 +63,7 @@ currentSeason: '1' };
 
              
           };
+          console.log("inside constructor",this.state.id)
       }
 
       setProgress = (e) => {
@@ -125,8 +126,7 @@ currentSeason: '1' };
           <div>
 <form className="folder" onSubmit = {(event)=>{
 event.preventDefault();
-
-
+console.log("inside return",this.state.id)
 this.setState({showSubmitted:true})
 console.log("showdetails submit", this.context.shows)
 let show = {

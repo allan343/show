@@ -25,6 +25,7 @@ export default class WatchingLog extends React.Component {
     console.log("this id", this.state.id)
     console.log("setWatching", this.context.shows)
     let show = this.context.getShow(this.state.id)
+    console.log("why undefined",show)
     show.toWatch= false
     show.watching= true
     show.finish=false
