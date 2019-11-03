@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import ShowDetails from '../ShowDetails/ShowDetails';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import ApiContext from '../ApiContext/ApiContext'
+import StartShow from '../StartShow/StartShow'
 
 
 
@@ -28,6 +29,7 @@ export default class Show extends React.Component {
     return (
       <div className='Note'>
         <h2 className='Note__title'>
+          <StartShow id={showId}></StartShow>
           Watching Log
         <Link to={`/WatchingLog/${showId}`}>
            Update
