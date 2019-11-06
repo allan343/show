@@ -83,7 +83,14 @@ class EditShowDetails extends React.Component {
       updateLanguage(language) {
         this.setState({language: {value:language,touched:true}});
       }
-   
+      
+      cancelHandle = (e) =>
+      {
+          e.preventDefault()
+
+          this.props.history.goBack()
+      }
+
     render(){
      //throw "test";
         
@@ -150,7 +157,7 @@ this.props.history.goBack()
 
         </div>
         <div className="folder__button__group">
-        <button type="reset" className="folder__button">
+        <button type="reset" className="folder__button" onClick={this.cancelHandle}>
             Cancel
         </button>
         <button type="submit" className="folder__button" >

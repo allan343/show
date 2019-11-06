@@ -82,6 +82,12 @@ currentSeason: '1' };
        })
       }
 
+      cancelHandle = (e) =>
+      {
+          e.preventDefault()
+
+this.props.history.push(`/`)
+      }
 
      
 
@@ -175,7 +181,7 @@ this.props.history.push(`/WatchingLog/${show.id}`)
 
         </div>
         <div className="folder__button__group">
-        <button type="reset" className="folder__button">
+        <button type="cancel" className="folder__button" onClick={this.cancelHandle}>
             Cancel
         </button>
         <button type="submit" className="folder__button" >
@@ -184,7 +190,7 @@ this.props.history.push(`/WatchingLog/${show.id}`)
        
        </div>
 </form>
-{this.state.showSubmitted?<WatchingLog id={this.state.id} history={this.props.history}/>:""}
+
 </div>
 )
     }
