@@ -26,6 +26,7 @@ finishShow = () =>{
  currentShow.watching= false
  currentShow.toWatch=false
  currentShow.finish=true
+ currentShow.finishDate=Date(Date.now)
  this.context.updateShow(currentShow, this.state.id)
  console.log("watch to watching", this.context.shows)
  this.setState(

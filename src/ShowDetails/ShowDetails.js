@@ -11,7 +11,7 @@ class ShowDetails extends React.Component {
   static defaultProps = { 
     id: '',
     name: '',
-    airDate: '',
+    finishDate: '',
     startDate:'',
     genre:'',
     seasons:'',
@@ -30,14 +30,9 @@ currentSeason: '1' };
                 touched: false
               },
            
-            airDate:    {
-                value: this.props.airDate,
-                touched: false
-              },
-              startDate: {
-                value: this.props.startDate,
-                touched: false
-              },
+            finishDate:   "",
+              startDate:""
+              ,
               genre: {
                 value: this.props.genre,
                 touched: false
@@ -73,8 +68,8 @@ currentSeason: '1' };
         let show = {
           id:this.state.id,
           name: this.state.name.value,
-          airDate: this.state.airDate.value,
-          startDate: this.state.startDate.value,
+          finishDate: this.state.airDate,
+          startDate: this.state.startDate,
           genre: this.state.genre.value,
           seasons: this.state.seasons.value,
           description: this.state.description.value,
@@ -132,8 +127,8 @@ console.log("showdetails submit", this.context.shows)
 let show = {
   id:this.state.id,
   name: this.state.name.value,
-  airDate: this.state.airDate.value,
-  startDate: this.state.startDate.value,
+  finishDate: this.state.airDate,
+  startDate: this.state.startDate,
   genre: this.state.genre.value,
   seasons: this.state.seasons.value,
   description: this.state.description.value,
@@ -160,13 +155,7 @@ this.props.history.push(`/WatchingLog/${show.id}`)
          <input type="text" className="folder__control"
            name="name" id="name" value = {this.state.name.value} onChange={e => this.updateName(e.target.value)} />
            
-           <label htmlFor="name">Air Date *</label>
-<input type="text" className="folder__control"
-           name="airDate" id="airDate"  value = {this.state.airDate.value} onChange={e => this.updateAirDate(e.target.value)} />
-           
-           <label htmlFor="name">Start Date *</label>
-<input type="text" className="folder__control"
-           name="startDate" id="startDate" value = {this.state.startDate.value} onChange={e => this.updateStartDate(e.target.value)} />
+         
            
            <label htmlFor="name">Genre *</label>
 <input type="text" className="folder__control"

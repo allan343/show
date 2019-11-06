@@ -21,14 +21,8 @@ class EditShowDetails extends React.Component {
                 touched: false
               },
            
-            airDate:    {
-                value: this.props.airDate,
-                touched: false
-              },
-              startDate: {
-                value: this.props.startDate,
-                touched: false
-              },
+            finishDate:   "",
+              startDate: "",
               genre: {
                 value: this.props.genre,
                 touched: false
@@ -104,8 +98,8 @@ console.log("showdetails submit", this.context.shows)
 let show = {
   id:this.state.id,
   name: this.state.name.value,
-  airDate: this.state.airDate.value,
-  startDate: this.state.startDate.value,
+  finishDate: this.state.finishDate,
+  startDate: this.state.startDate,
   genre: this.state.genre.value,
   seasons: this.state.seasons.value,
   description: this.state.description.value,
@@ -136,14 +130,7 @@ this.props.history.goBack()
          <input type="text" className="folder__control"
            name="name" id="name" value = {this.state.name.value} onChange={e => this.updateName(e.target.value)} />
            
-           <label htmlFor="name">Air Date *</label>
-<input type="text" className="folder__control"
-           name="airDate" id="airDate"  value = {this.state.airDate.value} onChange={e => this.updateAirDate(e.target.value)} />
-           
-           <label htmlFor="name">Start Date *</label>
-<input type="text" className="folder__control"
-           name="startDate" id="startDate" value = {this.state.startDate.value} onChange={e => this.updateStartDate(e.target.value)} />
-           
+         
            <label htmlFor="name">Genre *</label>
 <input type="text" className="folder__control"
            name="genre" id="genre"  value = {this.state.genre.value} onChange={e => this.updateGenre(e.target.value)} />
