@@ -58,20 +58,7 @@ export default class Show extends React.Component {
     // var show= this.context.shows.find(show => this.props.match.params.id === show.id)
       console.log("id",showId)
       let show= this.context.getShow(showId)
-      console.log("what?",show)
-      console.log("what?22",show.watching)
-      let currentlyWatching= false
-  let notYetWatching= false
-  
-    if(show.watching )
-      {
-    currentlyWatching= true
-        }
-        else if (show.toWatch){
-          notYetWatching = true
-        }
-  
-       
+     
      
   
     return (
@@ -80,8 +67,8 @@ export default class Show extends React.Component {
         <h2 className='Note__title'>
         {/*this.setWatching(showId)*/}
           
-          {notYetWatching? <StartShow id={this.state.id}/>:"" }
-          {currentlyWatching? <FinishShow id={this.state.id}/>:""}
+          {show.toWatch? <StartShow id={this.state.id}/>:"" }
+          {show.watching? <FinishShow id={this.state.id}/>:""}
           
           Watching Log
         <Link to={`/WatchingLog/${this.state.id}`}>

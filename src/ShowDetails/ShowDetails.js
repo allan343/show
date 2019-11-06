@@ -58,7 +58,7 @@ currentSeason: '1' };
               },
 
       
-              showSubmitted:false,
+            //  showSubmitted:false,
               currentSeason: this.props.currentSeason
 
              
@@ -68,7 +68,7 @@ currentSeason: '1' };
 
       setProgress = (e) => {
        e.preventDefault()
-        this.setState({showSubmitted:true})
+       // this.setState({showSubmitted:true})
        console.log("huh?",this.context.shows)
         let show = {
           id:this.state.id,
@@ -127,7 +127,7 @@ currentSeason: '1' };
 <form className="folder" onSubmit = {(event)=>{
 event.preventDefault();
 console.log("inside return",this.state.id)
-this.setState({showSubmitted:true})
+//this.setState({showSubmitted:true})
 console.log("showdetails submit", this.context.shows)
 let show = {
   id:this.state.id,
@@ -142,12 +142,13 @@ let show = {
 console.log("adding "+ show.id)
 this.context.addShow(show)
 console.log("showdetails submit end", this.context.shows)
-console.log(this.state.showSubmitted)
+//console.log(this.state.showSubmitted)
 this.setState({
 id:show.id
 
 })
 console.log("other id " +this.state.id)
+this.props.history.push(`/WatchingLog/${show.id}`)
 
 
 
