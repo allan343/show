@@ -67,8 +67,8 @@ export default class Show extends React.Component {
         <h2 className='Note__title'>
         {/*this.setWatching(showId)*/}
           
-          {show.toWatch? <StartShow id={this.state.id}/>:"" }
-          {show.watching? <FinishShow id={this.state.id}/>:""}
+          {show.toWatch? <StartShow id={this.state.id} history={this.props.history}/>:"" }
+          {show.watching? <FinishShow id={this.state.id} history={this.props.history}/>:""}
           
           Watching Log
         <Link to={`/WatchingLog/${this.state.id}`}>
