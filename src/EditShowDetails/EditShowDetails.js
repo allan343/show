@@ -21,7 +21,7 @@ class EditShowDetails extends React.Component {
                 touched: false
               },
            
-            finishDate:   "",
+            finishDate:"",
               startDate: "",
               genre: {
                 value: this.props.genre,

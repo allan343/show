@@ -30,9 +30,8 @@ currentSeason: '1' };
                 touched: false
               },
            
-            finishDate:   "",
-              startDate:""
-              ,
+            finishDate:"",
+              startDate:"",
               genre: {
                 value: this.props.genre,
                 touched: false
