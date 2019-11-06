@@ -30,6 +30,7 @@ export default class WatchingLog extends React.Component {
     show.watching= true
     show.finish=false
    this.context.updateShow(show, show.id)
+   this.props.history.push('/')
   }
 
   setToWatch = () =>{
@@ -43,6 +44,7 @@ export default class WatchingLog extends React.Component {
     show.finish=false
    this.context.updateShow(show, show.id)
    console.log("set to Watch after update", this.context.shows)
+   this.props.history.push('/')
   }
 
   setShowFinish = () =>{
@@ -52,6 +54,8 @@ export default class WatchingLog extends React.Component {
      show.watching= false
      show.finish=true
     this.context.updateShow(show, show.id)
+    this.props.history.push('/')
+    
    }
 
   render() {

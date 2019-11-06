@@ -195,7 +195,7 @@ console.log("other id " +this.state.id)
        
        </div>
 </form>
-{this.state.showSubmitted?<WatchingLog id={this.state.id}/>:""}
+{this.state.showSubmitted?<WatchingLog id={this.state.id} history={this.props.history}/>:""}
 </div>
 )
     }

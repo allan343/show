@@ -185,7 +185,7 @@ class App extends Component {
       />*/}
 
 <Route exact path="/WatchingLog/:showId" render={
-                        (routeProps)=>{return <WatchingLog id={routeProps.match.params.showId}>
+                        (routeProps)=>{return <WatchingLog history = {routeProps.history} id={routeProps.match.params.showId}>
                             </WatchingLog>
                         }} />
 

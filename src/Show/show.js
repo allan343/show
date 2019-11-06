@@ -80,7 +80,7 @@ export default class Show extends React.Component {
         <h2 className='Note__title'>
         {/*this.setWatching(showId)*/}
           
-          {notYetWatching? <StartShow id={this.state.id}/>:""}
+          {notYetWatching? <StartShow id={this.state.id}/>:"" }
           {currentlyWatching? <FinishShow id={this.state.id}/>:""}
           
           Watching Log

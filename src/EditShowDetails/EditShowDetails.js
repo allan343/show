@@ -126,7 +126,7 @@ id:show.id
 })
 console.log("other id " +this.state.id)
 
-
+this.props.history.goBack()
 
 }}> 
 <h2>Register</h2>

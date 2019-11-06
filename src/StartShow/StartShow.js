@@ -32,6 +32,7 @@ startShow = () =>{
      {
      show:currentShow}
  )
+  
 }
 
  render(){
