@@ -67,7 +67,7 @@ currentSeason: '1' };
         let show = {
           id:this.state.id,
           name: this.state.name.value,
-          finishDate: this.state.airDate,
+          finishDate: this.state.finishDate,
           startDate: this.state.startDate,
           genre: this.state.genre.value,
           seasons: this.state.seasons.value,
@@ -132,7 +132,7 @@ console.log("showdetails submit", this.context.shows)
 let show = {
   id:this.state.id,
   name: this.state.name.value,
-  finishDate: this.state.airDate,
+  finishDate: this.state.finishDate,
   startDate: this.state.startDate,
   genre: this.state.genre.value,
   seasons: this.state.seasons.value,
