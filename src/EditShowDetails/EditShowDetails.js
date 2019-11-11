@@ -2,7 +2,7 @@ import React from 'react';
 
 
 import ApiContext from '../ApiContext/ApiContext'
-import WatchingLog from '../WatchingLog/WatchingLog'
+
 
 
 class EditShowDetails extends React.Component {
@@ -91,6 +91,26 @@ class EditShowDetails extends React.Component {
           this.props.history.goBack()
       }
 
+      deleteHandle = (e) =>
+      {
+          e.preventDefault()
+          this.context.deleteShow(this.state.id)
+          if(this.props.finish)
+          {
+          this.props.history.push("/finish")
+          }
+         
+          else if(this.props.watching)
+            {
+            this.props.history.push("/watching")
+            }
+            else{
+              this.props.history.push("/")
+            }
+
+          
+      }
+
     render(){
      //throw "test";
         
@@ -133,6 +153,12 @@ this.props.history.goBack()
 <h2>Register</h2>
        <div className="show__hint">* required field</div>  
        <div className="form-group">
+       <button type="reset" className="folder__button" onClick={this.cancelHandle}>
+            Cancel
+        </button>
+        <button type="submit" className="folder__button" >
+            Done
+        </button>
          <label htmlFor="name">Name *</label>
          <input type="text" className="folder__control"
            name="name" id="name" value = {this.state.name.value} onChange={e => this.updateName(e.target.value)} />
@@ -153,16 +179,13 @@ this.props.history.goBack()
  <label htmlFor="name">Language *</label>
 <input type="text" className="folder__control"
            name="language" id="language" value = {this.state.language.value} onChange={e => this.updateLanguage(e.target.value)} />
-            
+             <button type="reset" className="folder__button" onClick={this.deleteHandle}>
+            Delete
+        </button>
 
         </div>
         <div className="folder__button__group">
-        <button type="reset" className="folder__button" onClick={this.cancelHandle}>
-            Cancel
-        </button>
-        <button type="submit" className="folder__button" >
-            Save
-        </button>
+     
        
        </div>
 </form>

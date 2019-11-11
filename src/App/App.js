@@ -48,6 +48,8 @@ class App extends Component {
         this.setState({
             shows: this.state.shows.filter(show => show.id != showId)
         });
+
+        console.log("delete",this.state.shows)
     };
 
     handleDeleteFinishedShow = showId => {
