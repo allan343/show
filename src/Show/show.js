@@ -80,7 +80,7 @@ export default class Show extends React.Component {
   
     return (
      
-      <div className='Note'>
+      <div >
         <h2 className='Note__title'>
         {/*this.setWatching(showId)*/}
           

@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import ApiContext from '../ApiContext/ApiContext'
 import CircleButton from '../CircleButton/CircleButton'
 import Show from '../Show/show'
+import '../main.css'
 
 
 export default class ShowListNav extends React.Component {
@@ -44,51 +45,37 @@ export default class ShowListNav extends React.Component {
     }
   
     return (
-      <div className='ShowListNav'>
+      <div>
+      <div id='shows'>
       
       <label htmlFor="name">Name *</label>
          <input type="text" className="folder__control"
            name="name" id="name" value = {this.state.name.value} onChange={e => this.updateName(e.target.value)} />
-           
-           
-        <ul className='ShowListNav__list'>
-          {
-            /*
-          {
-          
-            filteredShows.map(show =>
-            <li key={show.id}>
-           {  <NavLink
-                className='ShowListNav__folder-link'
-                to={`/show/${show.id}`}
-              >
-                <span className='ShowListNav__num-notes'>
+         <NavLink
                 
-                </span>
-                {show.name}
-           </NavLink>}
-           </li>
-          )}
-            */
+                to={`/add-show`}
+              >
+              
+                Add Show
+           </NavLink>
+           
+        <ul >
+          {
+            
+
+            
            filteredShows.map(show =>
-           <li className='showitem'  key ={show.id} data-id={show.id}>{show.name}
+           <li id='show'  key ={show.id} data-id={show.id}>{show.name}
            <button onClick={showClicked.bind(this, show.id)}>showdetails</button>
            </li>
             ) }
         </ul>
-        <div className='ShowListNav__button-wrapper'>
-          <CircleButton
-            tag={Link}
-            to='/add-show'
-            type='button'
-            className='ShowListNav__add-folder-button'
-          >
-            <FontAwesomeIcon icon='plus' />
-            <br />
-            +
-          </CircleButton>
-        </div>
+       
+        
+      </div>
+      <div id ="actualShow">
         {this.state.clicked? <Show showId={this.state.id}/>:"" }
+        </div>
       </div>
     )
   }

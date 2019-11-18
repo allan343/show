@@ -222,9 +222,9 @@ class App extends Component {
                           
                         </h1>
                     </header>
-                    <nav className="App__nav">{this.renderNavRoutes()}</nav>
+                    <div >{this.renderNavRoutes()}</div>
                  
-                    <main className="App__main">{this.renderMainRoutes()}</main>
+                    <div >{this.renderMainRoutes()}</div>
                 </div>
             </ApiContext.Provider>
            

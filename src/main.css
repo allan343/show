@@ -1,5 +1,25 @@
-.show {
+#show {
 
   padding: 15px 15px;
   background-color: #bbb;
 }
+
+#shows{
+  
+    float:left;
+    width: 40%;
+   }
+
+   .actualShow{
+      
+    float:right;
+    width: 60%;
+    }
+    .ShowListNav{
+
+        background-color: #bbb;
+        overflow: hidden;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }

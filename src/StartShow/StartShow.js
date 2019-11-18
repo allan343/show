@@ -34,7 +34,7 @@ startShow = () =>{
      show:currentShow}
  )
 
- this.props.history.push("/watching")
+// this.props.history.push("/watching")
   
 }
 
