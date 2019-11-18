@@ -19,7 +19,11 @@ export default class Show extends React.Component {
 
   constructor(props) {
     super(props);
-    const { showId } = this.props.match.params
+    //const { showId } = this.props.match.params
+    
+    const { showId } = this.props
+    
+
     this.state = {
       id: showId,
     watching:false,
@@ -54,7 +58,8 @@ export default class Show extends React.Component {
   render() {
     const { shows=[]} = this.context
 
-    const { showId } = this.props.match.params
+    //const { showId } = this.props.match.params
+    const { showId } = this.props
     // var show= this.context.shows.find(show => this.props.match.params.id === show.id)
       console.log("id",showId)
       let show= this.context.getShow(showId)

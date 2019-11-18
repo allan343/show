@@ -3,6 +3,7 @@ import { NavLink, Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import ApiContext from '../ApiContext/ApiContext'
 import CircleButton from '../CircleButton/CircleButton'
+import Show from '../Show/show'
 
 
 export default class ShowListNav extends React.Component {
@@ -12,11 +13,14 @@ export default class ShowListNav extends React.Component {
 
     super(props);
   this.state = {
-   
+    id:"",
      name: {
           value: "",
           touched: false
         },
+       
+          clicked: false
+        
       }}
 
   updateName(name) {
@@ -24,7 +28,10 @@ export default class ShowListNav extends React.Component {
   }
 
   render() {
-   
+    function showClicked(showid) {
+
+     this.setState({id:showid, clicked:true });
+    }
   
     const {  shows=[] } = this.props
     let filteredShows=[]
@@ -46,10 +53,12 @@ export default class ShowListNav extends React.Component {
            
         <ul className='ShowListNav__list'>
           {
+            /*
+          {
           
             filteredShows.map(show =>
             <li key={show.id}>
-              <NavLink
+           {  <NavLink
                 className='ShowListNav__folder-link'
                 to={`/show/${show.id}`}
               >
@@ -57,9 +66,15 @@ export default class ShowListNav extends React.Component {
                 
                 </span>
                 {show.name}
-              </NavLink>
-            </li>
+           </NavLink>}
+           </li>
           )}
+            */
+           filteredShows.map(show =>
+           <li className='showitem'  key ={show.id} data-id={show.id}>{show.name}
+           <button onClick={showClicked.bind(this, show.id)}>showdetails</button>
+           </li>
+            ) }
         </ul>
         <div className='ShowListNav__button-wrapper'>
           <CircleButton
@@ -73,8 +88,8 @@ export default class ShowListNav extends React.Component {
             +
           </CircleButton>
         </div>
+        {this.state.clicked? <Show showId={this.state.id}/>:"" }
       </div>
     )
   }
 }
-

@@ -9,7 +9,7 @@ import FooterNav from '../FooterNav/FooterNav';
 import ToWatch from '../ToWatch/ToWatch';
 import Finished from '../Finished/Finished';
 import Watching from '../Watching/Watching';
-import ApiContext from '../ApiContext/ApiContext'
+import ApiContext from '../ApiContext/ApiContext';
 //import './App.css';
 
 class App extends Component {
@@ -48,8 +48,6 @@ class App extends Component {
         this.setState({
             shows: this.state.shows.filter(show => show.id != showId)
         });
-
-        console.log("delete",this.state.shows)
     };
 
     handleDeleteFinishedShow = showId => {
