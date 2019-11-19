@@ -74,7 +74,7 @@ export default class ShowListNav extends React.Component {
         
       </div>
       <div id ="actualShow">
-        {this.state.clicked? <Show showId={this.state.id}/>:"" }
+        {this.state.clicked? <Show name = {this.state.name} showId={this.state.id}/>:"" }
         </div>
       </div>
     )

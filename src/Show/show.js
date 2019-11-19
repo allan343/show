@@ -86,7 +86,7 @@ export default class Show extends React.Component {
         
         {/*this.setWatching(showId)*/}
         <div id = "title"> 
-          {this.state.name}
+          {this.state.id}
           {show.toWatch? <StartShow id={this.state.id} history={this.props.history}/>:"" }
           {show.watching? <FinishShow id={this.state.id} history={this.props.history}/>:""}
           </div>
