@@ -22,9 +22,11 @@ export default class Show extends React.Component {
     //const { showId } = this.props.match.params
     
     const { showId } = this.props
+    const {name}=this.props
     
 
     this.state = {
+      name:name,
       id: showId,
     watching:false,
     toWatch:false
@@ -80,25 +82,32 @@ export default class Show extends React.Component {
   
     return (
      
-      <div >
-        <h2 className='Note__title'>
+      <div id='actualShow'>
+        
         {/*this.setWatching(showId)*/}
-          
+        <div id = "title"> 
+          {this.state.name}
           {show.toWatch? <StartShow id={this.state.id} history={this.props.history}/>:"" }
           {show.watching? <FinishShow id={this.state.id} history={this.props.history}/>:""}
-          
+          </div>
+          <hr></hr>
+          <div id = "watching"> 
           Watching Log
           Watch State {`${showState}`}
           Started {`${show.startDate}`}
           Finished {`${show.finishDate}`}
+          
         <Link to={`/WatchingLog/${this.state.id}`}>
            Update
           </Link>
+          </div>
+          <hr></hr>
+          <div id = "details"> 
           Details
           <Link to={`/ShowDetails/Edit/${this.state.id}`}>
            Edit
           </Link>
-        </h2>
+        </div>
        
         
         </div>

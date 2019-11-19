@@ -1,25 +1,38 @@
-#show {
-
-  padding: 15px 15px;
-  background-color: #bbb;
-}
-
-#shows{
+#showContainer{
+  height:100%;
   
-    float:left;
-    width: 40%;
-   }
-
-   .actualShow{
-      
-    float:right;
-    width: 60%;
-    }
-    .ShowListNav{
-
-        background-color: #bbb;
-        overflow: hidden;
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-    }
+  }
+  
+  #show {
+  
+    padding: 30px 30px;
+    background-color: #bbb;
+  }
+  
+  #shows{
+    
+      float:left;
+      width: 40%;
+      background-color:#ddd;
+     }
+   
+     #actualShow{
+        
+      float:right;
+      width: 60%;
+      }
+  
+      #details,#watching,#title{
+        display: block;
+        padding: 45px 15px;
+        background-color: #aaa;
+        
+      }
+      .ShowListNav{
+  
+          background-color: #bbb;
+          overflow: hidden;
+          position: fixed;
+          bottom: 0;
+          width: 100%;
+      }
