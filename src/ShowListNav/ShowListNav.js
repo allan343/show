@@ -11,28 +11,44 @@ export default class ShowListNav extends React.Component {
   static contextType = ApiContext;
   constructor(props) {
      
-
+   
     super(props);
+    this.showClicked.bind(this);
   this.state = {
     id:"",
      name: {
           value: "",
           touched: false
         },
-       
+       showName:"",
           clicked: false
         
-      }}
+         
+      }
+    
+    }
+
+   
 
   updateName(name) {
     this.setState({name: {value:name,touched:true}});
   }
 
-  render() {
-    function showClicked(showid) {
+  showClicked(showid,showname) {
+    console.log("id is", showid)
+   this.setState({id:showid, clicked:true, showName:showname });
+   //toggleClicked()
+  }
 
-     this.setState({id:showid, clicked:true });
-    }
+  render() {
+/*
+    function toggleClicked() {
+
+      this.setState({clicked:false });
+     }
+   
+*/
+   
   
     const {  shows=[] } = this.props
     let filteredShows=[]
@@ -45,7 +61,7 @@ export default class ShowListNav extends React.Component {
     }
   
     return (
-      <div>
+      <div id='showContainer'>
       <div id='shows'>
       
       <label htmlFor="name">Name *</label>
@@ -66,15 +82,21 @@ export default class ShowListNav extends React.Component {
             
            filteredShows.map(show =>
            <li id='show'  key ={show.id} data-id={show.id}>{show.name}
-           <button onClick={showClicked.bind(this, show.id)}>showdetails</button>
+           <button onClick={this.showClicked(show.id,show.name)}>showdetails</button>
+           <br></br>
            </li>
+         
             ) }
         </ul>
        
         
       </div>
-      <div id ="actualShow">
-        {this.state.clicked? <Show showId={this.state.id}/>:"" }
+      <div >
+        {this.state.clicked? <Show name = {this.state.showName } showId={this.state.id} /> :"" 
+      
+            
+        }
+
         </div>
       </div>
     )

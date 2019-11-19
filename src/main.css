@@ -1,6 +1,11 @@
+#showContainer{
+height:100%;
+
+}
+
 #show {
 
-  padding: 15px 15px;
+  padding: 30px 30px;
   background-color: #bbb;
 }
 
@@ -8,12 +13,20 @@
   
     float:left;
     width: 40%;
+    background-color:#ddd;
    }
-
-   .actualShow{
+ 
+   #actualShow{
       
     float:right;
     width: 60%;
+    }
+
+    #details,#watching,#title{
+      display: block;
+      padding: 45px 15px;
+      background-color: #aaa;
+      
     }
     .ShowListNav{
 
@@ -23,3 +36,4 @@
         bottom: 0;
         width: 100%;
     }
+  
