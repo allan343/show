@@ -28,11 +28,13 @@ export default class ShowListNav extends React.Component {
     this.setState({name: {value:name,touched:true}});
   }
 
-  render() {
-    function showClicked(showid) {
+  showClicked(showid) {
 
-     this.setState({id:showid, clicked:true });
-    }
+    this.setState({id:showid, clicked:true });
+   }
+
+  render() {
+   
   
     const {  shows=[] } = this.props
     let filteredShows=[]
@@ -66,7 +68,7 @@ export default class ShowListNav extends React.Component {
             
            filteredShows.map(show =>
            <li id='show'  key ={show.id} data-id={show.id}>{show.name}
-           <button onClick={showClicked.bind(this, show.id)}>showdetails</button>
+           <button onClick={this.showClicked.bind(this, show.id)}>showdetails</button>
            </li>
             ) }
         </ul>
@@ -74,7 +76,7 @@ export default class ShowListNav extends React.Component {
         
       </div>
       <div id ="actualShow">
-        {this.state.clicked? <Show name = {this.state.name} showId={this.state.id}/>:"" }
+        {this.state.clicked? <Show  showId={this.state.id}/>:"" }
         </div>
       </div>
     )
