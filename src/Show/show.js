@@ -65,6 +65,7 @@ export default class Show extends React.Component {
     // var show= this.context.shows.find(show => this.props.match.params.id === show.id)
       console.log("id",showId)
       let show= this.context.getShow(showId)
+      console.log("show",show)
       let showState=""
       if(show.toWatch)
       {
@@ -86,7 +87,7 @@ export default class Show extends React.Component {
         
         {/*this.setWatching(showId)*/}
         <div id = "title"> 
-          {this.state.id}
+          {showId}
           {show.toWatch? <StartShow id={this.state.id} history={this.props.history}/>:"" }
           {show.watching? <FinishShow id={this.state.id} history={this.props.history}/>:""}
           </div>

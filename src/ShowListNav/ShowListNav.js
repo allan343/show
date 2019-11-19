@@ -30,7 +30,9 @@ export default class ShowListNav extends React.Component {
 
   showClicked(showid) {
 
+    console.log("id balah is",this.state.id)
     this.setState({id:showid, clicked:true });
+    console.log("id after is",this.state.id)
    }
 
   render() {
@@ -68,7 +70,7 @@ export default class ShowListNav extends React.Component {
             
            filteredShows.map(show =>
            <li id='show'  key ={show.id} data-id={show.id}>{show.name}
-           <button onClick={this.showClicked.bind(this, show.id)}>showdetails</button>
+           <button onClick={() => this.setState({id:show.id})}>showdetails</button>
            </li>
             ) }
         </ul>
@@ -76,7 +78,7 @@ export default class ShowListNav extends React.Component {
         
       </div>
       <div id ="actualShow">
-        {this.state.clicked? <Show  showId={this.state.id}/>:"" }
+        {this.state.id? <Show showId={this.state.id}/>:"" }
         </div>
       </div>
     )
