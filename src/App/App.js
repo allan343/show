@@ -165,7 +165,7 @@ class App extends Component {
                             key={'/add-show'}
                             exact path={'/add-show'}
                   component={ShowDetails}*/}
-                       />
+                       
                  
                 </>
             );

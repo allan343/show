@@ -32,7 +32,7 @@ export default class WatchingLog extends React.Component {
     show.startDate=Date(Date.now())
     show.finishDate=""
    this.context.updateShow(show, show.id)
-   this.props.history.push('/watching')
+  
   }
 
   setToWatch = () =>{
@@ -83,7 +83,7 @@ Watching
     <button type="submit" className="folder__button" onClick={this.setShowFinish}>
 Finished
 </button>
-{this.state.watching?<Progress id={this.state.id} />:""}
+{this.state.watching?<Progress id={this.state.id} history={this.props.history} />:""}
     
  
 </div>
