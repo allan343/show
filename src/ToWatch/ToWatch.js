@@ -15,7 +15,7 @@ export default class ToWatch extends React.Component {
     return(
       <span className='NoteListMain__button-container'>
          { <h1>To Watch</h1>}
-    <ShowListNav shows={this.context.shows.filter(show=> show.toWatch)}>
+    <ShowListNav shows={this.context.shows.filter(show=> show.toWatch) } history={this.props.history}>
 
       
     </ShowListNav>

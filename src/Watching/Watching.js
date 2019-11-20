@@ -20,7 +20,7 @@ export default class Finished extends React.Component {
       <div className='NoteListMain__button-container'>
          
       { <h1>Watching</h1>}
-      <ShowListNav shows={this.context.shows.filter(show=> show.watching)}></ShowListNav>
+      <ShowListNav shows={this.context.shows.filter(show=> show.watching)} history={this.props.history}></ShowListNav>
       <FooterNav></FooterNav>
       </div>
     )
