@@ -32,7 +32,7 @@ export default class WatchingLog extends React.Component {
     show.startDate=Date(Date.now())
     show.finishDate=""
    this.context.updateShow(show, show.id)
-   this.props.history.push('/')
+   this.props.history.push('/watching')
   }
 
   setToWatch = () =>{
@@ -63,7 +63,7 @@ export default class WatchingLog extends React.Component {
        show.startDate=Date(Date.now())
      }
     this.context.updateShow(show, show.id)
-    this.props.history.push('/')
+    this.props.history.push('/finish')
     
    }
 

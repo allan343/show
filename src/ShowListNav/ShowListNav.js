@@ -78,7 +78,7 @@ export default class ShowListNav extends React.Component {
         
       </div>
       <div>
-        {this.state.id? <Show showId={this.state.id} />:"" }
+        {this.state.id? <Show showId={this.state.id} history={this.props.history}/>:"" }
         </div>
       </div>
     )

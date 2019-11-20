@@ -33,7 +33,8 @@ finishShow = () =>{
      {
      show:currentShow}
  )
- //this.props.history.push("/finish")
+ this.props.history.push("/finish")
+
 }
 
  render(){

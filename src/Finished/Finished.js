@@ -17,6 +17,7 @@ export default class Finished extends React.Component {
   render() {
     return (
       <div className='NoteListMain__button-container'>
+         { <h1>Finished</h1>}
       {/*<FinishedListNav></FinishedListNav>*/}
       <ShowListNav shows={this.context.shows.filter(show=> show.finish)}></ShowListNav>
       <FooterNav></FooterNav>

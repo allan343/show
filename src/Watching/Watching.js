@@ -16,8 +16,10 @@ export default class Finished extends React.Component {
 
   render() {
     return (
+    
       <div className='NoteListMain__button-container'>
-      {/*<WatchingListNav></WatchingListNav>*/}
+         
+      { <h1>Watching</h1>}
       <ShowListNav shows={this.context.shows.filter(show=> show.watching)}></ShowListNav>
       <FooterNav></FooterNav>
       </div>
