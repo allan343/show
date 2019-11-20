@@ -123,7 +123,7 @@ this.props.history.push(`/`)
      //throw "test";
         
         return(
-          <div>
+          <div id="edit-details">
 <form className="folder" onSubmit = {(event)=>{
 event.preventDefault();
 console.log("inside return",this.state.id)
@@ -153,7 +153,7 @@ this.props.history.push(`/WatchingLog/${show.id}`)
 
 
 }}> 
-<h2>Register</h2>
+<h2>Edit Show Details</h2>
        <div className="show__hint">* required field</div>  
        <div className="form-group">
          <label htmlFor="name">Name *</label>

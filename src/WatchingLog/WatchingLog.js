@@ -69,9 +69,9 @@ export default class WatchingLog extends React.Component {
 
   render() {
     return(
-      <div className='NoteListMain__button-container'>
+      <div id='watchingLog'>
   <div>
-    
+    <h1>Watching Log</h1>
 
 <button type="submit" className="folder__button" onClick={this.setToWatch}>
 To Watch

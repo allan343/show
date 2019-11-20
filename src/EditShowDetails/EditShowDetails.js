@@ -115,7 +115,7 @@ class EditShowDetails extends React.Component {
      //throw "test";
         
         return(
-          <div>
+          <div id="edit-details">
 <form className="folder" onSubmit = {(event)=>{
 event.preventDefault();
 

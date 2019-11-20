@@ -36,3 +36,10 @@
           bottom: 0;
           width: 100%;
       }
+
+      #edit-details,#watchingLog{
+        display:block;
+          margin-left:auto;
+          margin-right:auto;
+          background-color: #ddd
+        }
