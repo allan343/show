@@ -10,6 +10,7 @@ import ToWatch from '../ToWatch/ToWatch';
 import Finished from '../Finished/Finished';
 import Watching from '../Watching/Watching';
 import ApiContext from '../ApiContext/ApiContext';
+import config from '../config';
 //import './App.css';
 
 class App extends Component {
@@ -19,28 +20,26 @@ class App extends Component {
     };
 
     componentDidMount() {
-        /*
-        Promise.all([
-            fetch(`${config.API_ENDPOINT}/notes`),
-            fetch(`${config.API_ENDPOINT}/folders`)
-        ])
-            .then(([notesRes, foldersRes]) => {
-                if (!notesRes.ok)
-                    return notesRes.json().then(e => Promise.reject(e));
-                if (!foldersRes.ok){
-                    return foldersRes.json().then(e => Promise.reject(e));
-                }
+        
+      
+            fetch(`${config.API_ENDPOINT}/shows`)
+           
+        
+            .then((showsRes) => {
+                if (!showsRes.ok)
+                    return showsRes.json().then(e => Promise.reject(e));
+              
                 
-                return Promise.all([notesRes.json(), foldersRes.json()]);
+                return (showsRes.json());
             })
-            .then(([notes, folders]) => {
-                console.log(folders);
-                console.log(notes);
-                this.setState({notes, folders});
+            .then((shows) => {
+             
+                console.log(shows);
+                this.setState({shows:shows});
             })
             .catch(error => {
                 console.error({error});
-            });*/
+            });
     }
 
     
@@ -55,10 +54,53 @@ class App extends Component {
             finishedShows: this.state.finishedShow.filter(show => show.id != showId)
         });
     };
+    toServerNames(obj)
+    {
+      obj.showname =obj.name
+      delete obj.name
+      obj.showdescription =obj.description
+      delete obj.description
+      obj.showlanguage =obj.language
+      delete obj.language
+      obj.startdate =obj.startDate
+      delete obj.startDate
+      obj.finishdate =obj.finishDate
+      delete obj.finishDate
+      obj.showdescription =obj.description
+      delete obj.description
+      obj.showlanguage =obj.language
+      delete obj.language
 
+        return obj
+
+    }
  
+    toClientNames(obj)
+    {
+        obj.name =obj.showname
+        delete obj.showname
+        obj.description =obj.showdescription
+        delete obj.showdescription
+        obj.language =obj.showlanguage
+        delete obj.showlanguage
+        obj.startDate =obj.startdate
+        delete obj.startdate
+        obj.finishDate =obj.finishdate
+        delete obj.finishdate
+        obj.description =obj.showdescription
+        delete obj.showdescription
+        obj.language =obj.showlanguage
+        delete obj.showlanguage
+        return obj
+  
+
+    }
 
     handleAddShow = (showObject) => {
+
+    
+          
+
         if(this.state.shows.find((show)=>{
             console.log("showid and show "+ show.id+ " "+ showObject)
                 return show.id===showObject.id
@@ -67,11 +109,24 @@ class App extends Component {
         }
 
 
-        console.log("showOject " + showObject.id)
-        this.state.shows.push(showObject);
-        this.setState({
-            shows: this.state.shows
-        });
+    
+
+       
+        fetch(`${config.API_ENDPOINT}/shows`,{headers:{'content-type': 'application/json'},method:"POST",body:JSON.stringify(this.toServerNames(showObject))}) 
+        .then(response => response.json())
+        .then(responseJson => {
+         
+          if(responseJson.id){
+              let newid = responseJson.id
+            console.log("showOject " + newid)
+            this.state.shows.push(this.toClientNames(responseJson));
+            this.setState({
+                shows: this.state.shows
+            });
+            return newid
+          }
+
+        })
     };
 
     handleAddFinishedShow = (id) => {
@@ -100,10 +155,29 @@ class App extends Component {
     };
     
     handleUpdateShow = (showObject,showId) => {
-       let show= this.state.shows.find(show => show.id === showId)
+     /*  let show= this.state.shows.find(show => show.id === showId)
        for(let key in show)
        {
-            show[key]=showObject[key] }
+            show[key]=showObject[key] }*/
+
+            fetch(`${config.API_ENDPOINT}/shows/${showId}`,{headers:{'content-type': 'application/json'},method:"PATCH",body:JSON.stringify(this.toServerNames(showObject))}) 
+            .then(response => response.json())
+            .then(responseJson => {
+             
+              if(responseJson.id && responseJson.name){
+                console.log("showOject " + responseJson)
+                let show= this.state.shows.find(show => show.id === showId)
+                responseJson= this.toClientNames(responseJson)
+                for(let key in show)
+                {
+                     show[key]=responseJson[key] }
+                this.setState({
+                    shows: this.state.shows
+                });
+              }
+    
+            })
+
 
     };
 

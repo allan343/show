@@ -24,7 +24,8 @@ currentSeason: '1' };
 
         super(props);
         this.state = {
-          id: this.props.id||Math.random() +'',
+        //  id: this.props.id||Math.random() +'',
+        id:'',
            name: {
                 value: this.props.name,
                 touched: false
@@ -125,12 +126,14 @@ this.props.history.push(`/`)
         return(
           <div id="edit-details">
 <form className="folder" onSubmit = {(event)=>{
+
+
 event.preventDefault();
 console.log("inside return",this.state.id)
 //this.setState({showSubmitted:true})
 console.log("showdetails submit", this.context.shows)
 let show = {
-  id:this.state.id,
+//  id:this.state.id,
   name: this.state.name.value,
   finishDate: this.state.finishDate,
   startDate: this.state.startDate,
@@ -140,12 +143,13 @@ let show = {
   language: this.state.language.value
 }
 console.log("adding "+ show.id)
-this.context.addShow(show)
+let newid=this.context.addShow(show)
 console.log("showdetails submit end", this.context.shows)
+console.log("newid", newid)
 //console.log(this.state.showSubmitted)
 this.setState({
-id:show.id
-
+//id:show.id
+id:newid
 })
 console.log("other id " +this.state.id)
 this.props.history.push(`/WatchingLog/${show.id}`)
