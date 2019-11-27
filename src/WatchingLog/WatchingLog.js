@@ -38,8 +38,9 @@ export default class WatchingLog extends React.Component {
   setToWatch = () =>{
     console.log("before")
     console.log("set toWatch", this.context.shows)
+    console.log("towatch id", this.state.id)
    let show = this.context.getShow(this.state.id)
-   console.log(show)
+   console.log("towatchshow",show)
    console.log("array", this.context.shows)
     show.toWatch= true
     show.watching= false

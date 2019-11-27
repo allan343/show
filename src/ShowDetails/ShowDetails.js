@@ -142,17 +142,12 @@ let show = {
   description: this.state.description.value,
   language: this.state.language.value
 }
-console.log("adding "+ show.id)
-let newid=this.context.addShow(show)
-console.log("showdetails submit end", this.context.shows)
-console.log("newid", newid)
-//console.log(this.state.showSubmitted)
-this.setState({
-//id:show.id
-id:newid
-})
-console.log("other id " +this.state.id)
-this.props.history.push(`/WatchingLog/${show.id}`)
+
+this.context.addShow(show,(newid)=>{
+  this.setState({ id:newid })
+  this.props.history.push(`/WatchingLog/${newid}`)
+}) 
+
 
 
 

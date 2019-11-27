@@ -96,7 +96,7 @@ class App extends Component {
 
     }
 
-    handleAddShow = (showObject) => {
+    handleAddShow = (showObject,newId) => {
 
     
           
@@ -123,7 +123,7 @@ class App extends Component {
             this.setState({
                 shows: this.state.shows
             });
-            return newid
+            newId(newid)
           }
 
         })
@@ -142,7 +142,7 @@ class App extends Component {
     handleGetShow = (id) => {
     console.log("id is " +id)
       return  this.state.shows.find(function(show) { 
-       return  show.id === id; 
+       return  show.id == id; 
           }); 
       
     };
