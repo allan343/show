@@ -33,7 +33,7 @@ class App extends Component {
                 return (showsRes.json());
             })
             .then((shows) => {
-             
+                shows=shows.map((item)=>this.toClientNames(item))
                 console.log(shows);
                 this.setState({shows:shows});
             })
@@ -70,6 +70,8 @@ class App extends Component {
       delete obj.description
       obj.showlanguage =obj.language
       delete obj.language
+      obj.towatch =obj.toWatch
+      delete obj.toWatch
 
         return obj
 
@@ -91,6 +93,8 @@ class App extends Component {
         delete obj.showdescription
         obj.language =obj.showlanguage
         delete obj.showlanguage
+        obj.toWatch =obj.towatch
+        delete obj.towatch
         return obj
   
 

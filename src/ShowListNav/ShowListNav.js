@@ -47,7 +47,7 @@ export default class ShowListNav extends React.Component {
     else{
       filteredShows=shows.filter(show=> show.name===this.state.name.value);
     }
-  
+  console.log("filtered",filteredShows)
     return (
       <div>
       <div id='shows'>
