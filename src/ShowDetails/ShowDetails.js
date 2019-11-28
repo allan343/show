@@ -93,8 +93,8 @@ this.props.history.push(`/`)
 
      
 
-      updateName(name) {
-        this.setState({name: {value:name,touched:true}});
+      updateName(showname) {
+        this.setState({showname: {value:showname,touched:true}});
       }
 
       updateAirDate(airdate) {
