@@ -30,7 +30,7 @@ export default class WatchingLog extends React.Component {
     show.watching= true
     show.finish=false
     show.startdate=Date(Date.now())
-    show.finishDate=""
+    show.finishdate=""
    this.context.updateShow(show, show.id)
   
   }
