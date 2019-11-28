@@ -26,7 +26,7 @@ export default class WatchingLog extends React.Component {
     console.log("setWatching", this.context.shows)
     let show = this.context.getShow(this.state.id)
     console.log("why undefined",show)
-    show.toWatch= false
+    show.towatch= false
     show.watching= true
     show.finish=false
     show.startDate=Date(Date.now())
@@ -42,7 +42,7 @@ export default class WatchingLog extends React.Component {
    let show = this.context.getShow(this.state.id)
    console.log("towatchshow",show)
    console.log("array", this.context.shows)
-    show.toWatch= true
+    show.towatch= true
     show.watching= false
     show.finish=false
     show.startDate=""
@@ -55,7 +55,7 @@ export default class WatchingLog extends React.Component {
   setShowFinish = () =>{
     let show = this.context.getShow(this.state.id)
     console.log("array", this.context.shows)
-     show.toWatch= false
+     show.towatch= false
      show.watching= false
      show.finish=true
      show.finishDate=Date(Date.now())

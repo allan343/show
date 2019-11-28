@@ -16,13 +16,13 @@ class EditShowDetails extends React.Component {
         super(props);
         this.state = {
           id: this.props.id,
-           name: {
-                value: this.props.name,
+           showname: {
+                value: this.props.showname,
                 touched: false
               },
            
-            finishDate:"",
-              startDate: "",
+            finishdate:"",
+              startdate: "",
               genre: {
                 value: this.props.genre,
                 touched: false
@@ -32,21 +32,21 @@ class EditShowDetails extends React.Component {
                 touched: false
               },
            
-              description: {
-                value: this.props.description,
+              showdescription: {
+                value: this.props.showdescription,
                 touched: false
               },
            
-              language: {
-                value: this.props.language,
+              showlanguage: {
+                value: this.props.showlanguage,
                 touched: false
               },
 
               finish: this.props.finish,
               watching: this.props.watching,
-              toWatch: this.props.toWatch,
+              towatch: this.props.toWatch,
               showSubmitted:false,
-              currentSeason: this.props.currentSeason
+              currentseason: this.props.currentseason
 
              
           };
@@ -56,16 +56,16 @@ class EditShowDetails extends React.Component {
 
      
 
-      updateName(name) {
-        this.setState({name: {value:name,touched:true}});
+      updateName(showname) {
+        this.setState({showname: {value:showname,touched:true}});
       }
 
-      updateAirDate(airDate) {
-        this.setState({airDate: {value:airDate,touched:true}});
+      updateAirDate(airdate) {
+        this.setState({airdate: {value:airdate,touched:true}});
       }
 
-      updateStartDate(startDate) {
-        this.setState({startDate: {value:startDate,touched:true}});
+      updateStartDate(startdate) {
+        this.setState({startdate: {value:startdate,touched:true}});
       }
 
       updateGenre(genre) {
@@ -76,12 +76,12 @@ class EditShowDetails extends React.Component {
         this.setState({seasons:{value:seasons,touched:true}});
       }
 
-      updateDescription(description) {
-        this.setState({description: {value:description,touched:true}});
+      updateDescription(showdescription) {
+        this.setState({showdescription: {value:showdescription,touched:true}});
       }
 
-      updateLanguage(language) {
-        this.setState({language: {value:language,touched:true}});
+      updateLanguage(showlanguage) {
+        this.setState({showlanguage: {value:showlanguage,touched:true}});
       }
       
       cancelHandle = (e) =>
@@ -124,20 +124,20 @@ this.setState({showSubmitted:true})
 console.log("showdetails submit", this.context.shows)
 let show = {
   id:this.state.id,
-  name: this.state.name.value,
-  finishDate: this.state.finishDate,
-  startDate: this.state.startDate,
+  showname: this.state.name.value,
+  finishdate: this.state.finishdate,
+  startdate: this.state.startdate,
   genre: this.state.genre.value,
   seasons: this.state.seasons.value,
-  description: this.state.description.value,
-  language: this.state.language.value,
+  showdescription: this.state.showdescription.value,
+  showlanguage: this.state.showlanguage.value,
   finish: this.props.finish,
               watching: this.props.watching,
-              toWatch: this.props.toWatch,
+              towatch: this.props.toWatch,
 
 }
 console.log("editing "+ show.id)
-console.log("editing name "+ show.name)
+console.log("editing name "+ show.showname)
 this.context.updateShow(show,show.id)
 console.log("showdetails submit end", this.context.shows)
 console.log(this.state.showSubmitted)
@@ -161,7 +161,7 @@ this.props.history.goBack()
         </button>
          <label htmlFor="name">Name *</label>
          <input type="text" className="folder__control"
-           name="name" id="name" value = {this.state.name.value} onChange={e => this.updateName(e.target.value)} />
+           name="showname" id="showname" value = {this.state.showname.value} onChange={e => this.updateName(e.target.value)} />
            
          
            <label htmlFor="name">Genre *</label>
@@ -174,11 +174,11 @@ this.props.history.goBack()
             
             <label htmlFor="name">Description *</label>
 <input type="text" className="folder__control"
-           name="description" id="description" value = {this.state.description.value} onChange={e => this.updateDescription(e.target.value)} />
+           name="showdescription" id="showdescription" value = {this.state.showdescription.value} onChange={e => this.updateDescription(e.target.value)} />
 
  <label htmlFor="name">Language *</label>
 <input type="text" className="folder__control"
-           name="language" id="language" value = {this.state.language.value} onChange={e => this.updateLanguage(e.target.value)} />
+           name="showlanguage" id="showlanguage" value = {this.state.showlanguage.value} onChange={e => this.updateLanguage(e.target.value)} />
              <button type="reset" className="folder__button" onClick={this.deleteHandle}>
             Delete
         </button>

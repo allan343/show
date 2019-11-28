@@ -40,6 +40,7 @@ class App extends Component {
             .catch(error => {
                 console.error({error});
             });
+            console.log("MOUTNING")
     }
 
     
@@ -72,6 +73,8 @@ class App extends Component {
       delete obj.language
       obj.towatch =obj.toWatch
       delete obj.toWatch
+      obj.currentseason =obj.currentSeason
+      delete obj.currentSeason
 
         return obj
 
@@ -95,6 +98,8 @@ class App extends Component {
         delete obj.showlanguage
         obj.toWatch =obj.towatch
         delete obj.towatch
+        obj.currentSeason =obj.currentseason
+        delete obj.currentseason
         return obj
   
 
@@ -102,8 +107,13 @@ class App extends Component {
 
     handleAddShow = (showObject,newId) => {
 
-    
-          
+    console.log("ADDING!!!")
+ 
+ //   let serverObject =this.toServerNames(showObject)
+
+   
+   // console.log("server Oject  ",serverObject)
+    console.log("Oject  ",showObject)
 
         if(this.state.shows.find((show)=>{
             console.log("showid and show "+ show.id+ " "+ showObject)
@@ -116,14 +126,18 @@ class App extends Component {
     
 
        
-        fetch(`${config.API_ENDPOINT}/shows`,{headers:{'content-type': 'application/json'},method:"POST",body:JSON.stringify(this.toServerNames(showObject))}) 
+        fetch(`${config.API_ENDPOINT}/shows`,{headers:{'content-type': 'application/json'},method:"POST",body:JSON.stringify((showObject))}) 
         .then(response => response.json())
         .then(responseJson => {
          
           if(responseJson.id){
               let newid = responseJson.id
-            console.log("showOject " + newid)
-            this.state.shows.push(this.toClientNames(responseJson));
+           //   let clientName =this.toClientNames(responseJson)
+             // let serverName =this.toServerNames(responseJson)
+              //console.log("showOject client ",clientName)
+              //console.log("showOject server ",serverName)
+            this.state.shows.push(responseJson);
+            
             this.setState({
                 shows: this.state.shows
             });
@@ -163,15 +177,16 @@ class App extends Component {
        for(let key in show)
        {
             show[key]=showObject[key] }*/
+            console.log("updateshow", showObject)
 
-            fetch(`${config.API_ENDPOINT}/shows/${showId}`,{headers:{'content-type': 'application/json'},method:"PATCH",body:JSON.stringify(this.toServerNames(showObject))}) 
+            fetch(`${config.API_ENDPOINT}/shows/${showId}`,{headers:{'content-type': 'application/json'},method:"PATCH",body:JSON.stringify(showObject)}) 
             .then(response => response.json())
             .then(responseJson => {
              
               if(responseJson.id && responseJson.name){
                 console.log("showOject " + responseJson)
-                let show= this.state.shows.find(show => show.id === showId)
-                responseJson= this.toClientNames(responseJson)
+                let show= this.state.shows.find(show => show.id == showId)
+               let covertedShow= (responseJson)
                 for(let key in show)
                 {
                      show[key]=responseJson[key] }
