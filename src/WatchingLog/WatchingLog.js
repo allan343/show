@@ -29,7 +29,12 @@ export default class WatchingLog extends React.Component {
     show.towatch= false
     show.watching= true
     show.finish=false
-    show.startdate=Date(Date.now())
+    //show.startdate=Date(Date.now())
+    show.startdate=new Date()
+   show.startdate= show.startdate.toISOString()
+   let date = show.startdate
+   //date.toISOString()
+   //console.log("date",date)
     show.finishdate=""
    this.context.updateShow(show, show.id)
   
@@ -58,10 +63,12 @@ export default class WatchingLog extends React.Component {
      show.towatch= false
      show.watching= false
      show.finish=true
-     show.finishdate=Date(Date.now())
+     show.finishdate=new Date()
+     show.finishdate= show.finishdate.toISOString()
      if(show.startdate=="")
      {
-       show.startdate=Date(Date.now())
+      show.startdate=new Date()
+      show.startdate= show.startdate.toISOString()
      }
     this.context.updateShow(show, show.id)
     this.props.history.push('/finish')

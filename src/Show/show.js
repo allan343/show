@@ -22,11 +22,11 @@ export default class Show extends React.Component {
     //const { showId } = this.props.match.params
     
     const { showId } = this.props
-    const {name}=this.props
+    const {showname}=this.props
     
 
     this.state = {
-      name:name,
+      showname:showname,
       id: showId,
     watching:false,
     toWatch:false
@@ -87,7 +87,7 @@ export default class Show extends React.Component {
         
         {/*this.setWatching(showId)*/}
         <div id = "title"> 
-          {show.name}
+          {show.showname}
           {show.toWatch? <StartShow id={this.state.id} history={this.props.history}/>:"" }
           {show.watching? <FinishShow id={this.state.id} history={this.props.history}/>:""}
           </div>

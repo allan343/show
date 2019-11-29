@@ -45,7 +45,7 @@ export default class ShowListNav extends React.Component {
  filteredShows=shows
     }
     else{
-      filteredShows=shows.filter(show=> show.name===this.state.name.value);
+      filteredShows=shows.filter(show=> show.showname===this.state.name.value);
     }
   console.log("filtered",filteredShows)
     return (
@@ -69,7 +69,7 @@ export default class ShowListNav extends React.Component {
 
             
            filteredShows.map(show =>
-           <li id='show'  key ={show.id} data-id={show.id}>{show.name}
+           <li id='show'  key ={show.id} data-id={show.id}>{show.showname}
            <button onClick={() => this.setState({id:show.id})}>showdetails</button>
            </li>
             ) }

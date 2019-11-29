@@ -126,7 +126,7 @@ class App extends Component {
     
 
        
-        fetch(`${config.API_ENDPOINT}/shows`,{headers:{'content-type': 'application/json'},method:"POST",body:JSON.stringify((showObject))}) 
+        fetch(`${config.API_ENDPOINT}/shows`,{headers:{'content-type': 'application/json'},method:"POST",body:JSON.stringify(showObject)}) 
         .then(response => response.json())
         .then(responseJson => {
          
@@ -136,6 +136,7 @@ class App extends Component {
              // let serverName =this.toServerNames(responseJson)
               //console.log("showOject client ",clientName)
               //console.log("showOject server ",serverName)
+              console.log("response", responseJson)
             this.state.shows.push(responseJson);
             
             this.setState({

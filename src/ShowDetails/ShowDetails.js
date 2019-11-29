@@ -95,6 +95,7 @@ this.props.history.push(`/`)
 
       updateName(showname) {
         this.setState({showname: {value:showname,touched:true}});
+        console.log("name",showname)
       }
 
       updateAirDate(airdate) {
@@ -147,6 +148,8 @@ console.log("we are adding here",show)
 this.context.addShow(show,(newid)=>{
   this.setState({ id:newid })
   this.props.history.push(`/WatchingLog/${newid}`)
+  console.log("show is", show)
+  console.log("shows is", this.context.shows)
 }) 
 
 

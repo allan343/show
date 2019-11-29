@@ -124,7 +124,7 @@ this.setState({showSubmitted:true})
 console.log("showdetails submit", this.context.shows)
 let show = {
   id:this.state.id,
-  showname: this.state.name.value,
+  showname: this.state.showname.value,
   finishdate: this.state.finishdate,
   startdate: this.state.startdate,
   genre: this.state.genre.value,
