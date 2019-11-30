@@ -67,17 +67,25 @@ export default class Show extends React.Component {
       let show= this.context.getShow(showId)
       console.log("show",show)
       let showState=""
+      let start=""
+      let finish=""
       if(show.towatch)
       {
-        showState= "To Watching"
+        showState= "To Watch"
+        finish="Haven't started"
+        start="Haven't started"
       }
       if(show.watching)
       {
         showState="Watching"
+        finish ="Still Watching"
+        start =show.startdate
       }
       if(show.finish)
       {
         showState="Finished"
+        finish=show.finishdate
+        start= show.startdate
       }
      
   
@@ -95,8 +103,8 @@ export default class Show extends React.Component {
           <div id = "watching"> 
           Watching Log
           Watch State {`${showState}`}
-          Started {`${show.startdate}`}
-          Finished {`${show.finishdate}`}
+          Started {`${start}`}
+          Finished {`${finish}`}
           
         <Link to={`/WatchingLog/${this.state.id}`}>
            Update

@@ -65,11 +65,20 @@ export default class WatchingLog extends React.Component {
      show.finish=true
      show.finishdate=new Date()
      show.finishdate= show.finishdate.toISOString()
+     console.log("startdate should exist",show.startdate)
      if(show.startdate=="")
      {
       show.startdate=new Date()
       show.startdate= show.startdate.toISOString()
+      console.log("there should be a startdate",show.startdate)
      }
+     if(show.startdate==null)
+     {
+      show.startdate=new Date()
+      show.startdate= show.startdate.toISOString()
+      console.log("there should be a startdate",show.startdate)
+     }
+
     this.context.updateShow(show, show.id)
     this.props.history.push('/finish')
     
