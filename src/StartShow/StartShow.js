@@ -24,9 +24,10 @@ startShow = () =>{
     
     let currentShow = this.context.getShow(this.state.id)
  currentShow.watching= true
- currentShow.toWatch=false
+ currentShow.towatch=false
  currentShow.finish=false
- currentShow.startDate=Date(Date.now())
+ currentShow.startdate=new Date()
+ currentShow.startdate= currentShow.startdate.toISOString()
  this.context.updateShow(currentShow, this.state.id)
  console.log("watch to watching", this.context.shows)
  this.setState(
