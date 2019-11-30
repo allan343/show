@@ -33,7 +33,7 @@ class App extends Component {
                 return (showsRes.json());
             })
             .then((shows) => {
-                shows=shows.map((item)=>this.toClientNames(item))
+         //       shows=shows.map((item)=>this(item))
                 console.log(shows);
                 this.setState({shows:shows});
             })
@@ -45,9 +45,27 @@ class App extends Component {
 
     
     handleDeleteShow = showId => {
-        this.setState({
-            shows: this.state.shows.filter(show => show.id != showId)
-        });
+        fetch(`${config.API_ENDPOINT}/shows/${showId}`,{method:"DELETE"}) 
+        .then(response => response.json())
+        .then(responseJson => {
+         
+     
+         
+            
+            this.setState({
+                shows: this.state.shows.filter(show => show.id != showId)
+            });
+           
+          
+
+        })
+        
+
+
+
+//
+//
+     
     };
 
     handleDeleteFinishedShow = showId => {
@@ -184,10 +202,11 @@ class App extends Component {
             .then(response => response.json())
             .then(responseJson => {
              
-              if(responseJson.id && responseJson.name){
-                console.log("showOject " + responseJson)
+              if(responseJson.id && responseJson.showname){
+                console.log("showOject ", responseJson)
                 let show= this.state.shows.find(show => show.id == showId)
                let covertedShow= (responseJson)
+               console.log("show test", show)
                 for(let key in show)
                 {
                      show[key]=responseJson[key] }

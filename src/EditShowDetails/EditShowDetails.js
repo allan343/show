@@ -44,7 +44,7 @@ class EditShowDetails extends React.Component {
 
               finish: this.props.finish,
               watching: this.props.watching,
-              towatch: this.props.toWatch,
+              towatch: this.props.towatch,
               showSubmitted:false,
               currentseason: this.props.currentseason
 
@@ -121,7 +121,7 @@ event.preventDefault();
 
 
 this.setState({showSubmitted:true})
-console.log("showdetails submit", this.context.shows)
+console.log("edit showdetails submit", this.context.shows)
 let show = {
   id:this.state.id,
   showname: this.state.showname.value,
