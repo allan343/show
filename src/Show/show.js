@@ -34,58 +34,41 @@ export default class Show extends React.Component {
     }
   
   }
-  /*
-  setWatching= (id) =>{
-    let show= this.context.getShow(id)
-    console.log("wtf",show)
-  let currentlyWatching= false
-  let notYetWatching= false
-  
-    if(show.watching )
-      {
-    currentlyWatching= true
-        }
-        else if (show.toWatch){
-          notYetWatching = true
-        }
-  
-        this.setState(
-          {
-          watching:currentlyWatching,
-        toWatch:notYetWatching}
-      )
-     }
-*/
+
 
   render() {
     const { shows=[]} = this.context
 
-    //const { showId } = this.props.match.params
+
     const { showId } = this.props
-    // var show= this.context.shows.find(show => this.props.match.params.id === show.id)
+    
       console.log("id",showId)
       let show= this.context.getShow(showId)
       console.log("show",show)
       let showState=""
       let start=""
       let finish=""
+      let currentSeason = ""
       if(show.towatch)
       {
         showState= "To Watch"
         finish="Haven't started"
         start="Haven't started"
+        currentSeason="Haven't started"
       }
       if(show.watching)
       {
         showState="Watching"
         finish ="Still Watching"
         start =show.startdate
+        currentSeason= show.currentseason
       }
       if(show.finish)
       {
         showState="Finished"
         finish=show.finishdate
         start= show.startdate
+        currentSeason= show.currentseason
       }
      
   
@@ -105,6 +88,7 @@ export default class Show extends React.Component {
           Watch State {`${showState}`}
           Started {`${start}`}
           Finished {`${finish}`}
+          Current Season  {`${currentSeason}`}
           
         <Link to={`/WatchingLog/${this.state.id}`}>
            Update
