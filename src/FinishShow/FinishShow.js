@@ -28,6 +28,7 @@ finishShow = () =>{
  currentShow.finish=true
  currentShow.finishdate=new Date()
      currentShow.finishdate= currentShow.finishdate.toISOString()
+     currentShow.currentseason = currentShow.seasons
  this.context.updateShow(currentShow, this.state.id)
  console.log("watch to watching", this.context.shows)
  this.setState(

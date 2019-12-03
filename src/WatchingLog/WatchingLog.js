@@ -65,6 +65,7 @@ export default class WatchingLog extends React.Component {
      show.finish=true
      show.finishdate=new Date()
      show.finishdate= show.finishdate.toISOString()
+     show.currentseason= show.seasons
      console.log("startdate should exist",show.startdate)
      if(show.startdate=="")
      {

@@ -136,6 +136,12 @@ let show = {
               towatch: this.props.toWatch,
 
 }
+
+let oldShow= this.context.getShow(show.id)
+show.startdate= oldShow.startdate
+show.finishdate= oldShow.finishdate
+show.currentseason= oldShow.currentseason
+
 console.log("editing "+ show.id)
 console.log("editing name "+ show.showname)
 this.context.updateShow(show,show.id)
