@@ -52,9 +52,11 @@ currentseason: '1' };
                 touched: false
               },
 
+
       
             //  showSubmitted:false,
-              currentseason: this.props.currentseason
+              currentseason: this.props.currentseason,
+              watchLogVisible:false
 
              
           };
@@ -88,10 +90,16 @@ currentseason: '1' };
       {
           e.preventDefault()
 
-this.props.history.push(`/`)
+//this.props.history.push(`/`)
+this.props.closeShowDetails()
       }
 
-     
+      closeWatchLog= ()=>{
+        this.setState({
+          watchLogVisible:false
+        })
+        
+      }
 
       updateName(showname) {
         this.setState({showname: {value:showname,touched:true}});
@@ -146,14 +154,19 @@ let show = {
 }
 console.log("we are adding here",show)
 this.context.addShow(show,(newid)=>{
-  this.setState({ id:newid })
-  this.props.history.push(`/WatchingLog/${newid}`)
+  this.setState({ id:newid})
+  this.setState({
+    watchLogVisible:true
+  })
+  //this.props.history.push(`/WatchingLog/${newid}`)
+  
   console.log("show is", show)
-  console.log("shows is", this.context.shows)
+  console.log("watchlog", this.state.watchLogVisible)
+  
 }) 
 
 
-
+this.props.closeShowDetails()
 
 }}> 
 <h2>Edit Show Details</h2>
@@ -190,7 +203,7 @@ this.context.addShow(show,(newid)=>{
         <button type="submit" className="folder__button" >
             Save
         </button>
-       
+        {this.state.watchLogVisible? <WatchingLog id={this.state.id} closeWatchLog={this.closeWatchLog}/>:""}
        </div>
 </form>
 

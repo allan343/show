@@ -5,6 +5,7 @@ import ApiContext from '../ApiContext/ApiContext'
 import CircleButton from '../CircleButton/CircleButton'
 import Show from '../Show/show'
 import '../main.css'
+import ShowDetails from '../ShowDetails/ShowDetails'
 
 
 export default class ShowListNav extends React.Component {
@@ -20,9 +21,24 @@ export default class ShowListNav extends React.Component {
           touched: false
         },
        
-          clicked: false
+          clicked: false,
+          editShowVisible:false
         
       }}
+
+      closeShowDetails= ()=>{
+        this.setState({
+          editShowVisible:false
+        })
+        
+      }
+      setShowDetailsVisible =()=>{
+    
+    this.setState({
+      editShowVisible:true
+    })
+    
+      }
 
   updateName(name) {
     this.setState({name: {value:name,touched:true}});
@@ -55,14 +71,18 @@ export default class ShowListNav extends React.Component {
       <label htmlFor="name"  ></label>
          <input type="text" className="folder__control" placeholder="Search your shows..."
            name="name" id="name" value = {this.state.name.value} onChange={e => this.updateName(e.target.value)} />
+         {/*}
          <NavLink
                 
                 to={`/add-show`}
               >
               
                 Add Show
-           </NavLink>
-           
+           </NavLink>*/}
+            <button type="button" onClick={ this.setShowDetailsVisible} >
+          Add Show
+        </button>
+       
         <ul >
           {
             
@@ -75,7 +95,7 @@ export default class ShowListNav extends React.Component {
             ) }
         </ul>
        
-        
+        {this.state.editShowVisible? <ShowDetails  closeShowDetails={this.closeShowDetails}/>:""}
       </div>
       <div>
         {this.state.id? <Show showId={this.state.id} history={this.props.history}  hideshow={()=>{this.setState({id:null})}}/>:"" }
