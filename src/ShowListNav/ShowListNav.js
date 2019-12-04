@@ -50,7 +50,7 @@ export default class ShowListNav extends React.Component {
   console.log("filtered",filteredShows)
     return (
       <div>
-      <div id='shows'>
+      <div id='shows' className={this.state.id?'showlist':''}>
       
       <label htmlFor="name"  ></label>
          <input type="text" className="folder__control" placeholder="Search your shows..."
@@ -78,7 +78,7 @@ export default class ShowListNav extends React.Component {
         
       </div>
       <div>
-        {this.state.id? <Show showId={this.state.id} history={this.props.history}/>:"" }
+        {this.state.id? <Show showId={this.state.id} history={this.props.history}  hideshow={()=>{this.setState({id:null})}}/>:"" }
         </div>
       </div>
     )

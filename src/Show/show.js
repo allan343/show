@@ -90,7 +90,9 @@ this.setState({
     return (
      
       <div id='actualShow'>
-        
+          <button  className ="backButton" type="button"  onClick={this.props.hideshow}>
+Back
+</button>
         {/*this.setWatching(showId)*/}
         <div id = "title"> 
           {show.showname}
