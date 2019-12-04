@@ -4,8 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import ApiContext from '../ApiContext/ApiContext'
 import CircleButton from '../CircleButton/CircleButton'
 import Show from '../Show/show'
-import '../main.css'
 import ShowDetails from '../ShowDetails/ShowDetails'
+import '../main.css'
 
 
 export default class ShowListNav extends React.Component {
@@ -22,20 +22,20 @@ export default class ShowListNav extends React.Component {
         },
        
           clicked: false,
-          editShowVisible:false
+          EditShowVisible:false
         
       }}
 
       closeShowDetails= ()=>{
         this.setState({
-          editShowVisible:false
+          watchLogVisible:false
         })
         
       }
       setShowDetailsVisible =()=>{
     
     this.setState({
-      editShowVisible:true
+      watchLogVisible:true
     })
     
       }
@@ -79,7 +79,7 @@ export default class ShowListNav extends React.Component {
               
                 Add Show
            </NavLink>*/}
-            <button type="button" onClick={ this.setShowDetailsVisible} >
+            <button type="button"  onClick={ this.setShowDetailsVisible}  >
           Add Show
         </button>
        
@@ -95,7 +95,7 @@ export default class ShowListNav extends React.Component {
             ) }
         </ul>
        
-        {this.state.editShowVisible? <ShowDetails  closeShowDetails={this.closeShowDetails}/>:""}
+          {this.state.watchLogVisible? <ShowDetails id={this.state.id} closeShowDetails={this.closeShowDetails}/>:""}
       </div>
       <div>
         {this.state.id? <Show showId={this.state.id} history={this.props.history}  hideshow={()=>{this.setState({id:null})}}/>:"" }

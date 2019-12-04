@@ -155,7 +155,7 @@ let show = {
 console.log("we are adding here",show)
 this.context.addShow(show,(newid)=>{
   this.setState({ id:newid})
-  this.setState({
+ this.setState({
     watchLogVisible:true
   })
   //this.props.history.push(`/WatchingLog/${newid}`)
