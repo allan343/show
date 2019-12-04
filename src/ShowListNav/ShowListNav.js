@@ -28,14 +28,14 @@ export default class ShowListNav extends React.Component {
 
       closeShowDetails= ()=>{
         this.setState({
-          watchLogVisible:false
+          showDetailsVisible:false
         })
         
       }
       setShowDetailsVisible =()=>{
     
     this.setState({
-      watchLogVisible:true
+     showDetailsVisible:true
     })
     
       }
@@ -95,7 +95,7 @@ export default class ShowListNav extends React.Component {
             ) }
         </ul>
        
-          {this.state.watchLogVisible? <ShowDetails id={this.state.id} closeShowDetails={this.closeShowDetails}/>:""}
+          {this.state.showDetailsVisible? <ShowDetails id={this.state.id} closeShowDetails={this.closeShowDetails}/>:""}
       </div>
       <div>
         {this.state.id? <Show showId={this.state.id} history={this.props.history}  hideshow={()=>{this.setState({id:null})}}/>:"" }
