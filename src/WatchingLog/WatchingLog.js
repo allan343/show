@@ -4,6 +4,7 @@ import ShowListNav from '../ShowListNav/ShowListNav'
 import ApiContext from '../ApiContext/ApiContext'
 import FooterNav from '../FooterNav/FooterNav'
 import Progress from '../Progress/Progress'
+import './WatchingLog.css'
 
 
 
@@ -37,6 +38,7 @@ export default class WatchingLog extends React.Component {
    //console.log("date",date)
     show.finishdate=""
    this.context.updateShow(show, show.id)
+   //this.props.closeWatchLog()
   
   }
 
@@ -54,7 +56,8 @@ export default class WatchingLog extends React.Component {
     show.finishdate=""
    this.context.updateShow(show, show.id)
    console.log("set to Watch after update", this.context.shows)
-   this.props.history.push('/')
+  // this.props.history.push('/')
+  this.props.closeWatchLog()
   }
 
   setShowFinish = () =>{
@@ -81,7 +84,8 @@ export default class WatchingLog extends React.Component {
      }
 
     this.context.updateShow(show, show.id)
-    this.props.history.push('/finish')
+    //this.props.history.push('/finish')
+    this.props.closeWatchLog()
     
    }
 
@@ -101,7 +105,10 @@ Watching
     <button type="submit" className="folder__button" onClick={this.setShowFinish}>
 Finished
 </button>
-{this.state.watching?<Progress id={this.state.id} history={this.props.history} />:""}
+<button  id = "close" type="submit" className="folder__button" onClick={this.props.closeWatchLog}>
+&times;
+</button>
+{this.state.watching?<Progress id={this.state.id} history={this.props.history} closeWatchLog={this.props.closeWatchLog} />:""}
     
  
 </div>

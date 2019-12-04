@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import ApiContext from '../ApiContext/ApiContext'
 import StartShow from '../StartShow/StartShow'
 import FinishShow from '../FinishShow/FinishShow'
+import WatchingLog from '../WatchingLog/WatchingLog'
 
 
 
@@ -29,12 +30,26 @@ export default class Show extends React.Component {
       showname:showname,
       id: showId,
     watching:false,
-    toWatch:false
+    toWatch:false,
+    watchLogVisible:false
   
     }
   
   }
 
+  closeWatchLog= ()=>{
+    this.setState({
+      watchLogVisible:false
+    })
+    
+  }
+  setWatchLogVisible =()=>{
+
+this.setState({
+  watchLogVisible:true
+})
+
+  }
 
   render() {
     const { shows=[]} = this.context
@@ -90,9 +105,14 @@ export default class Show extends React.Component {
           Finished {`${finish}`}
           Current Season  {`${currentSeason}`}
           
+          {/*
         <Link to={`/WatchingLog/${this.state.id}`}>
            Update
-          </Link>
+          </Link*/}
+                {this.state.watchLogVisible? <WatchingLog id={this.state.id} closeWatchLog={this.closeWatchLog}/>:""}
+    <button type="submit" className="folder__button" onClick={this.setWatchLogVisible}>
+Update
+</button>
           </div>
           <hr></hr>
           <div id = "details"> 
