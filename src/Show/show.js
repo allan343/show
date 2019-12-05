@@ -90,9 +90,10 @@ this.setState({
     return (
      
       <div id='actualShow'>
+        
           <button  className ="backButton" type="button"  onClick={this.props.hideshow}>
 Back
-</button>
+        </button>
         {/*this.setWatching(showId)*/}
         <div id = "title"> 
           {show.showname}
@@ -107,14 +108,19 @@ Back
           Finished {`${finish}`}
           Current Season  {`${currentSeason}`}
           
-          {/*
+          
         <Link to={`/WatchingLog/${this.state.id}`}>
            Update
-          </Link*/}
+          </Link>
+          
+        
+
+
+          {/*
                 {this.state.watchLogVisible? <WatchingLog id={this.state.id} closeWatchLog={this.closeWatchLog}/>:""}
     <button type="submit" className="folder__button" onClick={this.setWatchLogVisible}>
 Update
-</button>
+</button>*/}
           </div>
           <hr></hr>
           <div id = "details"> 

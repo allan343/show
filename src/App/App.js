@@ -273,7 +273,7 @@ class App extends Component {
                             </ShowDetails>
                         }} />
                     
-                  {/* <Route
+                   {/* <Route
                             
                             key={'/add-show'}
                             exact path={'/add-show'}
@@ -290,12 +290,12 @@ class App extends Component {
         return (
             <>
           
-      {/* <Route
+      { <Route
                             
         key={'/WatchingLog/:showId'}
         exact path={'/WatchingLog/:showId'}
         component={WatchingLog}
-      />*/}
+      />}
 
 <Route exact path="/WatchingLog/:showId" render={
                         (routeProps)=>{return <WatchingLog history = {routeProps.history} id={routeProps.match.params.showId}>

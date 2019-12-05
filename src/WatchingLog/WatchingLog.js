@@ -56,8 +56,8 @@ export default class WatchingLog extends React.Component {
     show.finishdate=""
    this.context.updateShow(show, show.id)
    console.log("set to Watch after update", this.context.shows)
-  // this.props.history.push('/')
-  this.props.closeWatchLog()
+   this.props.history.push('/')
+  //this.props.closeWatchLog()
   }
 
   setShowFinish = () =>{
@@ -84,8 +84,8 @@ export default class WatchingLog extends React.Component {
      }
 
     this.context.updateShow(show, show.id)
-    //this.props.history.push('/finish')
-    this.props.closeWatchLog()
+    this.props.history.push('/finish')
+  //  this.props.closeWatchLog()
     
    }
 
