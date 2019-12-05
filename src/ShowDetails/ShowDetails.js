@@ -20,7 +20,7 @@ showlanguage: '',
 currentseason: '1' };
 
     constructor(props) {
-     
+     let watching=false
 
         super(props);
         this.state = {
@@ -155,19 +155,20 @@ let show = {
 console.log("we are adding here",show)
 this.context.addShow(show,(newid)=>{
   this.setState({ id:newid})
- this.setState({
-    watchLogVisible:true
-  })
+ 
   //this.props.history.push(`/WatchingLog/${newid}`)
   
   console.log("show is", show)
-  console.log("watchlog", this.state.watchLogVisible)
+
   
 }) 
-
-
-this.props.closeShowDetails()
-
+this.setState({
+  watchLogVisible:true
+})
+console.log("watchlog", this.state.watchLogVisible);
+this.watching=true
+//this.props.closeShowDetails()
+console.log("id",this.state.id)
 }}> 
 <h2>Edit Show Details</h2>
        <div className="show__hint">* required field</div>  
@@ -203,7 +204,7 @@ this.props.closeShowDetails()
         <button type="submit" className="folder__button" >
             Save
         </button>
-        {this.state.watchLogVisible? <WatchingLog id={this.state.id} closeWatchLog={this.closeWatchLog}/>:""}
+        {this.watching? <WatchingLog id={this.state.id} closeWatchLog={this.closeWatchLog}/>:""}
        </div>
 </form>
 
