@@ -330,10 +330,10 @@ class App extends Component {
             <ApiContext.Provider value={value}>
                 <div className="App">
                 <header className="App__header">
-                        <h1>
+                       { /*<h1>
                             <Link to="/">Show App</Link>{' '}
                           
-                        </h1>
+                       </h1>*/}
                     </header>
                     <div >{this.renderNavRoutes()}</div>
                  

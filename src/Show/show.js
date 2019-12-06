@@ -30,7 +30,7 @@ export default class Show extends React.Component {
       showname:showname,
       id: showId,
     watching:false,
-    toWatch:false,
+    towatch:false,
     watchLogVisible:false
   
     }
