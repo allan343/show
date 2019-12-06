@@ -50,7 +50,7 @@ finishShow = () =>{
 
 
             <button type="button" className="folder__button" onClick={this.finishShow}>
-           FinishShow
+           Finish
         </button>
        </div>
        

@@ -45,7 +45,7 @@ export default class FinishedListNav extends React.Component {
           >
             <FontAwesomeIcon icon='plus' />
             <br />
-            +
+            ++
           </CircleButton>
         </div>
       </div>
