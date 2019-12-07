@@ -1,15 +1,11 @@
 import React from 'react'
 
 export default React.createContext({
-
+//context methods
   shows: [],
-  finishedShows: [],
   addShow: () => {},
-  addFinishedShow: () => {},
   deleteShow: () => {},
   getShow: () =>{},
-  getFinishedShow: () =>{},
   updateShow: ()=>{},
-  updateFinishedShow: () =>{},
  
 })

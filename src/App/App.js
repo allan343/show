@@ -1,346 +1,189 @@
-import React, {Component} from 'react';
-import {Route, Link} from 'react-router-dom';
-import ShowListNav from '../ShowListNav/ShowListNav';
+import React, { Component } from 'react';
+import { Route } from 'react-router-dom';
 import Show from '../Show/show';
 import ShowDetails from '../ShowDetails/ShowDetails';
 import EditShowDetails from '../EditShowDetails/EditShowDetails';
 import WatchingLog from '../WatchingLog/WatchingLog';
-import FooterNav from '../FooterNav/FooterNav';
 import ToWatch from '../ToWatch/ToWatch';
 import Finished from '../Finished/Finished';
 import Watching from '../Watching/Watching';
 import ApiContext from '../ApiContext/ApiContext';
 import config from '../config';
-//import './App.css';
 
 class App extends Component {
     state = {
+        //array that holds all shows
         shows: [],
-       
     };
 
     componentDidMount() {
-        
-      
-            fetch(`${config.API_ENDPOINT}/shows`)
-           
-        
+        //fetches the shows from my endpoint and placed them in my array in state
+        fetch(`${config.API_ENDPOINT}/shows`)
             .then((showsRes) => {
                 if (!showsRes.ok)
                     return showsRes.json().then(e => Promise.reject(e));
-              
-                
                 return (showsRes.json());
             })
             .then((shows) => {
-         //       shows=shows.map((item)=>this(item))
-                console.log(shows);
-                this.setState({shows:shows});
+                this.setState({ shows: shows });
             })
             .catch(error => {
-                console.error({error});
             });
-            console.log("MOUTNING")
     }
-
-    
+    //deletes a show from the backend
+    // deletes a show from the front end in the state array holding all shows
     handleDeleteShow = showId => {
-        fetch(`${config.API_ENDPOINT}/shows/${showId}`,{method:"DELETE"}) 
-        .then(response => response.json())
-        .then(responseJson => {
-         
-     
-         
-            
-            this.setState({
-                shows: this.state.shows.filter(show => show.id != showId)
-            });
-           
-          
-
-        })
-        
-
-
-
-//
-//
-     
-    };
-
-    handleDeleteFinishedShow = showId => {
-        this.setState({
-            finishedShows: this.state.finishedShow.filter(show => show.id != showId)
-        });
-    };
-    toServerNames(obj)
-    {
-      obj.showname =obj.name
-      delete obj.name
-      obj.showdescription =obj.description
-      delete obj.description
-      obj.showlanguage =obj.language
-      delete obj.language
-      obj.startdate =obj.startDate
-      delete obj.startDate
-      obj.finishdate =obj.finishDate
-      delete obj.finishDate
-      obj.showdescription =obj.description
-      delete obj.description
-      obj.showlanguage =obj.language
-      delete obj.language
-      obj.towatch =obj.toWatch
-      delete obj.toWatch
-      obj.currentseason =obj.currentSeason
-      delete obj.currentSeason
-
-        return obj
-
-    }
- 
-    toClientNames(obj)
-    {
-        obj.name =obj.showname
-        delete obj.showname
-        obj.description =obj.showdescription
-        delete obj.showdescription
-        obj.language =obj.showlanguage
-        delete obj.showlanguage
-        obj.startDate =obj.startdate
-        delete obj.startdate
-        obj.finishDate =obj.finishdate
-        delete obj.finishdate
-        obj.description =obj.showdescription
-        delete obj.showdescription
-        obj.language =obj.showlanguage
-        delete obj.showlanguage
-        obj.toWatch =obj.towatch
-        delete obj.towatch
-        obj.currentSeason =obj.currentseason
-        delete obj.currentseason
-        return obj
-  
-
-    }
-
-    handleAddShow = (showObject,newId) => {
-
-    console.log("ADDING!!!")
- 
- //   let serverObject =this.toServerNames(showObject)
-
-   
-   // console.log("server Oject  ",serverObject)
-    console.log("Oject  ",showObject)
-
-        if(this.state.shows.find((show)=>{
-            console.log("showid and show "+ show.id+ " "+ showObject)
-                return show.id===showObject.id
-        })){
-         return this.handleUpdateShow(showObject,showObject.id)
-        }
-
-
-    
-
-       
-        fetch(`${config.API_ENDPOINT}/shows`,{headers:{'content-type': 'application/json'},method:"POST",body:JSON.stringify(showObject)}) 
-        .then(response => response.json())
-        .then(responseJson => {
-         
-          if(responseJson.id){
-              let newid = responseJson.id
-           //   let clientName =this.toClientNames(responseJson)
-             // let serverName =this.toServerNames(responseJson)
-              //console.log("showOject client ",clientName)
-              //console.log("showOject server ",serverName)
-              console.log("response", responseJson)
-            this.state.shows.push(responseJson);
-            
-            this.setState({
-                shows: this.state.shows
-            });
-            newId(newid)
-          }
-
-        })
-    };
-
-    handleAddFinishedShow = (id) => {
-      let show = this.handleGetShow(id)
-        this.handleDeleteShow(id)
-        this.state.finishedShows.push(show);
-        this.setState({
-            shows: this.state.shows,
-            finishedShows: this.state.shows
-        });
-    };
-
-    handleGetShow = (id) => {
-    console.log("id is " +id)
-      return  this.state.shows.find(function(show) { 
-       return  show.id == id; 
-          }); 
-      
-    };
-    
-    handleGetFinishedShow = (id) => {
-    
-       return this.state.finishedShows.find(function(show) { 
-            return show.id === id; 
-          }); 
-    };
-    
-    handleUpdateShow = (showObject,showId) => {
-     /*  let show= this.state.shows.find(show => show.id === showId)
-       for(let key in show)
-       {
-            show[key]=showObject[key] }*/
-            console.log("updateshow", showObject)
-
-            fetch(`${config.API_ENDPOINT}/shows/${showId}`,{headers:{'content-type': 'application/json'},method:"PATCH",body:JSON.stringify(showObject)}) 
+        fetch(`${config.API_ENDPOINT}/shows/${showId}`, { method: "DELETE" })
             .then(response => response.json())
             .then(responseJson => {
-             
-              if(responseJson.id && responseJson.showname){
-                console.log("showOject ", responseJson)
-                let show= this.state.shows.find(show => show.id == showId)
-               let covertedShow= (responseJson)
-               console.log("show test", show)
-                for(let key in show)
-                {
-                     show[key]=responseJson[key] }
                 this.setState({
-                    shows: this.state.shows
+                    shows: this.state.shows.filter(show => show.id != showId)
                 });
-              }
-    
             })
-
-
     };
 
-    handleUpdateFinishedShow = (showObject,showId) => {
-        let show= this.state.finishedShows.find(show => show.id === showId)
-        for(let key in show)
-        {
-             show[key]=showObject[key] }
+    //adds a showObject to backend based on id
+    // adds a show object to front end based on id
+    handleAddShow = (showObject, newId) => {
  
-     };
-    
- 
- // to watch, finished, organize
-    renderNavRoutes() {
-      
-            return (
-                <>
-              
-                    
-              <Route
-                            
-                            key={'/'}
-                            exact path={'/'}
-                            component={ToWatch}
-                        />
-    
-    <Route
-                            
-                            key={'/finish'}
-                            exact path={'/finish'}
-                            component={Finished}
-                        />
-    <Route
-                            
-                            key={'/watching'}
-                            exact path={'/watching'}
-                            component={Watching}
-                        />
-    
-                        <Route
-                            
-                            key={'/show/:showId'}
-                            exact path={'/show/:showId'}
-                            component={Show}
-                       />
-                       
-                            <Route exact path="/ShowDetails/Edit/:showId" render={
-                        (routeProps)=>{return <EditShowDetails {...this.handleGetShow(routeProps.match.params.showId)}  {...routeProps}>
-                            </EditShowDetails>
-                        }} />
+       if (this.state.shows.find((show) => {
+            return show.id === showObject.id
+        })) {
+            return this.handleUpdateShow(showObject, showObject.id)
+        }
 
-                      <Route exact path="/add-show" render={
-                        (routeProps)=>{return <ShowDetails {...routeProps}>
-                            </ShowDetails>
-                        }} />
-                    
-                   {/* <Route
-                            
-                            key={'/add-show'}
-                            exact path={'/add-show'}
-                  component={ShowDetails}*/}
-                       
-                 
-                </>
-            );
-        
+        fetch(`${config.API_ENDPOINT}/shows`, { headers: { 'content-type': 'application/json' }, method: "POST", body: JSON.stringify(showObject) })
+            .then(response => response.json())
+            .then(responseJson => {
+
+                if (responseJson.id) {
+                    let newid = responseJson.id
+                    this.state.shows.push(responseJson);
+                    this.setState({
+                        shows: this.state.shows
+                    });
+                    newId(newid)
+                }
+            })
+    };
+
+    //gets the show from shows array in state
+    handleGetShow = (id) => {
+        return this.state.shows.find(function (show) {
+            return show.id == id;
+        });
+    };
+
+    //updates the show in backend
+    //updates the show in frontend
+    handleUpdateShow = (showObject, showId) => {
+
+        fetch(`${config.API_ENDPOINT}/shows/${showId}`, { headers: { 'content-type': 'application/json' }, method: "PATCH", body: JSON.stringify(showObject) })
+            .then(response => response.json())
+            .then(responseJson => {
+
+                if (responseJson.id && responseJson.showname) {
+                    let show = this.state.shows.find(show => show.id == showId)
+                    let covertedShow = (responseJson)
+                    for (let key in show) {
+                        show[key] = responseJson[key]
+                    }
+                    this.setState({
+                        shows: this.state.shows
+                    });
+                }
+            })
+    };
+
+    //various routes for my app
+    renderNavRoutes() {
+
+        return (
+            <>
+                <Route
+                    key={'/'}
+                    exact path={'/'}
+                    component={ToWatch}
+                />
+
+                <Route
+                    key={'/finish'}
+                    exact path={'/finish'}
+                    component={Finished}
+                />
+
+                <Route
+                    key={'/watching'}
+                    exact path={'/watching'}
+                    component={Watching}
+                />
+
+                <Route
+                    key={'/show/:showId'}
+                    exact path={'/show/:showId'}
+                    component={Show}
+                />
+
+                <Route exact path="/ShowDetails/Edit/:showId" render={
+                    (routeProps) => {
+                        return <EditShowDetails {...this.handleGetShow(routeProps.match.params.showId)}  {...routeProps}>
+                        </EditShowDetails>
+                    }} />
+
+                <Route exact path="/add-show" render={
+                    (routeProps) => {
+                        return <ShowDetails {...routeProps}>
+                        </ShowDetails>
+                    }} />
+            </>
+        );
     }
 
+     //various routes for my app
     renderMainRoutes() {
 
         return (
             <>
-          
-      { <Route
-                            
-        key={'/WatchingLog/:showId'}
-        exact path={'/WatchingLog/:showId'}
-        component={WatchingLog}
-      />}
+                {<Route
+                    key={'/WatchingLog/:showId'}
+                    exact path={'/WatchingLog/:showId'}
+                    component={WatchingLog}
+                />}
 
-<Route exact path="/WatchingLog/:showId" render={
-                        (routeProps)=>{return <WatchingLog history = {routeProps.history} id={routeProps.match.params.showId}>
-                            </WatchingLog>
-                        }} />
+                <Route exact path="/WatchingLog/:showId" render={
+                    (routeProps) => {
+                        return <WatchingLog history={routeProps.history} id={routeProps.match.params.showId}>
+                        </WatchingLog>
+                    }} />
 
-    <Route
-                            
-    key={'/ShowDetails/:showId'}
-    exact path={'/ShowDetails/:showId'}
-    component={ShowDetails}
-/>
-</>
-            );
+                <Route
+                    key={'/ShowDetails/:showId'}
+                    exact path={'/ShowDetails/:showId'}
+                    component={ShowDetails}
+                />
+            </>
+        );
     }
 
     render() {
+        //my context methods
         const value = {
             shows: this.state.shows,
-            finishedShows: this.state.finishedShows,
             addShow: this.handleAddShow,
-            addFinishedShow: this.handleAddFinishedShow,
             deleteShow: this.handleDeleteShow,
-            deleteFinishedShow: this.handleDeleteFinishedShow,
             getShow: this.handleGetShow,
-            getFinishedShow: this.handleGetFinishedShow,
             updateShow: this.handleUpdateShow,
-            updateFinishedShow: this.handleUpdateFinishedShow
         };
         return (
 
             <ApiContext.Provider value={value}>
                 <div className="App">
-                <header className="App__header">
-                       { /*<h1>
-                            <Link to="/">Show App</Link>{' '}
-                          
-                       </h1>*/}
+                    <header className="App__header">
                     </header>
                     <div >{this.renderNavRoutes()}</div>
-                 
-                    <div >{this.renderMainRoutes()}</div>
+                  <div >{this.renderMainRoutes()}</div>
                 </div>
             </ApiContext.Provider>
-           
         );
     }
 }

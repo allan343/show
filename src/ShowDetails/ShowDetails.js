@@ -1,205 +1,142 @@
 import React from 'react';
-
-
 import ApiContext from '../ApiContext/ApiContext'
-import WatchingLog from '../WatchingLog/WatchingLog'
-
 
 class ShowDetails extends React.Component {
   static contextType = ApiContext
-  
-  static defaultProps = { 
+// component that allows user
+// to fill in show details
+  static defaultProps = {
     id: '',
     showname: '',
     finishdate: '',
-    startdate:'',
-    genre:'',
-    seasons:'',
-  showdescription:'',
-showlanguage: '',
-currentseason: '1' };
+    startdate: '',
+    genre: '',
+    seasons: '',
+    showdescription: '',
+    showlanguage: '',
+    currentseason: '1'
+  };
 
-    constructor(props) {
-     
+  constructor(props) {
+//states a show can have
+    super(props);
+    this.state = {
+      id: '',
+      showname: {
+        value: this.props.showname,
+        touched: false
+      },
+      finishdate: "",
+      startdate: "",
+      genre: {
+        value: this.props.genre,
+        touched: false
+      },
+      seasons: {
+        value: this.props.seasons,
+        touched: false
+      },
+      showdescription: {
+        value: this.props.showdescription,
+        touched: false
+      },
+      showlanguage: {
+        value: this.props.showlanguage,
+        touched: false
+      },
+      currentseason: this.props.currentseason
+    };
+  }
+//methods to update show state from user input
+  cancelHandle = (e) => {
+    e.preventDefault()
+    this.props.history.push(`/`)
+  }
 
-        super(props);
-        this.state = {
-        //  id: this.props.id||Math.random() +'',
-        id:'',
-           showname: {
-                value: this.props.showname,
-                touched: false
-              },
-           
-            finishdate:"",
-              startdate:"",
-              genre: {
-                value: this.props.genre,
-                touched: false
-              },
-              seasons: {
-                value: this.props.seasons,
-                touched: false
-              },
-           
-              showdescription: {
-                value: this.props.showdescription,
-                touched: false
-              },
-           
-              showlanguage: {
-                value: this.props.showlanguage,
-                touched: false
-              },
+  updateName(showname) {
+    this.setState({ showname: { value: showname, touched: true } });
+  }
 
-      
-            //  showSubmitted:false,
-              currentseason: this.props.currentseason
+  updateAirDate(airdate) {
+    this.setState({ airdate: { value: airdate, touched: true } });
+  }
 
-             
-          };
-          console.log("inside constructor",this.state.id)
-      }
-/*
-      setProgress = (e) => {
-       e.preventDefault()
-       // this.setState({showSubmitted:true})
-       console.log("huh?",this.context.shows)
-        let show = {
-          id:this.state.id,
-          name: this.state.name.value,
-          finishDate: this.state.finishDate,
-          startDate: this.state.startDate,
-          genre: this.state.genre.value,
-          seasons: this.state.seasons.value,
-          description: this.state.description.value,
-          language: this.state.language.value
-        }
-        this.context.AddShow(show)
-        console.log("wha??",this.context.shows)
-       this.setState({
-        id:show.id
+  updateStartDate(startdate) {
+    this.setState({ startdate: { value: startdate, touched: true } });
+  }
 
-       })
-      }
-      */
+  updateGenre(genre) {
+    this.setState({ genre: { value: genre, touched: true } });
+  }
 
-      cancelHandle = (e) =>
-      {
-          e.preventDefault()
+  updateSeasons(seasons) {
+    this.setState({ seasons: { value: seasons, touched: true } });
+  }
 
-this.props.history.push(`/`)
-      }
+  updateDescription(showdescription) {
+    this.setState({ showdescription: { value: showdescription, touched: true } });
+  }
 
-     
+  updateLanguage(showlanguage) {
+    this.setState({ showlanguage: { value: showlanguage, touched: true } });
+  }
 
-      updateName(showname) {
-        this.setState({showname: {value:showname,touched:true}});
-        console.log("name",showname)
-      }
+  render() {
 
-      updateAirDate(airdate) {
-        this.setState({airdate: {value:airdate,touched:true}});
-      }
-
-      updateStartDate(startdate) {
-        this.setState({startdate: {value:startdate,touched:true}});
-      }
-
-      updateGenre(genre) {
-        this.setState({genre: {value:genre,touched:true}});
-      }
-
-      updateSeasons(seasons) {
-        this.setState({seasons:{value:seasons,touched:true}});
-      }
-
-      updateDescription(showdescription) {
-        this.setState({showdescription: {value:showdescription,touched:true}});
-      }
-
-      updateLanguage(showlanguage) {
-        this.setState({showlanguage: {value:showlanguage,touched:true}});
-      }
-   
-    render(){
-     //throw "test";
-        
-        return(
-          <div id="edit-details">
-<form className="folder" onSubmit = {(event)=>{
-
-console.log("showdetails submit", this.context.shows)
-event.preventDefault();
-console.log("inside return",this.state.id)
-//this.setState({showSubmitted:true})
-console.log("showdetails submit", this.context.shows)
-let show = {
-//  id:this.state.id,
-  showname: this.state.showname.value,
-  finishdate: this.state.finishdate,
-  startdate: this.state.startdate,
-  genre: this.state.genre.value,
-  seasons: this.state.seasons.value,
-  showdescription: this.state.showdescription.value,
-  showlanguage: this.state.showlanguage.value
-}
-console.log("we are adding here",show)
-this.context.addShow(show,(newid)=>{
-  this.setState({ id:newid })
-  this.props.history.push(`/WatchingLog/${newid}`)
-  console.log("show is", show)
-  console.log("shows is", this.context.shows)
-}) 
-
-
-
-
-}}> 
-<h2>Edit Show Details</h2>
-       <div className="show__hint">* required field</div>  
-       <div className="form-group">
-         <label htmlFor="showname">Name *</label>
-         <input type="text" className="folder__control"
-           name="showname" id="showname" value = {this.state.showname.value} onChange={e => this.updateName(e.target.value)} />
-           
-         
-           
-           <label htmlFor="name">Genre *</label>
-<input type="text" className="folder__control"
-           name="genre" id="genre"  value = {this.state.genre.value} onChange={e => this.updateGenre(e.target.value)} />
-            
+    return (
+      <div id="edit-details">
+        <form className="folder" onSubmit={(event) => {
+          event.preventDefault();
+          let show = {
+            showname: this.state.showname.value,
+            finishdate: this.state.finishdate,
+            startdate: this.state.startdate,
+            genre: this.state.genre.value,
+            seasons: this.state.seasons.value,
+            showdescription: this.state.showdescription.value,
+            showlanguage: this.state.showlanguage.value
+          }
+          //we needed a callback function for 
+          // add show
+          // in app.js add show does a call/promise to backend
+          // can happen asyncronously
+          // callback function ensures we have newid from add show context method
+          this.context.addShow(show, (newid) => {
+            this.setState({ id: newid })
+            this.props.history.push(`/WatchingLog/${newid}`)
+          })
+        }}>
+          <h2>Edit Show Details</h2>
+          <div className="show__hint">* required field</div>
+          <div className="form-group">
+            <label htmlFor="showname">Name *</label>
+            <input type="text" className="folder__control"
+              name="showname" id="showname" value={this.state.showname.value} onChange={e => this.updateName(e.target.value)} />
+            <label htmlFor="name">Genre *</label>
+            <input type="text" className="folder__control"
+              name="genre" id="genre" value={this.state.genre.value} onChange={e => this.updateGenre(e.target.value)} />
             <label htmlFor="name">Number Of Seasons *</label>
-<input type="text" className="folder__control"
-           name="seasons" id="seasons" value = {this.state.seasons.value} onChange={e => this.updateSeasons(e.target.value)} />
-            
+            <input type="text" className="folder__control"
+              name="seasons" id="seasons" value={this.state.seasons.value} onChange={e => this.updateSeasons(e.target.value)} />
             <label htmlFor="name">Description *</label>
-<input type="text" className="folder__control"
-           name="showdescription" id="showdescription" value = {this.state.showdescription.value} onChange={e => this.updateDescription(e.target.value)} />
-
- <label htmlFor="name">Language *</label>
-<input type="text" className="folder__control"
-           name="showlanguage" id="showlanguage" value = {this.state.showlanguage.value} onChange={e => this.updateLanguage(e.target.value)} />
-            
-
-        </div>
-        <div className="folder__button__group">
-        <button type="cancel" className="folder__button" onClick={this.cancelHandle}>
-            Cancel
+            <input type="text" className="folder__control"
+              name="showdescription" id="showdescription" value={this.state.showdescription.value} onChange={e => this.updateDescription(e.target.value)} />
+            <label htmlFor="name">Language *</label>
+            <input type="text" className="folder__control"
+              name="showlanguage" id="showlanguage" value={this.state.showlanguage.value} onChange={e => this.updateLanguage(e.target.value)} />
+          </div>
+          <div className="folder__button__group">
+            <button type="cancel" className="folder__button" onClick={this.cancelHandle}>
+              Cancel
         </button>
-        <button type="submit" className="folder__button" >
-            Save
+            <button type="submit" className="folder__button" >
+              Save
         </button>
-       
-       </div>
-</form>
-
-</div>
-)
-    }
+          </div>
+        </form>
+      </div>
+    )
+  }
 }
-
-
-
 
 export default ShowDetails;

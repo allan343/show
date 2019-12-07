@@ -1,140 +1,107 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import ShowDetails from '../ShowDetails/ShowDetails';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import ApiContext from '../ApiContext/ApiContext'
 import StartShow from '../StartShow/StartShow'
 import FinishShow from '../FinishShow/FinishShow'
-import WatchingLog from '../WatchingLog/WatchingLog'
-
-
-
-
 
 export default class Show extends React.Component {
-  static defaultProps ={
-    onDeleteNote: () => {},
+  static defaultProps = {
+    onDeleteNote: () => { },
   }
-  
-  static contextType = ApiContext;
 
+  static contextType = ApiContext;
+//the show component
   constructor(props) {
     super(props);
-    //const { showId } = this.props.match.params
-    
+
     const { showId } = this.props
-    const {showname}=this.props
-    
-
+    const { showname } = this.props
+//name id and various states the show can be in
     this.state = {
-      showname:showname,
+      showname: showname,
       id: showId,
-    watching:false,
-    towatch:false,
-    watchLogVisible:false
-  
+      watching: false,
+      towatch: false,
+      watchLogVisible: false
     }
-  
   }
 
-  closeWatchLog= ()=>{
+  closeWatchLog = () => {
     this.setState({
-      watchLogVisible:false
+      watchLogVisible: false
     })
-    
+
   }
-  setWatchLogVisible =()=>{
-
-this.setState({
-  watchLogVisible:true
-})
-
+  setWatchLogVisible = () => {
+    this.setState({
+      watchLogVisible: true
+    })
   }
 
   render() {
-    const { shows=[]} = this.context
-
-
     const { showId } = this.props
-    
-      console.log("id",showId)
-      let show= this.context.getShow(showId)
-      console.log("show",show)
-      let showState=""
-      let start=""
-      let finish=""
-      let currentSeason = ""
-      if(show.towatch)
-      {
-        showState= "To Watch"
-        finish="Haven't started"
-        start="Haven't started"
-        currentSeason="Haven't started"
-      }
-      if(show.watching)
-      {
-        showState="Watching"
-        finish ="Still Watching"
-        start =show.startdate
-        currentSeason= show.currentseason
-      }
-      if(show.finish)
-      {
-        showState="Finished"
-        finish=show.finishdate
-        start= show.startdate
-        currentSeason= show.currentseason
-      }
-     
-  
+    let show = this.context.getShow(showId)
+    let showState = ""
+    let start = ""
+    let finish = ""
+    let currentSeason = ""
+    //depending on which state
+    // show is in
+    //label accordingly
+    if (show.towatch) {
+      showState = "To Watch"
+      finish = "Haven't started"
+      start = "Haven't started"
+      currentSeason = "Haven't started"
+    }
+    if (show.watching) {
+      showState = "Watching"
+      finish = "Still Watching"
+      start = show.startdate
+      currentSeason = show.currentseason
+    }
+    if (show.finish) {
+      showState = "Finished"
+      finish = show.finishdate
+      start = show.startdate
+      currentSeason = show.currentseason
+    }
+
+
     return (
-     
+
       <div id='actualShow'>
-        
-          <button  className ="backButton" type="button"  onClick={this.props.hideshow}>
-Back
+
+        <button className="backButton" type="button" onClick={this.props.hideshow}>
+          Back
         </button>
-        {/*this.setWatching(showId)*/}
-        <div id = "title"> 
+        <div id="title">
           {show.showname}
-          {show.towatch? <StartShow id={this.state.id} history={this.props.history}/>:"" }
-          {show.watching? <FinishShow id={this.state.id} history={this.props.history}/>:""}
-          </div>
-          <hr></hr>
-          <div id = "watching"> 
+          {show.towatch ? <StartShow id={this.state.id} history={this.props.history} /> : ""}
+          {show.watching ? <FinishShow id={this.state.id} history={this.props.history} /> : ""}
+        </div>
+        <hr></hr>
+        <div id="watching">
           Watching Log
           Watch State {`${showState}`}
           Started {`${start}`}
           Finished {`${finish}`}
           Current Season  {`${currentSeason}`}
-          
-          
-        <Link to={`/WatchingLog/${this.state.id}`}>
-           Update
+
+          <Link to={`/WatchingLog/${this.state.id}`}>
+            Update
           </Link>
-          
-        
 
-
-          {/*
-                {this.state.watchLogVisible? <WatchingLog id={this.state.id} closeWatchLog={this.closeWatchLog}/>:""}
-    <button type="submit" className="folder__button" onClick={this.setWatchLogVisible}>
-Update
-</button>*/}
-          </div>
-          <hr></hr>
-          <div id = "details"> 
+        </div>
+        <hr></hr>
+        <div id="details">
           Details
           <Link to={`/ShowDetails/Edit/${this.state.id}`}>
-           Edit
+            Edit
           </Link>
         </div>
-       
-        
-        </div>
-        
+      </div>
 
-     
     )
   }
 }
