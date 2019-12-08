@@ -5,9 +5,9 @@ class StartShow extends React.Component {
   static contextType = ApiContext
   constructor(props) {
     super(props);
-    let id = this.props.id
+
     this.state = {
-      id: id,
+   
       show: []
     }
   }
@@ -18,14 +18,14 @@ class StartShow extends React.Component {
 
   startShow = () => {
 
-    let currentShow = this.context.getShow(this.state.id)
+    let currentShow = this.context.getShow(this.context.getId())
     currentShow.watching = true
     currentShow.towatch = false
     currentShow.finish = false
     currentShow.startdate = new Date()
     currentShow.startdate = currentShow.startdate.toISOString()
     currentShow.currentseason = 1
-    this.context.updateShow(currentShow, this.state.id)
+    this.context.updateShow(currentShow, this.context.getId())
     this.setState(
       {
         show: currentShow

@@ -7,5 +7,7 @@ export default React.createContext({
   deleteShow: () => {},
   getShow: () =>{},
   updateShow: ()=>{},
+  getId:()=>{},
+  setId:()=>{}
  
 })

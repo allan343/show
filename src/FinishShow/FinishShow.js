@@ -5,9 +5,9 @@ class FinishShow extends React.Component {
   static contextType = ApiContext
   constructor(props) {
     super(props);
-    let id = this.props.id
+   
     this.state = {
-      id: id,
+      
       show: []
     }
   }
@@ -18,14 +18,14 @@ class FinishShow extends React.Component {
   // updates the show with changes by context update method
   finishShow = () => {
 
-    let currentShow = this.context.getShow(this.state.id)
+    let currentShow = this.context.getShow(this.context.getId())
     currentShow.watching = false
     currentShow.towatch = false
     currentShow.finish = true
     currentShow.finishdate = new Date()
     currentShow.finishdate = currentShow.finishdate.toISOString()
     currentShow.currentseason = currentShow.seasons
-    this.context.updateShow(currentShow, this.state.id)
+    this.context.updateShow(currentShow, this.context.getId())
     this.setState(
       {
         show: currentShow

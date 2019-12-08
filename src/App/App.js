@@ -14,6 +14,7 @@ class App extends Component {
     state = {
         //array that holds all shows
         shows: [],
+        id:''
     };
 
     componentDidMount() {
@@ -60,7 +61,8 @@ class App extends Component {
                     let newid = responseJson.id
                     this.state.shows.push(responseJson);
                     this.setState({
-                        shows: this.state.shows
+                        shows: this.state.shows,
+                        id:responseJson.id
                     });
                     newId(newid)
                 }
@@ -74,6 +76,15 @@ class App extends Component {
         });
     };
 
+    setId= (id) => {
+        this.setState({
+            id: id
+        });
+    };
+
+    getId= () => {
+        return this.state.id
+    };
     //updates the show in backend
     //updates the show in frontend
     handleUpdateShow = (showObject, showId) => {
@@ -173,6 +184,8 @@ class App extends Component {
             deleteShow: this.handleDeleteShow,
             getShow: this.handleGetShow,
             updateShow: this.handleUpdateShow,
+            getId:this.getId,
+            setId: this.setId
         };
         return (
 
