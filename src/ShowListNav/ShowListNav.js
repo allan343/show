@@ -55,7 +55,7 @@ export default class ShowListNav extends React.Component {
       filteredShows = shows.filter(show => show.showname.includes(this.state.name.value));
     }
     return (
-      <div>
+      <div >
         <div id='shows' className={this.state.id ? 'showlist' : ''}>
        {this.props.name ==='towatch' ? <h1>To Watch</h1> : ""}
        {this.props.name ==='watching' ? <h1>Watching</h1> : ""}
@@ -71,7 +71,7 @@ export default class ShowListNav extends React.Component {
            {//create a list of shows
            //shows have button to allow user to see show details
            }
-          <ul >
+          <ul id='list' >
             {
               filteredShows.map(show =>
                 <li id='show' key={show.id} data-id={show.id}>{show.showname}

@@ -7,14 +7,19 @@
   
     padding: 30px 30px;
     background-color: #bbb;
+    border-bottom: 1px solid black;
   }
   
   #shows{
-    
+      position: absolute;
       float:left;
       width: 40%;
       background-color:#ddd;
+      height: 100%;
      }
+ul{
+  list-style: none;
+}
    
      #actualShow{
         
