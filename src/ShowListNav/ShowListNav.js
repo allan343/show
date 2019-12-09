@@ -18,7 +18,21 @@ export default class ShowListNav extends React.Component {
       clicked: false
     }
   }
-
+   getHeading() {
+   let heading = this.props.name
+   if(heading==='towatch')
+   {
+    return <h1>To Watch</h1>;
+   }
+   if(heading==='watching')
+   {
+    return <h1>Watching</h1>;
+   }
+   if(heading==='finish')
+   {
+    return <h1>Finished</h1>;
+   }
+  }
   updateName(name) {
     this.setState({ name: { value: name, touched: true } });
   }
@@ -31,6 +45,7 @@ export default class ShowListNav extends React.Component {
   render() {
     
     const { shows = [] } = this.props
+    let label = this.props.name
     let filteredShows = []
     // there is a input field allowing user to filter shows by name
     if (this.state.name.value == "") {
@@ -42,6 +57,9 @@ export default class ShowListNav extends React.Component {
     return (
       <div>
         <div id='shows' className={this.state.id ? 'showlist' : ''}>
+       {this.props.name ==='towatch' ? <h1>To Watch</h1> : ""}
+       {this.props.name ==='watching' ? <h1>Watching</h1> : ""}
+       {this.props.name ==='finished'? <h1>Finished</h1> : ""}
           <label htmlFor="name"  ></label>
           <input type="text" className="folder__control" placeholder="Search your shows..."
             name="name" id="name" value={this.state.name.value} onChange={e => this.updateName(e.target.value)} />

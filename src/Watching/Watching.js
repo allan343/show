@@ -11,8 +11,8 @@ export default class Finished extends React.Component {
   render() {
     return (
       <div className='NoteListMain__button-container'>
-        {<h1>Watching</h1>}
-        <ShowListNav shows={this.context.shows.filter(show => show.watching)} history={this.props.history}></ShowListNav>
+
+        <ShowListNav name={'watching'} shows={this.context.shows.filter(show => show.watching)} history={this.props.history}></ShowListNav>
         <FooterNav></FooterNav>
       </div>
     )
