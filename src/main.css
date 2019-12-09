@@ -1,7 +1,14 @@
+body {
+  background-color: darkgrey;
+}
+
+
 #showContainer{
   height:100%;
   
   }
+
+
   
   #show {
   
