@@ -81,7 +81,7 @@ export default class ShowListNav extends React.Component {
           </ul>
         </div>
         <div>
-          {this.state.clicked? <Show showId={this.context.getId()} history={this.props.history}  /> : ""}
+          {this.state.clicked? <Show showId={this.context.getId()} history={this.props.history} hideshow={()=>{this.setState({clicked:false})}} /> : ""}
         </div>
       </div>
     )

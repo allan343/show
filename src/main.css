@@ -54,14 +54,14 @@ ul{
           width: 100%;
       }
 
-      #edit-details,#watchingLog{
+      #edit-details{
         display:block;
           margin-left:auto;
           margin-right:auto;
           background-color: #ddd
         }
 
-        .showlist{
+        .shows{
 
           display:none
         }

@@ -1,5 +1,6 @@
 import React from 'react';
 import ApiContext from '../ApiContext/ApiContext'
+import './ShowDetails.css'
 
 class ShowDetails extends React.Component {
   static contextType = ApiContext
@@ -84,7 +85,7 @@ class ShowDetails extends React.Component {
   render() {
 
     return (
-      <div id="edit-details">
+      <div id="show-details">
         <form className="folder" onSubmit={(event) => {
           event.preventDefault();
           let show = {
