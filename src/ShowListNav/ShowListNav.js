@@ -3,6 +3,8 @@ import { NavLink, Link } from 'react-router-dom'
 import ApiContext from '../ApiContext/ApiContext'
 import Show from '../Show/show'
 import '../main.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFilm } from "@fortawesome/free-solid-svg-icons";
 
 export default class ShowListNav extends React.Component {
   static contextType = ApiContext;
@@ -74,7 +76,8 @@ export default class ShowListNav extends React.Component {
           <ul id='list' >
             {
               filteredShows.map(show =>
-                <li id='show' key={show.id} data-id={show.id}>{show.showname}
+               
+                <li id='show' key={show.id} data-id={show.id}> <FontAwesomeIcon icon={faFilm} />{show.showname}
                   <button onClick={() => this.showClicked(show.id)}>showdetails</button>
                 </li>
               )}
