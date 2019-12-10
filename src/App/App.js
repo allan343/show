@@ -9,6 +9,8 @@ import Finished from '../Finished/Finished';
 import Watching from '../Watching/Watching';
 import ApiContext from '../ApiContext/ApiContext';
 import config from '../config';
+import { faHome } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 class App extends Component {
     state = {

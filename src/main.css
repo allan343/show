@@ -8,7 +8,6 @@ body {
   
   }
 
-
   
   #show {
   
@@ -43,7 +42,11 @@ ul{
         
       }
       .ShowListNav{
-  
+        text-decoration: none;
+        display: flex;
+        justify-content: space-evenly;
+        padding-top: 20px;
+        padding-bottom: 20px;
           background-color: #bbb;
           overflow: hidden;
           position: fixed;
