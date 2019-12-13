@@ -8,9 +8,7 @@ body {
   
   }
 
-  li:hover {
-    cursor: pointer;
-}
+  
   #show {
   
     padding: 30px 30px;

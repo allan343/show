@@ -40,7 +40,7 @@ export default class Show extends React.Component {
     let start = ""
     let finish = ""
     let currentSeason = ""
-    let icon = <FontAwesomeIcon icon={faFilm} />
+    let icon = <FontAwesomeIcon icon={faFilm}/>
     //depending on which state
     // show is in
     //label accordingly
@@ -76,10 +76,13 @@ export default class Show extends React.Component {
           Back
         </button>
         <div id="title">
-        <FontAwesomeIcon icon={faFilm} />
+
+        <FontAwesomeIcon icon={faFilm} size='4x'/>
+        <div className = "titleButton" >
           {show.showname}
           {show.towatch ? <StartShow  history={this.props.history} /> : ""}
           {show.watching ? <FinishShow history={this.props.history} /> : ""}
+          </div>
         </div>
         <hr></hr>
         <div id="watching">

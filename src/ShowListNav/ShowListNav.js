@@ -77,7 +77,7 @@ export default class ShowListNav extends React.Component {
             {
               filteredShows.map(show =>
                
-                <li id='show' onClick={() => this.showClicked(show.id)} key={show.id} data-id={show.id}> <FontAwesomeIcon className = "filmicon"icon={faFilm} size='2x' />{show.showname}
+                <li id='show'  onClick={() => this.showClicked(show.id)} key={show.id} data-id={show.id}> <FontAwesomeIcon className = "filmicon"icon={faFilm} size='2x' />{show.showname}
                 </li>
               )}
           </ul>
