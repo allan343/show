@@ -1,5 +1,6 @@
 body {
   background-color: darkgrey;
+ 
 }
 
 
@@ -82,6 +83,13 @@ ul{
   vertical-align: top;
  margin-top:30px;
 }
+
+.headerAndButton{
+  display: block;
+}
+.link{
+  float: right;
+}
       .ShowListNav{
         text-decoration: none;
         display: flex;
@@ -107,7 +115,9 @@ ul{
           display:none
         }
 
-
+        li:hover {
+          cursor: pointer;
+      }
 
         @media only screen and (min-width: 500px) {
          .showlist{

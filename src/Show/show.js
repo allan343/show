@@ -89,24 +89,31 @@ export default class Show extends React.Component {
         </div>
         <hr></hr>
         <div id="watching">
+          <div className="headerAndButton">
           Watching Log
+          <div className="link">
+          <Link to={`/WatchingLog/${this.context.getId()}`}>
+            Update
+          </Link>
+          </div>
+          </div>
           {icon}
           Watch State {`${showState}`}
           Started {`${start}`}
           Finished {`${finish}`}
           Current Season  {`${currentSeason}`}
 
-          <Link to={`/WatchingLog/${this.context.getId()}`}>
-            Update
-          </Link>
-
         </div>
         <hr></hr>
         <div id="details">
+        <div className="headerAndButton">
           Details
+          <div className="link">
           <Link to={`/ShowDetails/Edit/${this.context.getId()}`}>
             Edit
           </Link>
+          </div>
+          </div>
         </div>
       </div>
 
