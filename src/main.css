@@ -59,14 +59,15 @@ ul{
 
       #title{
         display:inline;
+        text-align:justify;
       }
 
 .titleIcon {
   display: inline-block;
-  width: 20%;
+
   height: 80px;
   padding: 5px;
-  margin-left:20px;
+  margin-left:240px;
   vertical-align: top;
   margin-top: 20px;
  
@@ -74,7 +75,7 @@ ul{
 
 .titleButton {
   display: inline-block;
-  width: 50%;
+ 
   height: 80px;
   padding: 5px;
   margin-left:20px;
