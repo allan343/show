@@ -64,21 +64,22 @@ ul{
 .titleIcon {
   display: inline-block;
   width: 20%;
-  height: 100px;
+  height: 80px;
   padding: 5px;
   margin-left:20px;
   vertical-align: top;
+  margin-top: 20px;
  
 }
 
 .titleButton {
   display: inline-block;
   width: 50%;
-  height: 100px;
+  height: 80px;
   padding: 5px;
   margin-left:20px;
   vertical-align: top;
- 
+ margin-top:30px;
 }
       .ShowListNav{
         text-decoration: none;
