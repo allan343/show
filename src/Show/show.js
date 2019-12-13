@@ -76,13 +76,16 @@ export default class Show extends React.Component {
           Back
         </button>
         <div id="title">
-
+        <div className= "titleIcon">
         <FontAwesomeIcon icon={faFilm} size='4x'/>
+        </div>
         <div className = "titleButton" >
           {show.showname}
           {show.towatch ? <StartShow  history={this.props.history} /> : ""}
           {show.watching ? <FinishShow history={this.props.history} /> : ""}
           </div>
+          
+    
         </div>
         <hr></hr>
         <div id="watching">

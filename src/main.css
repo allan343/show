@@ -50,12 +50,34 @@ ul{
       width: 60%;
       }
   
-      #details,#watching,#title{
+      #details,#watching{
         display: block;
         padding: 45px 15px;
         background-color: #aaa;
         
       }
+
+      #title{
+        display:inline;
+      }
+
+.titleIcon {
+  display: inline-block;
+  width: 20%;
+  height: 100px;
+  padding: 5px;
+  margin-left:20px;
+ 
+}
+
+.titleButton {
+  display: inline-block;
+  width: 50%;
+  height: 100px;
+  padding: 5px;
+  margin-left:20px;
+ 
+}
       .ShowListNav{
         text-decoration: none;
         display: flex;
