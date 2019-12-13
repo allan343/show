@@ -90,6 +90,11 @@ ul{
 .link{
   float: right;
 }
+.showStates{
+  display:block;
+  text-align: center;
+  margin-top: 5px;
+}
       .ShowListNav{
         text-decoration: none;
         display: flex;

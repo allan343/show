@@ -97,11 +97,19 @@ export default class Show extends React.Component {
           </Link>
           </div>
           </div>
-          {icon}
-          Watch State {`${showState}`}
+          <div className="showStates">
+          Watch State {icon}{`${showState}`}
+          </div>
+          <div className="showStates">
+          
           Started {`${start}`}
+          </div>
+          <div className="showStates">
           Finished {`${finish}`}
+          </div>
+          <div className="showStates">
           Current Season  {`${currentSeason}`}
+          </div>
 
         </div>
         <hr></hr>
