@@ -67,6 +67,7 @@ ul{
   height: 100px;
   padding: 5px;
   margin-left:20px;
+  vertical-align: top;
  
 }
 
@@ -76,6 +77,7 @@ ul{
   height: 100px;
   padding: 5px;
   margin-left:20px;
+  vertical-align: top;
  
 }
       .ShowListNav{
