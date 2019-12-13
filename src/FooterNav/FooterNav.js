@@ -21,7 +21,7 @@ export default class FooterNav extends React.Component {
         >
          
           <span className='ToWatchIcon'>
-          <FontAwesomeIcon icon={faHome} />
+          <FontAwesomeIcon className="icon" icon={faHome } size='2x' />
        To Watch
                 </span>
         </NavLink>
@@ -31,9 +31,10 @@ export default class FooterNav extends React.Component {
           style={{ textDecoration: 'none' }}
         >
           <span className='WatchingIcon Icon'>
-          <FontAwesomeIcon icon={faVideo} />
+          <FontAwesomeIcon className="icon"  icon={faVideo}  size='2x'/>
             Watching
                 </span>
+                
         </NavLink>
         <NavLink
           className='FinishLlink'
@@ -41,12 +42,11 @@ export default class FooterNav extends React.Component {
           style={{ textDecoration: 'none' }}
         >
           <span className='FinishIcon Icon'>
-          <FontAwesomeIcon icon={faCheck} />
+          <FontAwesomeIcon  className="icon"  icon={faCheck} size='2x' />
             Finished
                 </span>
         </NavLink>
-        <div className='ShowListNav__button-wrapper'>
-        </div>
+        
       </div>
     )
   }

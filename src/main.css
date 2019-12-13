@@ -23,6 +23,21 @@ body {
       background-color:#ddd;
       height: 100%;
      }
+
+    #icon {
+    
+      font-size: 50px;
+      position: relative;
+      top: 4px;
+    }
+
+    .fa-2x {
+      font-size: 2em;
+      position: relative;
+      top: 5px;
+      right: 3px;
+  }
+    
 ul{
   list-style: none;
   padding:0;
