@@ -23,6 +23,7 @@ body {
       width: 40%;
       background-color:#ddd;
       height: 100%;
+      padding-top:70px;
      }
 
     #icon {
@@ -49,6 +50,7 @@ ul{
         
       float:right;
       width: 60%;
+      padding-top: 100px;
       }
   
       #details,#watching{
@@ -104,7 +106,7 @@ ul{
           background-color: #bbb;
           overflow: hidden;
           position: fixed;
-          bottom: 0;
+          top: 0;
           width: 100%;
       }
 
