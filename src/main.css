@@ -26,6 +26,8 @@ body {
       padding-top:70px;
      }
 
+
+
     #icon {
     
       font-size: 50px;
@@ -53,6 +55,18 @@ ul{
       padding-top: 100px;
       }
   
+      .initialInfo
+      {
+        float: right;
+        width: 50%;
+        padding-top: 220px;
+        margin-right:20px;
+      }
+      .initialInfoIcon
+      {
+        margin-left: 200px;
+      }
+
       #details,#watching{
         display: block;
         padding: 45px 15px;
