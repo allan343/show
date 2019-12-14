@@ -98,17 +98,31 @@ export default class Show extends React.Component {
           </div>
           </div>
           <div className="showStates">
-          Watch State {icon}{`${showState}`}
+            <span className ="showlabel">
+          Watch State
+            </span>
+            <span className = "showdetails">
+           {icon}{`${showState}`}
+           </span>
           </div>
           <div className="showStates">
           
-          Started {`${start}`}
+          <span className = "showlabel">
+          Started
+          </span> <span className="showdetails">{`${start}`}
+          </span>
           </div>
           <div className="showStates">
-          Finished {`${finish}`}
+          <span className = "showlabel">
+          Finished
+          </span><span className="showdetails"> {`${finish}`}
+          </span>
           </div>
           <div className="showStates">
-          Current Season  {`${currentSeason}`}
+          <span className = "showlabel">
+          Current Season
+          </span> <span className="showdetails">  {`${currentSeason}`}
+          </span>
           </div>
 
         </div>
@@ -122,19 +136,36 @@ export default class Show extends React.Component {
           </Link>
           </div>
           <div className="showStates">
-          Name  {`${show.showname}`}
+          <span className = "showlabel">
+          Name 
+          </span><span className="showdetails"> {`${show.showname}`}
+          </span>
           </div>
           <div className="showStates">
-          Genre  {`${show.genre}`}
+          <span className = "showlabel">
+          Genre </span> <span className="showdetails">{`${show.genre}`}
+          </span>
           </div>
           <div className="showStates">
-          Number of seasons  {`${show.seasons}`}
+          <span className = "showlabel">
+          Number of seasons</span> <span className="showdetails"> {`${show.seasons}`}
+          </span>
           </div>
           <div className="showStates">
-          Description  {`${show.showdescription}`}
+          <span className = "showlabel">
+          Description  
+          </span>
+          <span className="showdetails"> 
+          {`${show.showdescription}`}
+          </span>
           </div>
           <div className="showStates">
-         Language  {`${show.showlanguage}`}
+          <span className = "showlabel">
+         Language 
+         </span>
+         <span className="showdetails"> 
+          {`${show.showlanguage}`}
+          </span>
           </div>
           </div>
         </div>

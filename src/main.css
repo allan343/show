@@ -92,12 +92,23 @@ ul{
 .link{
   float: right;
 }
+
 .showStates{
   display:block;
-  text-align: center;
+/*  text-align: center;*/
   margin-top: 5px;
 }
-      .ShowListNav{
+
+.showlabel{
+/*  margin-left: 115px;*/
+
+}
+    
+.showdetails{
+ float: right;
+  
+}
+.ShowListNav{
         text-decoration: none;
         display: flex;
         justify-content: space-evenly;
