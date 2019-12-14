@@ -121,6 +121,21 @@ export default class Show extends React.Component {
             Edit
           </Link>
           </div>
+          <div className="showStates">
+          Name  {`${show.showname}`}
+          </div>
+          <div className="showStates">
+          Genre  {`${show.genre}`}
+          </div>
+          <div className="showStates">
+          Number of seasons  {`${show.seasons}`}
+          </div>
+          <div className="showStates">
+          Description  {`${show.showdescription}`}
+          </div>
+          <div className="showStates">
+         Language  {`${show.showlanguage}`}
+          </div>
           </div>
         </div>
       </div>
