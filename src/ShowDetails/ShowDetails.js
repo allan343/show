@@ -117,7 +117,7 @@ class ShowDetails extends React.Component {
             <input type="text" className="folder__control"
               name="genre" id="genre" value={this.state.genre.value} onChange={e => this.updateGenre(e.target.value)} />
             <label htmlFor="name">Number Of Seasons *</label>
-            <input type="text" className="folder__control"
+            <input type="number" min="1" max="99" className="folder__control"
               name="seasons" id="seasons" value={this.state.seasons.value} onChange={e => this.updateSeasons(e.target.value)} />
             <label htmlFor="name">Description *</label>
             <input type="text" className="folder__control"

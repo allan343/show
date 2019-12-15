@@ -1,9 +1,9 @@
 #edit-details{
-    position:fixed;
+    position: fixed;
     width: 55%;
-    height: 90vh;
+    height: 100vh;
     left: 22.5%;
-    top: 5vh;
+    /* top: 5vh; */
     background-color: white !important;
     border: 3px solid black;
     border-radius: 3px;
