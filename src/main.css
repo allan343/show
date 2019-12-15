@@ -52,7 +52,7 @@ ul{
         
       float:right;
       width: 60%;
-      padding-top: 100px;
+      padding-top: 70px;
       }
   
       .initialInfo
@@ -69,7 +69,7 @@ ul{
 
       #details,#watching{
         display: block;
-        padding: 45px 15px;
+        padding: 40px 15px;
         background-color: #aaa;
         
       }
@@ -81,13 +81,12 @@ ul{
 
 .titleIcon {
   display: inline-block;
-
-  height: 80px;
-  padding: 5px;
-  margin-left:240px;
-  vertical-align: top;
-  margin-top: 20px;
- 
+    height: 80px;
+    padding: 5px;
+    margin-left: 240px;
+    vertical-align: top;
+    margin-top: 30px;
+    margin-bottom: 50px;
 }
 
 .titleButton {

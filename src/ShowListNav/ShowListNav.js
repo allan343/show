@@ -63,14 +63,15 @@ export default class ShowListNav extends React.Component {
        {this.props.name ==='towatch' ? <h1>To Watch</h1> : ""}
        {this.props.name ==='watching' ? <h1>Watching</h1> : ""}
        {this.props.name ==='finished'? <h1>Finished</h1> : ""}
-          <label htmlFor="name"  ></label>
-          <input type="text" className="folder__control" placeholder="Search your shows..."
-            name="name" id="name" value={this.state.name.value} onChange={e => this.updateName(e.target.value)} />
-          <NavLink
+       <NavLink
             to={`/add-show`}
           >
             Add Show
            </NavLink>
+          <label htmlFor="name"  ></label>
+          <input type="text" className="folder__control" placeholder="Search your shows..."
+            name="name" id="name" value={this.state.name.value} onChange={e => this.updateName(e.target.value)} />
+         
            {//create a list of shows
            //shows have button to allow user to see show details
            }
