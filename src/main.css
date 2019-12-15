@@ -124,12 +124,12 @@ ul{
 }
 
 input[type=text], select {
-  width: 100%;
+  width: 90%;
   
   padding: 12px 20px;
-  margin: 8px 0;
+  margin: 8px auto;
   
-  display: inline-block;
+  display: block;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
