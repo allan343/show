@@ -148,13 +148,13 @@ class EditShowDetails extends React.Component {
             <input type="text" className="show__control"
               name="showlanguage" id="showlanguage" value={this.state.showlanguage.value} onChange={e => this.updateLanguage(e.target.value)} />
             <div className="editShow__button__group">
-             <button type="reset" className="show__button" onClick={this.cancelHandle}>
+             <button type="reset" className="cancelShowButton" onClick={this.cancelHandle}>
               Cancel
         </button>
-            <button type="submit" className="show__button" >
+            <button type="submit" className="editShowButton" >
               Done
         </button>
-            <button type="reset" className="show__button" onClick={this.deleteHandle}>
+            <button type="reset" className="deleteShowButton" onClick={this.deleteHandle}>
               Delete
         </button>
           </div>

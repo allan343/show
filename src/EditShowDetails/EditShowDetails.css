@@ -8,3 +8,21 @@
     border: 3px solid black;
     border-radius: 3px;
 }
+
+.editShow__button__group
+{
+    margin-left: 275px;
+    margin-top:20px;
+}
+
+.cancelShowButton{
+
+    margin-right:20px ;
+}
+
+.deleteShowButton{
+
+  display:block;
+  margin-top:10px;
+  margin-left: 40px;
+}
