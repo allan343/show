@@ -63,7 +63,7 @@ export default class ShowListNav extends React.Component {
        {this.props.name ==='towatch' ? <h1>To Watch</h1> : ""}
        {this.props.name ==='watching' ? <h1>Watching</h1> : ""}
        {this.props.name ==='finished'? <h1>Finished</h1> : ""}
-       <NavLink
+       <NavLink className="addShowPath"
             to={`/add-show`}
           >
             Add Show

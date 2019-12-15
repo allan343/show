@@ -74,6 +74,10 @@ ul{
         
       }
 
+
+      .addShowPath{
+        float:right;
+      }
       #title{
         display:inline;
         text-align:justify;
