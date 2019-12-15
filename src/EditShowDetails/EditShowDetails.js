@@ -128,15 +128,10 @@ class EditShowDetails extends React.Component {
           })
           this.props.history.goBack()
         }}>
-          <h2>Register</h2>
+          <h2>Edit Show Details</h2>
           <div className="show__hint">* required field</div>
           <div className="form-group">
-            <button type="reset" className="show__button" onClick={this.cancelHandle}>
-              Cancel
-        </button>
-            <button type="submit" className="show__button" >
-              Done
-        </button>
+          
             <label htmlFor="name">Name *</label>
             <input type="text" className="show__control"
               name="showname" id="showname" value={this.state.showname.value} onChange={e => this.updateName(e.target.value)} />
@@ -152,11 +147,18 @@ class EditShowDetails extends React.Component {
             <label htmlFor="name">Language *</label>
             <input type="text" className="show__control"
               name="showlanguage" id="showlanguage" value={this.state.showlanguage.value} onChange={e => this.updateLanguage(e.target.value)} />
+            <div className="editShow__button__group">
+             <button type="reset" className="show__button" onClick={this.cancelHandle}>
+              Cancel
+        </button>
+            <button type="submit" className="show__button" >
+              Done
+        </button>
             <button type="reset" className="show__button" onClick={this.deleteHandle}>
               Delete
         </button>
           </div>
-          <div className="show__button__group">
+         
           </div>
         </form>
 
