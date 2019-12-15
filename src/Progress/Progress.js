@@ -27,6 +27,7 @@ export default class Progress extends React.Component {
   render() {
     return (
       <div className='NoteListMain__button-container'>
+        <h1>Current Season</h1>
         <form className="folder" onSubmit={(event) => {
           event.preventDefault()
           this.updateCurrentSeason(this.state.currentSeason)
@@ -34,7 +35,7 @@ export default class Progress extends React.Component {
           <input type="number" min="1" max={this.context.getShow(this.state.id).seasons + ""} placeholder="current season you're on" className="folder__control"
             name="currentSeason" id="currentSeason" onChange={(e) => this.setState({ currentSeason: e.target.value })} />
           <button type="submit" className="folder__button"  >
-            Save
+            Set Current Season
         </button>
         </form>
       </div>
