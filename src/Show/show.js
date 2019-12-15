@@ -77,7 +77,7 @@ export default class Show extends React.Component {
         </button>
         <div id="title">
         <div className= "titleIcon">
-        <FontAwesomeIcon icon={faFilm} size='4x'/>
+        <FontAwesomeIcon icon={faFilm} size='6x'/>
         </div>
         <div className = "titleButton" >
           {show.showname}
