@@ -46,8 +46,8 @@ export default class ShowListNav extends React.Component {
   }
 
   render() {
-    
     const { shows = [] } = this.props
+    console.log(shows[0])
     let label = this.props.name
     let filteredShows = []
     // there is a input field allowing user to filter shows by name
@@ -59,7 +59,7 @@ export default class ShowListNav extends React.Component {
     }
     return (
       <div >
-        <div id='shows' className={this.state.id ? 'showlist' : ''}>
+        <div id='shows' className={this.state.clicked ? 'showlist' : ''}>
        {this.props.name ==='towatch' ? <h1>To Watch</h1> : ""}
        {this.props.name ==='watching' ? <h1>Watching</h1> : ""}
        {this.props.name ==='finished'? <h1>Finished</h1> : ""}
@@ -75,17 +75,20 @@ export default class ShowListNav extends React.Component {
            {//create a list of shows
            //shows have button to allow user to see show details
            }
-          <ul id='list' >
+           {(shows.length===0)? <Placeholder /> :<ul id='list' >
             {
               filteredShows.map(show =>
                
                 <li id='show'  onClick={() => this.showClicked(show.id)} key={show.id} data-id={show.id}> <FontAwesomeIcon className = "filmicon"icon={faFilm} size='2x' />{show.showname}
                 </li>
               )}
-          </ul>
+          </ul>}
+          
         </div>
         <div>
-          {this.state.clicked? <Show showId={this.context.getId()} history={this.props.history} hideshow={()=>{this.setState({clicked:false})}} /> : <Placeholder/>}
+        
+          {(this.state.clicked)? <Show showId={this.context.getId()} history={this.props.history} hideshow={()=>{this.setState({clicked:false})}} /> : ""}
+      
         </div>
       </div>
     )

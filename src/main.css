@@ -20,7 +20,7 @@ body {
   #shows{
       position: absolute;
       float:left;
-      width: 40%;
+      width: 100%;
       background-color:#ddd;
       height: 100%;
       padding-top:70px;
@@ -51,16 +51,16 @@ ul{
      #actualShow{
         
       float:right;
-      width: 60%;
+      width: 100%;
       padding-top: 80px;
       }
   
       .initialInfo
       {
-        float: right;
         width: 50%;
-        padding-top: 220px;
-        margin-right:20px;
+        padding-top: 120px;
+        margin-right: auto;
+        margin-left: auto;
       }
       .initialInfoIcon
       {
@@ -192,13 +192,35 @@ input[type=submit] {
           cursor: pointer;
       }
 
+      
+      .showlist{
+
+        display:none
+      }
+
+
         @media only screen and (min-width: 500px) {
-         .showlist{
-
-  display:inline-block
-}
-
+     
+/*
 .backButton{
   display:none
-}
+}*/
+
+  
+#shows{
+  position: absolute;
+  float:left;
+  width: 100%;
+  background-color:#ddd;
+  height: 100%;
+  padding-top:70px;
+  
+ }
+ #actualShow{
+        
+  float:right;
+  width: 100%;
+  padding-top: 80px;
+  }
+ 
 }
