@@ -58,7 +58,48 @@ h2{
     }
 }
 
-@media only screen and (min-width: 500px) {
+
+@media only screen and (min-width: 700px) {
+    #show-details{
+        position:fixed;
+        width: 55%;
+        height: 90vh;
+        left: 22.5%;
+        top: 5vh;
+        background-color: white !important;
+        border: 3px solid black;
+        border-radius: 3px;
+        }
+
+
+        .addShow__button__group
+        {
+            margin-left: 75px;
+            margin-top:20px;
+        }
+    }
+
+    @media only screen and (min-width: 1000px) {
+        #show-details{
+            position:fixed;
+            width: 55%;
+            height: 90vh;
+            left: 22.5%;
+            top: 5vh;
+            background-color: white !important;
+            border: 3px solid black;
+            border-radius: 3px;
+            }
+    
+    
+            .addShow__button__group
+            {
+                margin-left: 125px;
+                margin-top:20px;
+            }
+        }
+
+@media only screen and (min-width: 1040px) {
     #show-details{
         position:fixed;
         width: 55%;
