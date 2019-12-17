@@ -107,19 +107,19 @@ ul{
 }
 
 .showStates{
-  display:block;
-/*  text-align: center;*/
+ /* display:block;*/
+  text-align: center;
   margin-top: 5px;
 }
 
 .showlabel{
 /*  margin-left: 115px;*/
-
+font-weight: bold;
 }
     
 .showdetails{
- float: right;
-  
+/* float: right;*/
+font-style: italic;
 }
 
 input[type=text], select {

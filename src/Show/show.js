@@ -99,7 +99,7 @@ export default class Show extends React.Component {
           </div>
           <div className="showStates">
             <span className ="showlabel">
-          Watch State
+          Watch State:
             </span>
             <span className = "showdetails">
            {icon}{`${showState}`}
@@ -108,19 +108,19 @@ export default class Show extends React.Component {
           <div className="showStates">
           
           <span className = "showlabel">
-          Started
+          Started: 
           </span> <span className="showdetails">{`${start}`}
           </span>
           </div>
           <div className="showStates">
           <span className = "showlabel">
-          Finished
+          Finished: 
           </span><span className="showdetails"> {`${finish}`}
           </span>
           </div>
           <div className="showStates">
           <span className = "showlabel">
-          Current Season
+          Current Season: 
           </span> <span className="showdetails">  {`${currentSeason}`}
           </span>
           </div>
@@ -129,31 +129,31 @@ export default class Show extends React.Component {
         <hr></hr>
         <div id="details">
         <div className="headerAndButton">
-          Details
+          Details: 
           <div className="link">
           <Link to={`/ShowDetails/Edit/${this.context.getId()}`}>
-            Edit
+            Edit: 
           </Link>
           </div>
           <div className="showStates">
           <span className = "showlabel">
-          Name 
+          Name:  
           </span><span className="showdetails"> {`${show.showname}`}
           </span>
           </div>
           <div className="showStates">
           <span className = "showlabel">
-          Genre </span> <span className="showdetails">{`${show.genre}`}
+          Genre:  </span> <span className="showdetails">{`${show.genre}`}
           </span>
           </div>
           <div className="showStates">
           <span className = "showlabel">
-          Number of seasons</span> <span className="showdetails"> {`${show.seasons}`}
+          Number of seasons: </span> <span className="showdetails"> {`${show.seasons}`}
           </span>
           </div>
           <div className="showStates">
           <span className = "showlabel">
-          Description  
+          Description:   
           </span>
           <span className="showdetails"> 
           {`${show.showdescription}`}
@@ -161,7 +161,7 @@ export default class Show extends React.Component {
           </div>
           <div className="showStates">
           <span className = "showlabel">
-         Language 
+         Language:  
          </span>
          <span className="showdetails"> 
           {`${show.showlanguage}`}
