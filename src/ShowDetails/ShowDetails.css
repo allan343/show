@@ -1,3 +1,6 @@
+
+
+
 #show-details{
 position:fixed;
 width: 95%;
@@ -67,12 +70,12 @@ h2{
         border-radius: 3px;
         }
 
-      /*  
-.addShow__button__group
-{
-    margin-left: 220px;
-    margin-top:20px;
-}*/
+
+        .addShow__button__group
+        {
+            margin-left: 210px;
+            margin-top:20px;
+        }
 
 .cancelShowButton{
 
