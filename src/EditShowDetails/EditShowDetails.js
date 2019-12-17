@@ -154,7 +154,7 @@ class EditShowDetails extends React.Component {
             <button type="submit" className="editShowButton" >
               Done
         </button>
-            <button type="reset" className="deleteShowButton" onClick={this.deleteHandle}>
+            <button type="reset" className="delShowButton" onClick={this.deleteHandle}>
               Delete
         </button>
           </div>
