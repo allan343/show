@@ -135,6 +135,7 @@ export default class Show extends React.Component {
             Edit: 
           </Link>
           </div>
+          </div>
           <div className="showStates">
           <span className = "showlabel">
           Name:  
@@ -167,7 +168,7 @@ export default class Show extends React.Component {
           {`${show.showlanguage}`}
           </span>
           </div>
-          </div>
+         
         </div>
       </div>
 
