@@ -105,13 +105,14 @@
         .deleteShowButton {
             margin-right: 15px;
             margin-left: 55px;
+            margin-top: 3px;
         }
     }
     @media only screen and (min-width: 400px) {
     
         
     .editShow__button__group {
-        margin-left: 60px; 
+        margin-left: 50px; 
     
        margin-top: 20px;
        width: 70%;
@@ -119,7 +120,13 @@
     
         .cancelShowButton {
             margin-right: 20px;
-            margin-left: 60px;
+            margin-left: 40px;
+        }
+
+        .deleteShowButton {
+            margin-right: 15px;
+            margin-left: 95px;
+            margin-top: 15px;
         }
     }
     
@@ -179,7 +186,7 @@
     
             .editShow__button__group
             {
-                margin-left: 210px;
+                margin-left: 150px;
                 margin-top:20px;
             }
     
@@ -188,7 +195,11 @@
         margin-right:20px ;
     }
     
-    
+    .deleteShowButton {
+        margin-right: 15px;
+        margin-left: 20px;
+        margin-top: 15px;
+    }
     }
     
     
