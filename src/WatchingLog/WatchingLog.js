@@ -72,14 +72,14 @@ export default class WatchingLog extends React.Component {
         <div>
           <h1>Watching Log</h1>
           <div className="watchLog__button__group">
-          <button type="submit" className="folder__button" onClick={this.setToWatch}>
+          <button type="submit" className="toWatch__button" onClick={this.setToWatch}>
             To Watch
 </button>
 
-          <button type="submit" className="folder__button" onClick={this.setWatching}>
+          <button type="submit" className="watching__button" onClick={this.setWatching}>
             Watching
 </button>
-          <button type="submit" className="folder__button" onClick={this.setShowFinish}>
+          <button type="submit" className="finished__button" onClick={this.setShowFinish}>
             Finished
 </button>
           {this.state.watching ? <Progress id={this.state.id} history={this.props.history} closeWatchLog={this.props.closeWatchLog} /> : ""}
