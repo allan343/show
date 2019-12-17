@@ -76,9 +76,9 @@ h2{
        width: 70%;
     }
 
-    button {
+    .addShow__button__group button {
         display: inline-block;
-        padding: 10px 10px;
+        padding:10px 10px;
         font-size: 24px;
         cursor: pointer;
         text-align: center;
@@ -91,7 +91,6 @@ h2{
         box-shadow: 0 9px #999;
     }
 }
-
 @media only screen and (min-width: 400px) {
 
     
