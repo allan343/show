@@ -62,10 +62,7 @@ ul{
         margin-right: auto;
         margin-left: auto;
       }
-      .initialInfoIcon
-      {
-        margin-left: 200px;
-      }
+    
 
       #details,#watching{
         display: block;
@@ -87,7 +84,6 @@ ul{
   display: inline-block;
     height: 80px;
     padding: 5px;
-    margin-left: 440px;
     vertical-align: top;
     margin-top: 20px;
     margin-bottom: 50px;
@@ -222,5 +218,19 @@ input[type=submit] {
   width: 100%;
   padding-top: 80px;
   }
+
+  .titleIcon {
+    display: inline-block;
+      height: 80px;
+      padding: 5px;
+      margin-left: 440px;
+      vertical-align: top;
+      margin-top: 20px;
+      margin-bottom: 50px;
+  }
  
+  .initialInfoIcon
+  {
+    margin-left: 200px;
+  }
 }
