@@ -33,12 +33,62 @@ h2{
     width: 70%;
 }
 
+@media only screen and (min-width: 300px) {
+  
+  
+    .addShow__button__group {
+        margin-left: 45px;
+        
+    }
+ 
+    .addShow__button__group button {
+        display: inline-block;
+        padding:0;
+        font-size: 24px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        color: #fff;
+        background-color: #4CAF50;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 9px #999;
+    }
+
+    show-details {
+        position: fixed;
+        width: 98%;
+        height: 97vh;
+        /* top: 5vh; */
+        background-color: white !important;
+        border: 3px solid black;
+        border-radius: 3px;
+    }
+}
+
+
 @media only screen and (min-width: 350px) {
     .addShow__button__group {
-        margin-left: 60px; 
+        margin-left: 70px; 
     
        margin-top: 20px;
        width: 70%;
+    }
+
+    button {
+        display: inline-block;
+        padding: 10px 10px;
+        font-size: 24px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        color: #fff;
+        background-color: #4CAF50;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 9px #999;
     }
 }
 
@@ -54,7 +104,7 @@ h2{
 
     .cancelShowButton {
         margin-right: 20px;
-        margin-left: 40px;
+        margin-left: 60px;
     }
 }
 
