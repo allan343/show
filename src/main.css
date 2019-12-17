@@ -101,6 +101,7 @@ ul{
 
 .headerAndButton{
   display: block;
+  font-weight: bold;
 }
 .link{
   float: right;
