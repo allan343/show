@@ -1,0 +1,34 @@
+
+
+  @media only screen and (min-width: 300px) {
+
+    .seasonButton{
+
+        margin-left:10%;
+    }
+
+  }
+    @media only screen and (min-width: 350px) {
+
+        .seasonButton{
+
+            margin-left:12.5%;
+        }
+    }
+        @media only screen and (min-width: 400px) {
+
+            .seasonButton{
+
+                margin-left:15%;
+            }
+        }
+            
+  @media only screen and (min-width: 700px) {
+
+.seasonButton{
+
+    margin-left:30%;
+}
+  }
+
+  @media only screen and (min-width: 700px) {}

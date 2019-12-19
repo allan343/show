@@ -1,6 +1,6 @@
 .watchLog__button__group{
   width: 80%;
-    margin: 0 auto;
+  margin-left: 30%;
     display: block;
     
 }
@@ -38,7 +38,10 @@ button {
     box-shadow: 0 5px #666;
     transform: translateY(4px);
   }
+  .Progress__button-container{
 
+
+  }
 
   input[type=text], select {
     width: 90%;
@@ -65,9 +68,10 @@ button {
       border-radius: 3px;
       }
 
+      
       .watchLog__button__group{
         width: 80%;
-          margin: 0 auto;
+        margin-left: 25.5%;
           display: block;
           
       }
@@ -122,16 +126,24 @@ button {
       border: 3px solid black;
       border-radius: 3px;
       }
+
+      .watchLog__button__group{
+        width: 80%;
+        margin-left: 25.5%;
+          display: block;
+          
+      }
   }
 
 
   @media only screen and (min-width: 1000px) {
-.watchLog__button__group{
-  width: 80%;
-    margin: 0 auto;
-    display: block;
+    .watchLog__button__group{
+      width: 80%;
+      margin-left: 20%;
+        display: block;
+        
+    }
     
-}
 
 #watchingLog{
   position: fixed;

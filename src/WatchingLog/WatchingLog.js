@@ -70,7 +70,7 @@ export default class WatchingLog extends React.Component {
     return (
       <div id='watchingLog'>
         <div>
-          <h1>Watching Log</h1>
+          <h2>Watching Log</h2>
           <div className="watchLog__button__group">
           <button type="submit" className="toWatch__button" onClick={this.setToWatch}>
             To Watch
@@ -82,10 +82,14 @@ export default class WatchingLog extends React.Component {
           <button type="submit" className="finished__button" onClick={this.setShowFinish}>
             Finished
 </button>
+</div>
+</div>
+<div>
           {this.state.watching ? <Progress id={this.state.id} history={this.props.history} closeWatchLog={this.props.closeWatchLog} /> : ""}
+       </div>
         </div>
-      </div>
-      </div>
+      
+     
     )
   }
 }

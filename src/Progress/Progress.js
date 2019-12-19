@@ -1,5 +1,6 @@
 import React from 'react'
 import ApiContext from '../ApiContext/ApiContext'
+import './Progress.css'
 
 export default class Progress extends React.Component {
   static contextType = ApiContext;
@@ -26,15 +27,15 @@ export default class Progress extends React.Component {
 
   render() {
     return (
-      <div className='NoteListMain__button-container'>
-        <h1>Current Season</h1>
+      <div className='Progress__button-container'>
+        <h2>Current Season</h2>
         <form className="folder" onSubmit={(event) => {
           event.preventDefault()
           this.updateCurrentSeason(this.state.currentSeason)
         }}>
           <input type="number" min="1" max={this.context.getShow(this.state.id).seasons + ""} placeholder="current season you're on" className="folder__control"
             name="currentSeason" id="currentSeason" onChange={(e) => this.setState({ currentSeason: e.target.value })} />
-          <button type="submit" className="folder__button"  >
+          <button className = "seasonButton" type="submit" >
             Set Current Season
         </button>
         </form>
