@@ -8,6 +8,7 @@ export default React.createContext({
   getShow: () =>{},
   updateShow: ()=>{},
   getId:()=>{},
-  setId:()=>{}
+  setId:()=>{},
+  
  
 })

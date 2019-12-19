@@ -9,8 +9,6 @@ import Finished from '../Finished/Finished';
 import Watching from '../Watching/Watching';
 import ApiContext from '../ApiContext/ApiContext';
 import config from '../config';
-import { faHome } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 class App extends Component {
     state = {
@@ -21,6 +19,8 @@ class App extends Component {
 
     componentDidMount() {
         //fetches the shows from my endpoint and placed them in my array in state
+        
+        
         fetch(`${config.API_ENDPOINT}/shows`)
             .then((showsRes) => {
                 if (!showsRes.ok)
@@ -108,6 +108,7 @@ class App extends Component {
             })
     };
 
+   
     //various routes for my app
     renderNavRoutes() {
 
@@ -187,13 +188,19 @@ class App extends Component {
             getShow: this.handleGetShow,
             updateShow: this.handleUpdateShow,
             getId:this.getId,
-            setId: this.setId
+            setId: this.setId,
+            setLoggedIn: this.setLoggedIn,
+            setUserName: this.setUserName,
+            setPassword: this.setPassword,
+            getUserName: this.getUserName,
+            getPassword: this.getPassword
         };
         return (
-
+           
             <ApiContext.Provider value={value}>
                 <div className="App">
                     <header className="App__header">
+              
                     </header>
                     <div >{this.renderNavRoutes()}</div>
                   <div >{this.renderMainRoutes()}</div>
