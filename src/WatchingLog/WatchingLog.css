@@ -56,12 +56,70 @@ button {
 
     #watchingLog{
       position:fixed;
-      width: 40%;
+      width: 90%;
       height: 70vh;
-      left: 32%;
+      left: 5%;
       top: 15vh;
       background-color: white !important;
       border: 3px solid black;
       border-radius: 3px;
+      }
+  }
+
+  @media only screen and (min-width: 400px) {
+
+    #watchingLog{
+      position:fixed;
+      width: 80%;
+      height: 70vh;
+      left: 10%;
+      top: 15vh;
+      background-color: white !important;
+      border: 3px solid black;
+      border-radius: 3px;
+      }
+  }
+
+  
+  
+  @media only screen and (min-width: 350px) {
+
+    #watchingLog{
+      position:fixed;
+      width: 85%;
+      height: 70vh;
+      left: 5%;
+      top: 15vh;
+      background-color: white !important;
+      border: 3px solid black;
+      border-radius: 3px;
+      }
+
+      .watchLog__button__group{
+        width: 80%;
+          margin: 0 auto;
+          display: block;
+          
+      }
+  }
+
+  @media only screen and (min-width: 300px) {
+
+    #watchingLog{
+      position:fixed;
+      width: 85%;
+      height: 80vh;
+      left: 5%;
+      top: 15vh;
+      background-color: white !important;
+      border: 3px solid black;
+      border-radius: 3px;
+      }
+
+      .watchLog__button__group{
+        width: 80%;
+          margin: 0 auto;
+          display: block;
+          
       }
   }
