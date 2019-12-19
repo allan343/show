@@ -52,36 +52,27 @@ button {
     box-sizing: border-box;
   }
 
-  @media only screen and (min-width: 700px) {
+  @media only screen and (min-width: 300px) {
 
     #watchingLog{
       position:fixed;
-      width: 90%;
-      height: 70vh;
+      width: 85%;
+      height: 80vh;
       left: 5%;
       top: 15vh;
       background-color: white !important;
       border: 3px solid black;
       border-radius: 3px;
       }
-  }
 
-  @media only screen and (min-width: 400px) {
-
-    #watchingLog{
-      position:fixed;
-      width: 80%;
-      height: 70vh;
-      left: 10%;
-      top: 15vh;
-      background-color: white !important;
-      border: 3px solid black;
-      border-radius: 3px;
+      .watchLog__button__group{
+        width: 80%;
+          margin: 0 auto;
+          display: block;
+          
       }
   }
 
-  
-  
   @media only screen and (min-width: 350px) {
 
     #watchingLog{
@@ -103,23 +94,95 @@ button {
       }
   }
 
-  @media only screen and (min-width: 300px) {
+  @media only screen and (min-width: 400px) {
 
     #watchingLog{
       position:fixed;
-      width: 85%;
-      height: 80vh;
+      width: 80%;
+      height: 70vh;
+      left: 10%;
+      top: 15vh;
+      background-color: white !important;
+      border: 3px solid black;
+      border-radius: 3px;
+      }
+  }
+
+  
+
+  @media only screen and (min-width: 700px) {
+
+    #watchingLog{
+      position:fixed;
+      width: 90%;
+      height: 70vh;
       left: 5%;
       top: 15vh;
       background-color: white !important;
       border: 3px solid black;
       border-radius: 3px;
       }
-
-      .watchLog__button__group{
-        width: 80%;
-          margin: 0 auto;
-          display: block;
-          
-      }
   }
+
+
+  @media only screen and (min-width: 1000px) {
+.watchLog__button__group{
+  width: 80%;
+    margin: 0 auto;
+    display: block;
+    
+}
+
+#watchingLog{
+  position: fixed;
+  width: 50%;
+  height: 70vh;
+  left: 25%;
+
+  top: 15vh;
+  background-color: white !important;
+  border: 3px solid black;
+  border-radius: 3px;
+}
+
+button {
+    display: inline-block;
+    padding: 10px 10px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }
+  
+  button:hover {background-color: #3e8e41}
+  
+  button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+
+  input[type=text], select {
+    width: 90%;
+    
+    padding: 12px 20px;
+    margin: 8px auto;
+    
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+
+  }
+
+  
+

@@ -36,6 +36,7 @@ export default class Show extends React.Component {
   render() {
     const { showId } = this.props
     let show = this.context.getShow(showId)
+    let months = ["JAN", "FEB", "MAR","APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"]
     let showState = ""
     let start = ""
     let finish = ""
@@ -106,16 +107,16 @@ export default class Show extends React.Component {
            </span>
           </div>
           <div className="showStates">
-          
+        
           <span className = "showlabel">
           Started: 
-          </span> <span className="showdetails">{`${start}`}
+          </span> <span className="showdetails">{`${new Date(start).getDate() + "-" + months[new Date(start).getMonth()] + "-" + new Date(start).getFullYear()}`}
           </span>
           </div>
           <div className="showStates">
           <span className = "showlabel">
           Finished: 
-          </span><span className="showdetails"> {`${finish}`}
+          </span><span className="showdetails"> {`${new Date(finish).getDate() + "-" + months[new Date(finish).getMonth()] + "-" + new Date(finish).getFullYear()}`}
           </span>
           </div>
           <div className="showStates">
