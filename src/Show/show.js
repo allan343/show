@@ -55,14 +55,14 @@ export default class Show extends React.Component {
     if (show.watching) {
       showState = "Watching"
       finish = "Still Watching"
-      start = new Date(show.startdate).getDate() + "-" + months[new Date(show.startdate).getMonth()] + "-" + new Date(show.startdate).getFullYear()
+      start = show.startdate
       currentSeason = show.currentseason
       icon =<FontAwesomeIcon icon={faVideo} />
     }
     if (show.finish) {
       showState = "Finished"
-      start = new Date(show.startdate).getDate() + "-" + months[new Date(show.startdate).getMonth()] + "-" + new Date(show.startdate).getFullYear()
-      finish = new Date(show.finishdate).getDate() + "-" + months[new Date(show.finishdate).getMonth()] + "-" + new Date(show.finishdate).getFullYear()
+      finish = show.finishdate
+      start = show.startdate
       currentSeason = show.currentseason
       icon =    <FontAwesomeIcon icon={faCheck} />
 
@@ -110,13 +110,13 @@ export default class Show extends React.Component {
         
           <span className = "showlabel">
           Started: 
-          </span> <span className="showdetails">{`${start}`}
+          </span> <span className="showdetails">{`${new Date(start).getDate() + "-" + months[new Date(start).getMonth()] + "-" + new Date(start).getFullYear()}`}
           </span>
           </div>
           <div className="showStates">
           <span className = "showlabel">
           Finished: 
-          </span><span className="showdetails"> {`${finish}`}
+          </span><span className="showdetails"> {`${new Date(finish).getDate() + "-" + months[new Date(finish).getMonth()] + "-" + new Date(finish).getFullYear()}`}
           </span>
           </div>
           <div className="showStates">
