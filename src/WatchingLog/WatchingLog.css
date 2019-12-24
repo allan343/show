@@ -25,16 +25,16 @@ button {
     text-decoration: none;
     outline: none;
     color: #fff;
-    background-color: #4CAF50;
+    background-color: rgb(129, 127, 127);
     border: none;
     border-radius: 15px;
     box-shadow: 0 9px #999;
   }
   
-  button:hover {background-color: #3e8e41}
+  button:hover {background-color: #333}
   
   button:active {
-    background-color: #3e8e41;
+    background-color: #333;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
   }
@@ -166,16 +166,16 @@ button {
     text-decoration: none;
     outline: none;
     color: #fff;
-    background-color: #4CAF50;
+    background-color: rgb(129, 127, 127);
     border: none;
     border-radius: 15px;
     box-shadow: 0 9px #999;
   }
   
-  button:hover {background-color: #3e8e41}
+  button:hover {background-color: rgb(129, 127, 127)}
   
   button:active {
-    background-color: #3e8e41;
+    background-color: #333;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
   }
