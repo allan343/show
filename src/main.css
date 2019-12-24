@@ -8,12 +8,14 @@ body {
   height:100%;
   
   }
-
+a{
+  color:#999;
+}
   
   #show {
   
     padding: 30px 30px;
-    background-color: #bbb;
+    background-color: rgb(129, 127, 127);
     border-bottom: 1px solid black;
   }
   
@@ -21,7 +23,7 @@ body {
       position: absolute;
       float:left;
       width: 100%;
-      background-color:#ddd;
+      background-color:#F5EBC9;
       height: 100%;
       padding-top:70px;
      }
@@ -53,6 +55,7 @@ ul{
       float:right;
       width: 100%;
       padding-top: 80px;
+      background-color:#F5EBC9;
       }
   
       .initialInfo
@@ -67,7 +70,7 @@ ul{
       #details,#watching{
         display: block;
         padding: 40px 15px;
-        background-color: #aaa;
+        background-color: #F5EBC9;
         
       }
 
@@ -123,40 +126,7 @@ font-weight: bold;
 font-style: italic;
 }
 
-input[type=text], select {
-  width: 90%;
-  
-  padding: 12px 20px;
-  margin: 8px auto;
-  
-  display: block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
 
-input[type=number], select {
-  width: 90%;
-  
-  padding: 12px 20px;
-  margin: 8px auto;
-  
-  display: block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-input[type=submit] {
-  width: 100%;
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
 
 
 
@@ -166,7 +136,7 @@ input[type=submit] {
         justify-content: space-evenly;
         padding-top: 20px;
         padding-bottom: 20px;
-          background-color: #bbb;
+          background-color: #333;
           overflow: hidden;
           position: fixed;
           top: 0;
@@ -208,7 +178,7 @@ input[type=submit] {
   position: absolute;
   float:left;
   width: 100%;
-  background-color:#ddd;
+  background-color:#F5EBC9;
   height: 100%;
   padding-top:70px;
   

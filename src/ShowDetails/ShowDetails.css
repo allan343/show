@@ -1,6 +1,4 @@
 
-
-
 #show-details{
 position:fixed;
 width: 95%;
@@ -13,13 +11,15 @@ border-radius: 3px;
 
 .addShow__button__group
 {
+    /*
     margin-left: 275px;
-    margin-top:20px;
+    margin-top:20px;*/
+    float: left;
 }
 
 .cancelShowButton {
     margin-right: 60px;
-    margin-left: 25px;
+    margin-left: 250px;
 }
 
 h2{
@@ -56,11 +56,11 @@ h2{
         box-shadow: 0 9px #999;
     }
 
-    show-details {
+    #show-details {
         position: fixed;
         width: 98%;
         height: 97vh;
-        /* top: 5vh; */
+        
         background-color: white !important;
         border: 3px solid black;
         border-radius: 3px;
@@ -110,14 +110,14 @@ h2{
 
 @media only screen and (min-width: 700px) {
     #show-details{
-        position:fixed;
-        width: 90%;
-        height: 90vh;
-        left: 5.5%;
-        top: 5vh;
-        background-color: white !important;
-        border: 3px solid black;
-        border-radius: 3px;
+        position: fixed;
+        padding: 6px 20px;
+    width: 90%;
+    height: 60vh;
+    left: 5.5%;
+    background-color: white !important;
+    border: 3px solid black;
+    border-radius: 3px;
         }
 
 
@@ -125,6 +125,25 @@ h2{
         {
             margin-left: 200px;
             margin-top:20px;
+        }
+
+        input[type=text], select {
+            width: 90%;
+            padding: 6px 20px;
+            margin: 8px auto;
+            display: block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type=number], select {
+            width: 90%;
+            padding: 6px 20px;
+            margin: 6px auto;
+            display: block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
         }
     }
 
@@ -134,7 +153,6 @@ h2{
             width: 90%;
             height: 90vh;
             left: 5.5%;
-            top: 5vh;
             background-color: white !important;
             border: 3px solid black;
             border-radius: 3px;
@@ -146,6 +164,12 @@ h2{
                 margin-left: 300px;
                 margin-top:20px;
             }
+
+            .cancelShowButton {
+                margin-right: 60px;
+                margin-left: 250px;
+            }
+    
         }
 
 @media only screen and (min-width: 1040px) {
@@ -154,10 +178,13 @@ h2{
         width: 55%;
         height: 90vh;
         left: 22.5%;
-        top: 5vh;
         background-color: white !important;
         border: 3px solid black;
         border-radius: 3px;
+        }
+        .cancelShowButton {
+            margin-right: 60px;
+            margin-left: 250px;
         }
 
 
@@ -167,11 +194,26 @@ h2{
             margin-top:20px;
         }
 
-.cancelShowButton{
-
-    margin-right:20px ;
-}
-
+      
 
 }
 
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+
+    
+#show-details{
+    position:fixed;
+    width: 95%;
+    height: 90vh;
+    top: 5vh;
+    background-color: white !important;
+    border: 3px solid black;
+    border-radius: 3px;
+    overflow-y: auto;
+    }
+  }
