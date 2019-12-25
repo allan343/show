@@ -9,13 +9,6 @@ border: 3px solid black;
 border-radius: 3px;
 }
 
-.addShow__button__group
-{
-    /*
-    margin-left: 275px;
-    margin-top:20px;*/
-    float: left;
-}
 
 .cancelShowButton {
     background-color:rgb(129, 127, 127);
@@ -25,24 +18,29 @@ border-radius: 3px;
     padding:4px 6px;
 }
 
+.saveShowButton{
+    background-color: green !important;
+}
+
 h2{
     text-align: center;
     margin-bottom:0 px;
 }
 
 .addShow__button__group {
-     margin-left: 500px; 
- 
+    margin-left: 300px;
+    margin-top: 20px;
    
-    width: 70%;
+display:block;
 }
 
 @media only screen and (min-width: 300px) {
   
-  
     .addShow__button__group {
-        margin-left: 45px;
-        
+        margin-left: 140px;
+        margin-top: 20px;
+       
+    display:block;
     }
  
     .addShow__button__group button {
@@ -74,8 +72,7 @@ h2{
 
 @media only screen and (min-width: 350px) {
     .addShow__button__group {
-        margin-left: 70px; 
-    
+      
    
        width: 70%;
     }
@@ -99,7 +96,7 @@ h2{
 
     
 .addShow__button__group {
-    margin-left: 60px; 
+   
 
   
    width: 70%;
@@ -123,7 +120,7 @@ h2{
 
         .addShow__button__group
         {
-            margin-left: 200px;
+        
             margin-top:20px;
         }
 
@@ -145,6 +142,12 @@ h2{
             border-radius: 4px;
             box-sizing: border-box;
         }
+        .addShow__button__group {
+            margin-left: 300px;
+            margin-top: 20px;
+           
+        display:block;
+        }
     }
 
     @media only screen and (min-width: 1000px) {
@@ -158,13 +161,12 @@ h2{
             border-radius: 3px;
             }
     
-    
-            .addShow__button__group
-            {
+            .addShow__button__group {
                 margin-left: 300px;
-                margin-top:20px;
+                margin-top: 20px;
+               
+            display:block;
             }
-    
         }
 
 @media only screen and (min-width: 1040px) {
@@ -177,13 +179,12 @@ h2{
         border: 3px solid black;
         border-radius: 3px;
         }
-
-        .addShow__button__group
-        {
-            margin-left: 210px;
-            margin-top:20px;
+        .addShow__button__group {
+            margin-left: 300px;
+            margin-top: 20px;
+           
+        display:block;
         }
-
       
 
 }
