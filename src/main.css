@@ -12,6 +12,17 @@ a{
   color:#999;
 }
   
+.category{
+  margin-left:63px;
+}
+
+.addShowPath{
+  margin-left:67px;
+}
+
+.filmicon{
+  margin-left:39px;
+}
   #show {
   
     padding: 30px 30px;
@@ -73,6 +84,7 @@ ul{
         background-color: #F5EBC9;
         
       }
+
 
 
       .addShowPath{

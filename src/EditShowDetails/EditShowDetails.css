@@ -6,7 +6,7 @@
     width: 95%;
     height: 90vh;
     top: 5vh;
-    background-color: white !important;
+    background-color: #F5EBC9 !important;
     border: 3px solid black;
     border-radius: 3px;
     }
@@ -145,7 +145,7 @@
             height: 90vh;
             left: 5.5%;
             top: 5vh;
-            background-color: white !important;
+            background-color: #F5EBC9 !important;
             border: 3px solid black;
             border-radius: 3px;
             }
@@ -171,7 +171,7 @@
                 height: 90vh;
                 left: 5.5%;
                 top: 5vh;
-                background-color: white !important;
+                background-color: #F5EBC9!important;
                 border: 3px solid black;
                 border-radius: 3px;
                 }
@@ -191,7 +191,7 @@
             height: 90vh;
             left: 22.5%;
             top: 5vh;
-            background-color: white !important;
+            background-color: #F5EBC9 !important;
             border: 3px solid black;
             border-radius: 3px;
             }
