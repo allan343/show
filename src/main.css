@@ -107,7 +107,10 @@ ul{
   padding:0;
 }
 
-   
+   .seasons{
+     display:block;
+     margin-left: 18px;
+   }
      #actualShow{
         
       float:right;
