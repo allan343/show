@@ -18,7 +18,7 @@ border-radius: 3px;
 
 button {
     display: inline-block;
-    padding: 10px 10px;
+    padding: 2px 8px;
     font-size: 24px;
     cursor: pointer;
     text-align: center;
@@ -159,7 +159,7 @@ button {
 
 button {
     display: inline-block;
-    padding: 10px 10px;
+    padding: 2px 8px;
     font-size: 24px;
     cursor: pointer;
     text-align: center;

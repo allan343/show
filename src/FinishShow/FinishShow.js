@@ -37,7 +37,7 @@ class FinishShow extends React.Component {
   render() {
     return (
       <div>
-        <button type="button" className="folder__button" onClick={this.finishShow}>
+        <button type="button" className="state__button" onClick={this.finishShow}>
           Finish
         </button>
       </div>

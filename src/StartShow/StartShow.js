@@ -1,5 +1,6 @@
 import React from 'react';
 import ApiContext from '../ApiContext/ApiContext'
+import './startShow.css'
 
 class StartShow extends React.Component {
   static contextType = ApiContext
@@ -37,7 +38,7 @@ class StartShow extends React.Component {
   render() {
     return (
       <div>
-        <button type="button" className="folder__button" onClick={this.startShow}>
+        <button type="button" className="state__button" onClick={this.startShow}>
           Start
         </button>
       </div>
