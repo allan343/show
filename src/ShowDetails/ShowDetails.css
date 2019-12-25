@@ -18,18 +18,22 @@ border-radius: 3px;
 }
 
 .cancelShowButton {
-    margin-right: 60px;
-    margin-left: 250px;
+    background-color:rgb(129, 127, 127);
+    position: absolute;
+    top: 0;
+    left:0;
+    padding:4px 6px;
 }
 
 h2{
     text-align: center;
+    margin-bottom:0 px;
 }
 
 .addShow__button__group {
-     margin-left: 200px; 
+     margin-left: 500px; 
  
-    margin-top: 20px;
+   
     width: 70%;
 }
 
@@ -72,7 +76,7 @@ h2{
     .addShow__button__group {
         margin-left: 70px; 
     
-       margin-top: 20px;
+   
        width: 70%;
     }
 
@@ -97,14 +101,10 @@ h2{
 .addShow__button__group {
     margin-left: 60px; 
 
-   margin-top: 20px;
+  
    width: 70%;
 }
 
-    .cancelShowButton {
-        margin-right: 20px;
-        margin-left: 60px;
-    }
 }
 
 
@@ -164,11 +164,6 @@ h2{
                 margin-left: 300px;
                 margin-top:20px;
             }
-
-            .cancelShowButton {
-                margin-right: 60px;
-                margin-left: 250px;
-            }
     
         }
 
@@ -182,11 +177,6 @@ h2{
         border: 3px solid black;
         border-radius: 3px;
         }
-        .cancelShowButton {
-            margin-right: 60px;
-            margin-left: 250px;
-        }
-
 
         .addShow__button__group
         {
@@ -214,6 +204,6 @@ h2{
     background-color: #F5EBC9 !important;
     border: 3px solid black;
     border-radius: 3px;
-    overflow-y: auto;
+ 
     }
   }

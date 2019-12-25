@@ -129,6 +129,9 @@ class EditShowDetails extends React.Component {
           this.props.history.goBack()
         }}>
           <h2>Edit Show Details</h2>
+          <button type="reset" className="cancelShowButton" onClick={this.cancelHandle}>
+              Back
+        </button>
           <div className="show__hint">* required field</div>
           <div className="form-group">
           
@@ -148,9 +151,6 @@ class EditShowDetails extends React.Component {
             <input type="text" className="show__control"
               name="showlanguage" id="showlanguage" value={this.state.showlanguage.value} onChange={e => this.updateLanguage(e.target.value)} />
             <div className="editShow__button__group">
-             <button type="reset" className="cancelShowButton" onClick={this.cancelHandle}>
-              Cancel
-        </button>
             <button type="submit" className="editShowButton" >
               Done
         </button>

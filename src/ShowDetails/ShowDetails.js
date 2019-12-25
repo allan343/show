@@ -107,15 +107,10 @@ class ShowDetails extends React.Component {
             this.props.history.push(`/WatchingLog/${newid}`)
           })
         }}>
-          <h2> Show Details</h2>
-          <div className="addShow__button__group">
+          <h2 className="showDetailsHeading"> Show Details</h2>
           <button type="cancel" className="cancelShowButton" onClick={this.cancelHandle}>
-              Cancel
+              Back
         </button>
-            <button type="submit" className="saveShowButton" >
-              Save
-        </button>
-        </div>
           <div className="show__hint">* required field</div>
           <div className="form-group">
             <label htmlFor="showname">Name *</label>
@@ -134,7 +129,12 @@ class ShowDetails extends React.Component {
             <input type="text" className="folder__control"
               name="showlanguage" id="showlanguage" value={this.state.showlanguage.value} onChange={e => this.updateLanguage(e.target.value)} />
           </div>
-          
+          <div className="addShow__button__group">
+         
+            <button type="submit" className="saveShowButton" >
+              Save
+        </button>
+        </div>
           
         
         </form>

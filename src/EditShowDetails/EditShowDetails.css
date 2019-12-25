@@ -1,6 +1,30 @@
 
+    .cancelShowButton {
+        background-color:rgb(129, 127, 127);
+        position: absolute;
+        top: 0;
+        left:0;
+        padding:4px 6px;
+        display: inline-block;
+  
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: rgb(129, 127, 127);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    }
 
-
+    .delShowButton{
+        background-color: red;
+    }
+    .editShowButton{
+    background-color: #4CAF50;
+    }
 #edit-details{
     position:fixed;
     width: 95%;
@@ -17,10 +41,7 @@
         margin-top:20px;
     }
     
-    .cancelShowButton {
-        margin-right: 60px;
-        margin-left: 25px;
-    }
+  
     
     h2{
         text-align: center;
@@ -50,7 +71,7 @@
             text-decoration: none;
             outline: none;
             color: #fff;
-            background-color: #4CAF50;
+         
             border: none;
             border-radius: 15px;
             box-shadow: 0 9px #999;
@@ -67,10 +88,7 @@
         }
 
          
-    .cancelShowButton {
-        margin-right: 15px;
-        margin-left: 5px;
-    }
+
     .delShowButton {
         margin-right: 15px;
         margin-left: 15px;
@@ -97,15 +115,10 @@
             text-decoration: none;
             outline: none;
             color: #fff;
-            background-color: #4CAF50;
+        
             border: none;
             border-radius: 15px;
             box-shadow: 0 9px #999;
-        }
-
-        .cancelShowButton {
-            margin-right: 15px;
-            margin-left: 5px;
         }
 
         .delShowButton {
@@ -124,12 +137,6 @@
        margin-top: 20px;
        width: 70%;
     }
-    
-        .cancelShowButton {
-            margin-right: 20px;
-            margin-left: 40px;
-        }
-
         .delShowButton {
             margin-right: 15px;
             margin-left: 95px;
@@ -153,7 +160,7 @@
     
             .editShow__button__group
             {
-                margin-left: 150px;
+                margin-left: 250px;
                 margin-top:20px;
             }
             .delShowButton {
@@ -199,14 +206,10 @@
     
             .editShow__button__group
             {
-                margin-left: 150px;
+                margin-left: 250px;
                 margin-top:20px;
             }
     
-    .cancelShowButton{
-    
-        margin-right:20px ;
-    }
     
     .delShowButton {
         margin-right: 15px;
