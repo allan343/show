@@ -1,8 +1,58 @@
-.watchLog__button__group{
+/*.watchLog__button__group{
   width: 80%;
   margin-left: 30%;
     display: block;
     
+}*/
+
+.watchLogHeading{
+
+  margin-top: 70px;
+}
+.watchLog__button__group {
+
+  
+  color: white;
+  padding: 10px 24px;
+  cursor: pointer;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  display:flex;
+  justify-content: space-evenly;
+
+}
+
+.watchLog__button__group button{
+  display: inline-block;
+  padding: 8px 12px !important;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: rgb(10, 151, 10);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+ background-color: #4CAF50;
+}
+
+
+.watchLog__button__group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.watchLog__button__group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.watchLog__button__group button:hover {
+  background-color: #3e8e41;
 }
 
 #watchingLog{
@@ -16,28 +66,7 @@ border: 3px solid black;
 border-radius: 3px;
 }
 
-button {
-    display: inline-block;
-    padding: 2px 8px;
-    font-size: 24px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    outline: none;
-    color: #fff;
-    background-color: rgb(129, 127, 127);
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 9px #999;
-  }
-  
-  button:hover {background-color: #333}
-  
-  button:active {
-    background-color: #333;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
-  }
+
   .Progress__button-container{
 
 
@@ -68,13 +97,8 @@ button {
       border-radius: 3px;
       }
 
+   
       
-      .watchLog__button__group{
-        width: 80%;
-        margin-left: 25.5%;
-          display: block;
-          
-      }
   }
 
   @media only screen and (min-width: 350px) {
@@ -90,12 +114,7 @@ button {
       border-radius: 3px;
       }
 
-      .watchLog__button__group{
-        width: 80%;
-          margin: 0 auto;
-          display: block;
-          
-      }
+  
   }
 
   @media only screen and (min-width: 400px) {
@@ -127,23 +146,12 @@ button {
       border-radius: 3px;
       }
 
-      .watchLog__button__group{
-        width: 80%;
-        margin-left: 25.5%;
-          display: block;
-          
-      }
+  
   }
 
 
   @media only screen and (min-width: 1000px) {
-    .watchLog__button__group{
-      width: 80%;
-      margin-left: 20%;
-        display: block;
-        
-    }
-    
+  
 
 #watchingLog{
   position: fixed;
@@ -157,28 +165,7 @@ button {
   border-radius: 3px;
 }
 
-button {
-    display: inline-block;
-    padding: 2px 8px;
-    font-size: 24px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    outline: none;
-    color: #fff;
-    background-color: rgb(129, 127, 127);
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 9px #999;
-  }
-  
-  button:hover {background-color: rgb(129, 127, 127)}
-  
-  button:active {
-    background-color: #333;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
-  }
+
 
 
   input[type=text], select {
