@@ -1,6 +1,6 @@
 body {
   background-color: darkgrey;
- 
+  margin:0;
 }
 
 
@@ -183,24 +183,6 @@ font-weight: bold;
 /* float: right;*/
 font-style: italic;
 }
-
-
-
-
-
-.ShowListNav{
-        text-decoration: none;
-        display: flex;
-        justify-content: space-evenly;
-        padding-top: 20px;
-        padding-bottom: 20px;
-          background-color: #333;
-          overflow: hidden;
-          position: fixed;
-          top: 0;
-          width: 100%;
-      }
-
       #edit-details{
         display:block;
           margin-left:auto;

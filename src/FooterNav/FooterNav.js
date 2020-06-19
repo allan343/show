@@ -6,6 +6,7 @@ import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { faFilm } from "@fortawesome/free-solid-svg-icons";
 import { faVideo } from "@fortawesome/free-solid-svg-icons";
 import {faHome} from "@fortawesome/free-solid-svg-icons";
+import './FooterListNav.css'
 export default class FooterNav extends React.Component {
   static contextType = ApiContext;
 
@@ -13,7 +14,7 @@ export default class FooterNav extends React.Component {
     const { shows = [] } = this.context
     //const element = <FontAwesomeIcon icon={fatv} />
     return (
-      <div className='ShowListNav'>
+      <div className='FooterListNav'>
         <NavLink
           className='ToWatchlink'
           to={`/`}
