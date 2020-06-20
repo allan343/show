@@ -1,9 +1,3 @@
-/*.watchLog__button__group{
-  width: 80%;
-  margin-left: 30%;
-    display: block;
-    
-}*/
 
 .watchLogHeading{
 
@@ -76,12 +70,6 @@ background-color: #F5EBC9 !important;
 border: 3px solid black;
 border-radius: 3px;
 }
-
-
-  .Progress__button-container{
-
-
-  }
 
   input[type=text], select {
     width: 90%;
