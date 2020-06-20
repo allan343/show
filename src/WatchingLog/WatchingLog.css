@@ -9,6 +9,17 @@
 
   margin-top: 70px;
 }
+.Progress__button-container{
+
+  text-align: center;
+}
+.seasonButton{
+  display:block;
+  margin-top:5px;
+  margin-left:auto;
+  margin-right: auto;
+}
+
 .watchLog__button__group {
 
   
