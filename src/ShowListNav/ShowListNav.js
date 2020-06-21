@@ -47,7 +47,6 @@ export default class ShowListNav extends React.Component {
 
   render() {
     const { shows = [] } = this.props
-    console.log(shows[0])
     let label = this.props.name
     let filteredShows = []
     // there is a input field allowing user to filter shows by name
@@ -55,7 +54,7 @@ export default class ShowListNav extends React.Component {
       filteredShows = shows
     }
     else {
-      filteredShows = shows.filter(show => show.showname.includes(this.state.name.value));
+      filteredShows = shows.filter(show => show.showname.toLowerCase().includes(this.state.name.value.toLowerCase()));
     }
     return (
       <div >
