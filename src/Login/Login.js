@@ -23,17 +23,12 @@ export default class Login extends React.Component {
   }
 
   handleName(name) {
-      /*
-    event.preventDefault();
-    this.context.setUserName( name );
-    */
+    
    this.setState({name:name  });
   }
 
   handlePassword(pswd) {
-      /*
-    event.preventDefault();
-    this.context.setPassword(pswd );*/
+    
     this.setState({ password:pswd  });
   }
 
@@ -53,7 +48,7 @@ export default class Login extends React.Component {
             <input type="text" className="folder__control"
               name="password" id="password" value={this.state.password}  onChange={e => this.handlePassword(e.target.value)} />
 
-        <button type="submit" /*disabled={!this.validateForm()}*/onClick={event =>this.validateForm(event)} className="LoginButton" >
+        <button type="submit" onClick={event =>this.validateForm(event)} className="LoginButton" >
               Log In
         </button>
       </form>
