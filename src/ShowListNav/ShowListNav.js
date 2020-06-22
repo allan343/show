@@ -68,7 +68,7 @@ export default class ShowListNav extends React.Component {
             Add Show
            </NavLink>
           <label htmlFor="name"  ></label>
-          <input type="text" className="folder__control" placeholder="Search your shows..."
+          <input type="text" className="folder__control" placeholder="Filter your shows..."
             name="name" id="name" value={this.state.name.value} onChange={e => this.updateName(e.target.value)} />
          
            {//create a list of shows
