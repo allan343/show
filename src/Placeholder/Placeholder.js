@@ -21,7 +21,7 @@ class Placeholder extends React.Component {
               <FontAwesomeIcon icon={faFilm} size='10x' />
               </div>
               <div className="instructions">
-          Click on one of your shows to see show details.  If you have no shows, click on "Add Show" to add a show. 
+          This app allows you to add and track tv shows.  Click on one of your shows to see show details.  If you have no shows, click on "Add Show" to add a show. 
             </div>
           </div>
     
