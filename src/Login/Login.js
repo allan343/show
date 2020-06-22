@@ -15,9 +15,9 @@ export default class Login extends React.Component {
    validateForm(event) {
  
     event.preventDefault();
-       console.log("log in")
+     
  if( this.state.name=== 'show'&& this.state.password==='watcher' ){
-    console.log("log in2")
+   
      this.context.setLoggedIn()
  }
   }
