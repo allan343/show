@@ -1,5 +1,4 @@
-
-.seasonButton{
+.seasonButton {
     display: inline-block;
     padding: 8px 12px !important;
     font-size: 24px;
@@ -12,34 +11,29 @@
     border: none;
     border-radius: 15px;
     box-shadow: 0 9px #999;
-   background-color: #4CAF50;
-  }
-  
+    background-color: #4CAF50;
+}
+
 @media only screen and (min-width: 300px) {
-
-.seasonButton{
-    margin-left:10%;
+    .seasonButton {
+        margin-left: 10%;
     }
-
 }
-   
+
 @media only screen and (min-width: 350px) {
-
-.seasonButton{
-    margin-left:12.5%;
+    .seasonButton {
+        margin-left: 12.5%;
     }
 }
-        
+
 @media only screen and (min-width: 400px) {
-
-.seasonButton{
-    margin-left:15%;
+    .seasonButton {
+        margin-left: 15%;
     }
 }
-            
-@media only screen and (min-width: 700px) {
 
-.seasonButton{
-    margin-left:30%;
-}
+@media only screen and (min-width: 700px) {
+    .seasonButton {
+        margin-left: 30%;
+    }
 }

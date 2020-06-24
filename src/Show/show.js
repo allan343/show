@@ -20,8 +20,8 @@ export default class Show extends React.Component {
   constructor(props) {
     super(props);
 
-    const { showId } = this.props
-    const { showname } = this.props
+    const { showId } = this.props;
+    const { showname } = this.props;
 //name id and various states the show can be in
     this.state = {
       showname: showname,
@@ -32,47 +32,44 @@ export default class Show extends React.Component {
     }
   }
 
-
   render() {
-    const { showId } = this.props
-    let show = this.context.getShow(showId)
-    let months = ["JAN", "FEB", "MAR","APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"]
-    let showState = ""
-    let start = ""
-    let finish = ""
-    let currentSeason = ""
+    const { showId } = this.props;
+    let show = this.context.getShow(showId);
+    let months = ["JAN", "FEB", "MAR","APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
+    let showState = "";
+    let start = "";
+    let finish = "";
+    let currentSeason = "";
     let icon = <FontAwesomeIcon icon={faFilm}/>
     //depending on which state
     // show is in
     //label accordingly
     if (show.towatch) {
-      showState = "To Watch"
-      finish = "Haven't started"
-      start = "Haven't started"
-      currentSeason = "Haven't started"
+      showState = "To Watch";
+      finish = "Haven't started";
+      start = "Haven't started";
+      currentSeason = "Haven't started";
       icon =  <FontAwesomeIcon icon={faHome} />
     }
     if (show.watching) {
-      showState = "Watching"
-      finish = "Still Watching"
-      start = new Date(show.startdate).getDate() + "-" + months[new Date(show.startdate).getMonth()] + "-" + new Date(show.startdate).getFullYear()
-      currentSeason = show.currentseason
+      showState = "Watching";
+      finish = "Still Watching";
+      start = new Date(show.startdate).getDate() + "-" + months[new Date(show.startdate).getMonth()] + "-" + new Date(show.startdate).getFullYear();
+      currentSeason = show.currentseason;
       icon =<FontAwesomeIcon icon={faVideo} />
     }
     if (show.finish) {
-      showState = "Finished"
-      start = new Date(show.startdate).getDate() + "-" + months[new Date(show.startdate).getMonth()] + "-" + new Date(show.startdate).getFullYear()
-      finish = new Date(show.finishdate).getDate() + "-" + months[new Date(show.finishdate).getMonth()] + "-" + new Date(show.finishdate).getFullYear()
-      currentSeason = show.currentseason
+      showState = "Finished";
+      start = new Date(show.startdate).getDate() + "-" + months[new Date(show.startdate).getMonth()] + "-" + new Date(show.startdate).getFullYear();
+      finish = new Date(show.finishdate).getDate() + "-" + months[new Date(show.finishdate).getMonth()] + "-" + new Date(show.finishdate).getFullYear();
+      currentSeason = show.currentseason;
       icon =    <FontAwesomeIcon icon={faCheck} />
 
     }
 
-
     return (
 
       <div id='actualShow'>
-
         <button className="backButton" type="button" onClick={this.props.hideshow}>
           Back
         </button>

@@ -1,6 +1,5 @@
-
-#show-details{
-    position:fixed;
+#show-details {
+    position: fixed;
     width: 95%;
     height: 90vh;
     top: 5vh;
@@ -10,183 +9,165 @@
 }
 
 .cancelShowButton {
-    background-color:rgb(129, 127, 127);
+    background-color: rgb(129, 127, 127);
     position: absolute;
     top: 0;
-    left:0;
-    padding:4px 6px;
+    left: 0;
+    padding: 4px 6px;
 }
 
-.saveShowButton{
+.saveShowButton {
     background-color: green !important;
 }
 
-h2{
+h2 {
     text-align: center;
-    margin-bottom:0 px;
+    margin-bottom: 0 px;
 }
 
 .addShow__button__group {
     margin-left: 300px;
     margin-top: 20px;
-    display:block;
+    display: block;
 }
 
 @media only screen and (min-width: 300px) {
-  
-.addShow__button__group {
-    margin-left: 140px;
-    margin-top: 20px;   
-    display:block;
-}
- 
-.addShow__button__group button {
-    display: inline-block;
-    padding:0;
-    font-size: 24px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    outline: none;
-    color: #fff;
-    background-color: rgb(129, 127, 127);
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 9px #999;
+    .addShow__button__group {
+        margin-left: 140px;
+        margin-top: 20px;
+        display: block;
     }
-
+    .addShow__button__group button {
+        display: inline-block;
+        padding: 0;
+        font-size: 24px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        color: #fff;
+        background-color: rgb(129, 127, 127);
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 9px #999;
+    }
     #show-details {
-    position: fixed;
-    width: 98%;
-    height: 97vh;    
-    background-color: #F5EBC9 !important;
-    border: 3px solid black;
-    border-radius: 3px;
+        position: fixed;
+        width: 98%;
+        height: 97vh;
+        background-color: #F5EBC9 !important;
+        border: 3px solid black;
+        border-radius: 3px;
     }
 }
 
 @media only screen and (min-width: 350px) {
     .addShow__button__group {
-    width: 70%;
+        width: 70%;
     }
-
     .addShow__button__group button {
-    display: inline-block;
-    padding:10px 10px;
-    font-size: 24px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    outline: none;
-    color: #fff;
-    background-color: rgb(129, 127, 127);
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 9px #999;
+        display: inline-block;
+        padding: 10px 10px;
+        font-size: 24px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        color: #fff;
+        background-color: rgb(129, 127, 127);
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 9px #999;
     }
 }
-@media only screen and (min-width: 400px) {
 
-.addShow__button__group {
-    width: 70%;
-}
+@media only screen and (min-width: 400px) {
+    .addShow__button__group {
+        width: 70%;
+    }
 }
 
 @media only screen and (min-width: 700px) {
-
-#show-details{
-    position: fixed;
-    padding: 6px 20px;
-    width: 90%;
-    height: 60vh;
-    left: 5.5%;
-    background-color: #F5EBC9 !important;
-    border: 3px solid black;
-    border-radius: 3px;
+    #show-details {
+        position: fixed;
+        padding: 6px 20px;
+        width: 90%;
+        height: 60vh;
+        left: 5.5%;
+        background-color: #F5EBC9 !important;
+        border: 3px solid black;
+        border-radius: 3px;
+    }
+    .addShow__button__group {
+        margin-top: 20px;
+    }
+    input[type=text], select {
+        width: 90%;
+        padding: 6px 20px;
+        margin: 8px auto;
+        display: block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    input[type=number], select {
+        width: 90%;
+        padding: 6px 20px;
+        margin: 6px auto;
+        display: block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    .addShow__button__group {
+        margin-left: 300px;
+        margin-top: 20px;
+        display: block;
+    }
 }
-
-.addShow__button__group{
-    margin-top:20px;
-}
-
-input[type=text], select {
-    width: 90%;
-    padding: 6px 20px;
-    margin: 8px auto;
-    display: block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    }
-        
-input[type=number], select {
-    width: 90%;
-    padding: 6px 20px;
-    margin: 6px auto;
-    display: block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    }
-    
-.addShow__button__group {
-    margin-left: 300px;
-    margin-top: 20px;
-    display:block;
-    }
-    }
 
 @media only screen and (min-width: 1000px) {
-
-#show-details{
-    position:fixed;
-    width: 90%;
-    height: 90vh;
-    left: 5.5%;
-    background-color: #F5EBC9 !important;
-    border: 3px solid black;
-    border-radius: 3px;
+    #show-details {
+        position: fixed;
+        width: 90%;
+        height: 90vh;
+        left: 5.5%;
+        background-color: #F5EBC9 !important;
+        border: 3px solid black;
+        border-radius: 3px;
     }
-    
-.addShow__button__group {
-    margin-left: 300px;
-    margin-top: 20px;           
-    display:block;
-    }
-    }
-
-@media only screen and (min-width: 1040px) {
-    
-#show-details{
-    position:fixed;
-    width: 55%;
-    height: 90vh;
-    left: 22.5%;
-    background-color: #F5EBC9 !important;
-    border: 3px solid black;
-    border-radius: 3px;
-    }
-    
-.addShow__button__group {
-    margin-left: 300px;
-    margin-top: 20px;
-    display:block;
+    .addShow__button__group {
+        margin-left: 300px;
+        margin-top: 20px;
+        display: block;
     }
 }
 
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 480px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: landscape) {
-
-#show-details{
-    position:fixed;
-    width: 95%;
-    height: 90vh;
-    top: 5vh;
-    background-color: #F5EBC9 !important;
-    border: 3px solid black;
-    border-radius: 3px;
+@media only screen and (min-width: 1040px) {
+    #show-details {
+        position: fixed;
+        width: 55%;
+        height: 90vh;
+        left: 22.5%;
+        background-color: #F5EBC9 !important;
+        border: 3px solid black;
+        border-radius: 3px;
     }
-  }
+    .addShow__button__group {
+        margin-left: 300px;
+        margin-top: 20px;
+        display: block;
+    }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+    #show-details {
+        position: fixed;
+        width: 95%;
+        height: 90vh;
+        top: 5vh;
+        background-color: #F5EBC9 !important;
+        border: 3px solid black;
+        border-radius: 3px;
+    }
+}

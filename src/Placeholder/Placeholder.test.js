@@ -10,12 +10,12 @@ import Placeholder from './Placeholder'
 library.add(faPlus, faChevronLeft, faTrashAlt, faCheckDouble)
 
 it('renders without crashing', () => {
-  const div = document.createElement('div')
+  const div = document.createElement('div');
   ReactDOM.render(
     <BrowserRouter>
       <Placeholder />
     </BrowserRouter>,
     div
   )
-  ReactDOM.unmountComponentAtNode(div)
+  ReactDOM.unmountComponentAtNode(div);
 })

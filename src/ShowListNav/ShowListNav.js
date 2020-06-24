@@ -22,7 +22,7 @@ export default class ShowListNav extends React.Component {
     }
   }
    getHeading() {
-   let heading = this.props.name
+   let heading = this.props.name;
    if(heading==='towatch')
    {
     return <h1>To Watch</h1>;
@@ -42,16 +42,16 @@ export default class ShowListNav extends React.Component {
 
   showClicked(showid) {
     this.setState({  clicked: true });
-    this.context.setId(showid)
+    this.context.setId(showid);
   }
 
   render() {
-    const { shows = [] } = this.props
-    let label = this.props.name
-    let filteredShows = []
+    const { shows = [] } = this.props;
+    let label = this.props.name;
+    let filteredShows = [];
     // there is a input field allowing user to filter shows by name
     if (this.state.name.value == "") {
-      filteredShows = shows
+      filteredShows = shows;
     }
     else {
       filteredShows = shows.filter(show => show.showname.toLowerCase().includes(this.state.name.value.toLowerCase()));

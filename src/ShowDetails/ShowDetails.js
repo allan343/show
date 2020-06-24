@@ -4,8 +4,8 @@ import './ShowDetails.css'
 
 class ShowDetails extends React.Component {
   static contextType = ApiContext
-// component that allows user
-// to fill in show details
+  // component that allows user
+  // to fill in show details
   static defaultProps = {
     id: '',
     showname: '',
@@ -19,7 +19,7 @@ class ShowDetails extends React.Component {
   };
 
   constructor(props) {
-//states a show can have
+    //states a show can have
     super(props);
     this.state = {
       id: '',
@@ -48,7 +48,7 @@ class ShowDetails extends React.Component {
       currentseason: this.props.currentseason
     };
   }
-//methods to update show state from user input
+  //methods to update show state from user input
   cancelHandle = (e) => {
     e.preventDefault();
     this.props.history.push(`/`);
@@ -103,13 +103,13 @@ class ShowDetails extends React.Component {
           // can happen asyncronously
           // callback function ensures we have newid from add show context method
           this.context.addShow(show, (newid) => {
-            this.setState({ id: newid })
-            this.props.history.push(`/WatchingLog/${newid}`)
+            this.setState({ id: newid });
+            this.props.history.push(`/WatchingLog/${newid}`);
           })
         }}>
           <h2 className="showDetailsHeading"> Show Details</h2>
           <button type="cancel" className="cancelShowButton" onClick={this.cancelHandle}>
-              Back
+            Back
         </button>
           <div className="show__hint">* required field</div>
           <div className="form-group">
@@ -130,11 +130,11 @@ class ShowDetails extends React.Component {
               name="showlanguage" id="showlanguage" value={this.state.showlanguage.value} onChange={e => this.updateLanguage(e.target.value)} />
           </div>
           <div className="addShow__button__group">
-         
+
             <button type="submit" className="saveShowButton" >
               Save
         </button>
-        </div>
+          </div>
         </form>
       </div>
     )

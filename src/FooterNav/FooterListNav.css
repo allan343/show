@@ -1,4 +1,4 @@
-.FooterListNav{
+.FooterListNav {
   text-decoration: none;
   display: flex;
   justify-content: space-evenly;
@@ -12,16 +12,16 @@
 }
 
 @media screen and (min-width: 1024px) {
-  .FooterListNav{
-  text-decoration: none;
-  display: flex;
-  justify-content: space-evenly;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  background-color: #333;
-  overflow: hidden;
-  position: fixed;
-  top: 0;
-  width: 100%;
+  .FooterListNav {
+    text-decoration: none;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #333;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
   }
-  }
+}

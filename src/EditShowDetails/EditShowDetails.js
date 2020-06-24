@@ -81,7 +81,7 @@ class EditShowDetails extends React.Component {
   // goes to appropriate page on delete
   deleteHandle = (e) => {
     e.preventDefault();
-    this.context.deleteShow(this.state.id)
+    this.context.deleteShow(this.state.id);
     if (this.props.finish) {
       this.props.history.push("/finish");
     }
@@ -95,7 +95,7 @@ class EditShowDetails extends React.Component {
 
   //on submit create a new show and update state
   // updates show on edit 
-  render() {  
+  render() {
     return (
       <div id="edit-details">
         <form className="folder" onSubmit={(event) => {
@@ -130,11 +130,11 @@ class EditShowDetails extends React.Component {
         }}>
           <h2>Edit Show Details</h2>
           <button type="reset" className="cancelShowButton" onClick={this.cancelHandle}>
-              Back
+            Back
         </button>
           <div className="show__hint">* required field</div>
           <div className="form-group">
-          
+
             <label htmlFor="name">Name *</label>
             <input type="text" className="show__control"
               name="showname" id="showname" value={this.state.showname.value} onChange={e => this.updateName(e.target.value)} />
@@ -151,14 +151,14 @@ class EditShowDetails extends React.Component {
             <input type="text" className="show__control"
               name="showlanguage" id="showlanguage" value={this.state.showlanguage.value} onChange={e => this.updateLanguage(e.target.value)} />
             <div className="editShow__button__group">
-            <button type="submit" className="editShowButton" >
-              Done
+              <button type="submit" className="editShowButton" >
+                Done
         </button>
-            <button type="reset" className="delShowButton" onClick={this.deleteHandle}>
-              Delete
+              <button type="reset" className="delShowButton" onClick={this.deleteHandle}>
+                Delete
         </button>
-          </div>
-         
+            </div>
+
           </div>
         </form>
 

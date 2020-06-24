@@ -10,14 +10,13 @@ import Show from './Show'
 library.add(faPlus, faChevronLeft, faTrashAlt, faCheckDouble)
 
 it('renders without crashing', () => {
-  const div = document.createElement('div')
+  const div = document.createElement('div');
   ReactDOM.render(
     <BrowserRouter>
     {
-    
-}
+    }
     </BrowserRouter>,
     div
   )
-  ReactDOM.unmountComponentAtNode(div)
+  ReactDOM.unmountComponentAtNode(div);
 })

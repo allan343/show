@@ -10,7 +10,7 @@ export default class Finished extends React.Component {
   render() {
     return (
       <div className='NoteListMain__button-container'>
-        
+
         <ShowListNav name={'finished'} shows={this.context.shows.filter(show => show.finish)}></ShowListNav>
         <FooterNav></FooterNav>
       </div>
