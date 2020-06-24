@@ -102,7 +102,7 @@ class App extends Component {
                         show[key] = responseJson[key];
                     }
                     this.setState({
-                        shows: this.state.shows;
+                        shows: this.state.shows
                     });
                 }
             })
