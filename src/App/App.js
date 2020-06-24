@@ -50,9 +50,9 @@ class App extends Component {
     handleAddShow = (showObject, newId) => {
  
        if (this.state.shows.find((show) => {
-            return show.id === showObject.id
+            return show.id === showObject.id;
         })) {
-            return this.handleUpdateShow(showObject, showObject.id)
+            return this.handleUpdateShow(showObject, showObject.id);
         }
 
         fetch(`${config.API_ENDPOINT}/shows`, { headers: { 'content-type': 'application/json' }, method: "POST", body: JSON.stringify(showObject) })
@@ -60,7 +60,7 @@ class App extends Component {
             .then(responseJson => {
 
                 if (responseJson.id) {
-                    let newid = responseJson.id
+                    let newid = responseJson.id;
                     this.state.shows.push(responseJson);
                     this.setState({
                         shows: this.state.shows,
@@ -85,7 +85,7 @@ class App extends Component {
     };
 
     getId= () => {
-        return this.state.id
+        return this.state.id;
     };
     //updates the show in backend
     //updates the show in frontend
@@ -96,13 +96,13 @@ class App extends Component {
             .then(responseJson => {
 
                 if (responseJson.id && responseJson.showname) {
-                    let show = this.state.shows.find(show => show.id == showId)
-                    let covertedShow = (responseJson)
+                    let show = this.state.shows.find(show => show.id == showId);
+                    let covertedShow = (responseJson);
                     for (let key in show) {
-                        show[key] = responseJson[key]
+                        show[key] = responseJson[key];
                     }
                     this.setState({
-                        shows: this.state.shows
+                        shows: this.state.shows;
                     });
                 }
             })

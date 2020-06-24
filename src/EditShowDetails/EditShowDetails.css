@@ -19,33 +19,35 @@
         padding:4px 6px;
         display: inline-block;
         margin-top:17px;
-    margin-left:6px;
-    font-size: 24px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    outline: none;
-    color: #fff;
-    background-color: rgb(129, 127, 127);
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 9px #999;
+        margin-left:6px;
+        font-size: 24px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        color: #fff;
+        background-color: rgb(129, 127, 127);
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 9px #999;
     }
 
     .delShowButton{
         background-color: red;
     }
+
     .editShowButton{
-    background-color: #4CAF50;
+        background-color: #4CAF50;
     }
-#edit-details{
-    position:fixed;
-    width: 95%;
-    height: 90vh;
-    top: 5vh;
-    background-color: #F5EBC9 !important;
-    border: 3px solid black;
-    border-radius: 3px;
+
+    #edit-details{
+        position:fixed;
+        width: 95%;
+        height: 90vh;
+        top: 5vh;
+        background-color: #F5EBC9 !important;
+        border: 3px solid black;
+        border-radius: 3px;
     }
     
     .editShow__button__group
@@ -55,55 +57,49 @@
         display: inline;
     }
     
-  
-    
     h2{
         text-align: center;
     }
     
     .editShow__button__group {
-         margin-left: 200px; 
-     
+        margin-left: 200px; 
         margin-top: 20px;
         width: 70%;
     }
     
     @media only screen and (min-width: 300px) {
       
-        .cancelShowButton {
-        
-        font-size:12px;}
+    .cancelShowButton {
+        font-size:12px;
+    }
 
-        .editShow__button__group {
-            margin-left: 30px;
-            width:100%;
-        }
+    .editShow__button__group {
+        margin-left: 30px;
+        width:100%;
+    }
      
-        .editShow__button__group button {
-            display: inline-block;
-            padding:0;
-            font-size: 24px;
-            cursor: pointer;
-            text-align: center;
-            text-decoration: none;
-            outline: none;
-            color: #fff;
-         
-            border: none;
-            border-radius: 15px;
-            box-shadow: 0 9px #999;
-        }
+    .editShow__button__group button {
+        display: inline-block;
+        padding:0;
+        font-size: 24px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        color: #fff;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 9px #999;
+    }
     
-        edit-details {
-            position: fixed;
-            width: 98%;
-            height: 97vh;
-            background-color: white !important;
-            border: 3px solid black;
-            border-radius: 3px;
-        }
-
-         
+    edit-details {
+        position: fixed;
+        width: 98%;
+        height: 97vh;
+        background-color: white !important;
+        border: 3px solid black;
+        border-radius: 3px;
+    }
 
     .delShowButton {
         margin-right: 15px;
@@ -112,125 +108,122 @@
     }
 
     }
-    
-    
+        
     @media only screen and (min-width: 350px) {
-        .cancelShowButton {
-        
-            font-size:18px;}
+    .cancelShowButton {
+        font-size:18px;
+    }
 
-        .editShow__button__group {
-            margin-left: 70px; 
-        
-           margin-top: 20px;
-           width: 70%;
-        }
+    .editShow__button__group {
+        margin-left: 70px; 
+        margin-top: 20px;
+        width: 70%;
+    }
     
-        .editShow__button__group button {
-            display: inline-block;
-            padding:10px 10px;
-            font-size: 24px;
-            cursor: pointer;
-            text-align: center;
-            text-decoration: none;
-            outline: none;
-            color: #fff;
-        
-            border: none;
-            border-radius: 15px;
-            box-shadow: 0 9px #999;
+    .editShow__button__group button {
+        display: inline-block;
+        padding:10px 10px;
+        font-size: 24px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        color: #fff;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 9px #999;
         }
 
-        .delShowButton {
-            margin-right: 15px;
-            margin-left: 60px;
-            margin-top: 2px;
+    .delShowButton {
+        margin-right: 15px;
+        margin-left: 60px;
+        margin-top: 2px;
         }
       
     }
     @media only screen and (min-width: 400px) {
-        .cancelShowButton {
         
-            font-size:24px;}
+    .cancelShowButton {    
+        font-size:24px;
+    }
         
     .editShow__button__group {
         margin-left: 50px; 
-    
-       margin-top: 20px;
-       width: 70%;
+        margin-top: 20px;
+        width: 70%;
     }
-        .delShowButton {
-            margin-right: 15px;
-            margin-left: 95px;
-            margin-top: 15px;
+    
+    .delShowButton {
+        margin-right: 15px;
+        margin-left: 95px;
+        margin-top: 15px;
         }
     }
     
     
     @media only screen and (min-width: 700px) {
-        #edit-details{
-            position:fixed;
-            width: 90%;
-            height: 90vh;
-            left: 5.5%;
-            top: 5vh;
-            background-color: #F5EBC9 !important;
-            border: 3px solid black;
-            border-radius: 3px;
-            }
+    
+    #edit-details{
+        position:fixed;
+        width: 90%;
+        height: 90vh;
+        left: 5.5%;
+        top: 5vh;
+        background-color: #F5EBC9 !important;
+        border: 3px solid black;
+        border-radius: 3px;
+        }
     
     
-            .editShow__button__group
-            {
-                margin-left: 250px;
-                margin-top:20px;
+    .editShow__button__group {
+        margin-left: 250px;
+        margin-top:20px;
+        }
+    
+    .delShowButton {
+        margin-right: 15px;
+        margin-left: 20px;
+        margin-top: 15px;
             }
-            .delShowButton {
-                margin-right: 15px;
-                margin-left: 20px;
-                margin-top: 15px;
-            }
-
         }   
     
-        @media only screen and (min-width: 1000px) {
-            #edit-details{
-                position:fixed;
-                width: 90%;
-                height: 90vh;
-                left: 5.5%;
-                top: 5vh;
-                background-color: #F5EBC9!important;
-                border: 3px solid black;
-                border-radius: 3px;
-                }
-        
-        
-                .editShow__button__group
-                {
-                    margin-left: 250px;
-                    margin-top:20px;
-                }
-            }
+    @media only screen and (min-width: 1000px) {
+    
+    #edit-details{
+        position:fixed;
+        width: 90%;
+        height: 90vh;
+        left: 5.5%;
+        top: 5vh;
+        background-color: #F5EBC9!important;
+        border: 3px solid black;
+        border-radius: 3px;
+        }
+
+    .editShow__button__group{
+        margin-left: 250px;
+        margin-top:20px;
+        }
+        }
     
     @media only screen and (min-width: 1040px) {
-        #edit-details{
-            position:fixed;
-            width: 55%;
-            height: 90vh;
-            left: 22.5%;
-            top: 5vh;
-            background-color: #F5EBC9 !important;
-            border: 3px solid black;
-            border-radius: 3px;
-            }
+       
+    #edit-details{
+        position:fixed;
+        width: 55%;
+        height: 90vh;
+        left: 22.5%;
+        top: 5vh;
+        background-color: #F5EBC9 !important;
+        border: 3px solid black;
+        border-radius: 3px;
+        }
     
     
-            .editShow__button__group
-            {
-                margin-left: 250px;
-                margin-top:20px;
-            }
+    .editShow__button__group{
+        margin-left: 250px;
+        margin-top:20px;
+        }
     
     
     .delShowButton {

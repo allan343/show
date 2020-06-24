@@ -72,24 +72,24 @@ class EditShowDetails extends React.Component {
 
   //user clicks cancel goes back to previous page
   cancelHandle = (e) => {
-    e.preventDefault()
-    this.props.history.goBack()
+    e.preventDefault();
+    this.props.history.goBack();
   }
 
   //delete a show from backend
   //depending on which view user is in
   // goes to appropriate page on delete
   deleteHandle = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     this.context.deleteShow(this.state.id)
     if (this.props.finish) {
-      this.props.history.push("/finish")
+      this.props.history.push("/finish");
     }
     else if (this.props.watching) {
-      this.props.history.push("/watching")
+      this.props.history.push("/watching");
     }
     else {
-      this.props.history.push("/")
+      this.props.history.push("/");
     }
   }
 
@@ -118,15 +118,15 @@ class EditShowDetails extends React.Component {
             //gets a existing show from context
             //calls context update method to update show
           }
-          let oldShow = this.context.getShow(show.id)
-          show.startdate = oldShow.startdate
-          show.finishdate = oldShow.finishdate
-          show.currentseason = oldShow.currentseason
-          this.context.updateShow(show, show.id)
+          let oldShow = this.context.getShow(show.id);
+          show.startdate = oldShow.startdate;
+          show.finishdate = oldShow.finishdate;
+          show.currentseason = oldShow.currentseason;
+          this.context.updateShow(show, show.id);
           this.setState({
             id: show.id
           })
-          this.props.history.goBack()
+          this.props.history.goBack();
         }}>
           <h2>Edit Show Details</h2>
           <button type="reset" className="cancelShowButton" onClick={this.cancelHandle}>
