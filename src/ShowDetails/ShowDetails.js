@@ -50,8 +50,8 @@ class ShowDetails extends React.Component {
   }
 //methods to update show state from user input
   cancelHandle = (e) => {
-    e.preventDefault()
-    this.props.history.push(`/`)
+    e.preventDefault();
+    this.props.history.push(`/`);
   }
 
   updateName(showname) {
@@ -135,8 +135,6 @@ class ShowDetails extends React.Component {
               Save
         </button>
         </div>
-          
-        
         </form>
       </div>
     )

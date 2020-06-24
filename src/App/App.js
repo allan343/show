@@ -97,7 +97,6 @@ class App extends Component {
 
                 if (responseJson.id && responseJson.showname) {
                     let show = this.state.shows.find(show => show.id == showId);
-                    let covertedShow = (responseJson);
                     for (let key in show) {
                         show[key] = responseJson[key];
                     }

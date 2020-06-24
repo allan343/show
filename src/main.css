@@ -1,6 +1,6 @@
 body {
   background-color: darkgrey;
-  margin:0;
+  margin: 0;
 }
 
 body {
@@ -22,7 +22,9 @@ body {
   box-shadow: 0 9px #999;
 }
 
-.state__button:hover {background-color: #333}
+.state__button:hover {
+  background-color: #333
+}
 
 .state__button:active {
   background-color: #333;
@@ -45,7 +47,9 @@ body {
   box-shadow: 0 9px #999;
 }
 
-.backButton:hover {background-color: #333}
+.backButton:hover {
+  background-color: #333
+}
 
 .backButton:active {
   background-color: #333;
@@ -53,193 +57,176 @@ body {
   transform: translateY(4px);
 }
 
-
-#showContainer{
-  height:100%;
-  
-  }
-a{
-  color:#999;
-}
-  
-.category{
-  margin-left:63px;
+#showContainer {
+  height: 100%;
 }
 
-.addShowPath{
-  margin-left:67px;
-  color:black;
+a {
+  color: #999;
 }
 
-.filmicon{
-  margin-left:39px;
+.category {
+  margin-left: 63px;
 }
-  #show {
-  
-    padding: 30px 30px;
-    background-color: rgb(129, 127, 127);
-    border-bottom: 1px solid black;
-  }
-  
-  #shows{
-      position: absolute;
-      float:left;
-      width: 100%;
-      background-color:#F5EBC9;
-      height: 100%;
-      padding-top:70px;
-     }
 
+.addShowPath {
+  margin-left: 67px;
+  color: black;
+}
 
+.filmicon {
+  margin-left: 39px;
+}
 
-    #icon {
-    
-      font-size: 50px;
-      position: relative;
-      top: 4px;
-    }
+#show {
+  padding: 30px 30px;
+  background-color: rgb(129, 127, 127);
+  border-bottom: 1px solid black;
+}
 
-    .fa-2x {
-      font-size: 2em;
-      position: relative;
-      top: 5px;
-      right: 3px;
-  }
-    
-ul{
+#shows {
+  position: absolute;
+  float: left;
+  width: 100%;
+  background-color: #F5EBC9;
+  height: 100%;
+  padding-top: 70px;
+}
+
+#icon {
+  font-size: 50px;
+  position: relative;
+  top: 4px;
+}
+
+.fa-2x {
+  font-size: 2em;
+  position: relative;
+  top: 5px;
+  right: 3px;
+}
+
+ul {
   list-style: none;
-  padding:0;
+  padding: 0;
 }
 
-   .seasons{
-     display:block;
-     margin-left: 18px;
-   }
-     #actualShow{
-        
-      float:right;
-      width: 100%;
-      padding-top: 80px;
-      background-color:#F5EBC9;
-      }
-  
-      .initialInfo
-      {
-        width: 50%;
-        padding-top: 70px;
-        margin-right: auto;
-        margin-left: auto;
-      }
-    
+.seasons {
+  display: block;
+  margin-left: 18px;
+}
 
-      #details,#watching{
-        display: block;
-        padding: 40px 15px;
-        background-color: #F5EBC9;
-        
-      }
+#actualShow {
+  float: right;
+  width: 100%;
+  padding-top: 80px;
+  background-color: #F5EBC9;
+}
 
-      #title{
-        display:inline;
-        text-align:justify;
-      }
+.initialInfo {
+  width: 50%;
+  padding-top: 70px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#details, #watching {
+  display: block;
+  padding: 40px 15px;
+  background-color: #F5EBC9;
+}
+
+#title {
+  display: inline;
+  text-align: justify;
+}
 
 .titleIcon {
   display: inline-block;
-    height: 80px;
-    padding: 5px;
-    vertical-align: top;
-    margin-top: 20px;
-    margin-bottom: 50px;
+  height: 80px;
+  padding: 5px;
+  vertical-align: top;
+  margin-top: 20px;
+  margin-bottom: 50px;
 }
 
 .titleButton {
   display: inline-block;
- 
   height: 80px;
   padding: 5px;
-  margin-left:20px;
+  margin-left: 20px;
   vertical-align: top;
- margin-top:30px;
+  margin-top: 30px;
 }
 
-.headerAndButton{
+.headerAndButton {
   display: block;
   font-weight: bold;
 }
-.link{
+
+.link {
   float: right;
 }
 
-.showStates{
- /* display:block;*/
+.showStates {
+  /* display:block;*/
   text-align: center;
   margin-top: 5px;
 }
 
-.showlabel{
-/*  margin-left: 115px;*/
-font-weight: bold;
+.showlabel {
+  /*  margin-left: 115px;*/
+  font-weight: bold;
 }
-    
-.showdetails{
-/* float: right;*/
-font-style: italic;
+
+.showdetails {
+  /* float: right;*/
+  font-style: italic;
 }
-      #edit-details{
-        display:block;
-          margin-left:auto;
-          margin-right:auto;
-          background-color: #ddd
-        }
 
-        .shows{
+#edit-details {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ddd
+}
 
-          display:none
-        }
+.shows {
+  display: none
+}
 
-        li:hover {
-          cursor: pointer;
-      }
+li:hover {
+  cursor: pointer;
+}
 
-      
-      .showlist{
+.showlist {
+  display: none
+}
 
-        display:none
-      }
-
-
-        @media only screen and (min-width: 500px) {
-     
-  
-#shows{
-  position: absolute;
-  float:left;
-  width: 100%;
-  background-color:#F5EBC9;
-  height: 100%;
-  padding-top:70px;
-  
- }
- #actualShow{
-        
-  float:right;
-  width: 100%;
-  padding-top: 80px;
+@media only screen and (min-width: 500px) {
+  #shows {
+    position: absolute;
+    float: left;
+    width: 100%;
+    background-color: #F5EBC9;
+    height: 100%;
+    padding-top: 70px;
   }
-
+  #actualShow {
+    float: right;
+    width: 100%;
+    padding-top: 80px;
+  }
   .titleIcon {
     display: inline-block;
-      height: 80px;
-      padding: 5px;
-      margin-left: 440px;
-      vertical-align: top;
-      margin-top: 20px;
-      margin-bottom: 50px;
+    height: 80px;
+    padding: 5px;
+    margin-left: 440px;
+    vertical-align: top;
+    margin-top: 20px;
+    margin-bottom: 50px;
   }
- 
-  .initialInfoIcon
-  {
+  .initialInfoIcon {
     margin-left: 200px;
   }
 }

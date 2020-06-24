@@ -19,7 +19,6 @@
 
 .watchLog__button__group {
 
-  
   color: white;
   padding: 10px 24px;
   cursor: pointer;
@@ -47,7 +46,6 @@
  background-color: #4CAF50;
 }
 
-
 .watchLog__button__group:after {
   content: "";
   clear: both;
@@ -64,51 +62,46 @@
 }
 
 #watchingLog{
-position:fixed;
-width: 100%;
-height: 70vh;
-left: 32%;
-top: 15vh;
-background-color: #F5EBC9 !important;
-border: 3px solid black;
-border-radius: 3px;
+  position:fixed;
+  width: 100%;
+  height: 70vh;
+  left: 32%;
+  top: 15vh;
+  background-color: #F5EBC9 !important;
+  border: 3px solid black;
+  border-radius: 3px;
 }
 
-  input[type=text], select {
-    width: 90%;
-    
-    padding: 12px 20px;
-    margin: 8px auto;
-    
-    display: block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+input[type=text], select {
+  width: 90%;    
+  padding: 12px 20px;
+  margin: 8px auto;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+@media only screen and (min-width: 300px) {
+
+.watchLog__button__group button{
+  font-size:1em;
+  margin-right: 10px;
+}
+
+#watchingLog{
+  position:fixed;
+  width: 85%;
+  height: 80vh;
+  left: 5%;
+  top: 15vh;
+  background-color: #F5EBC9 !important;
+  border: 3px solid black;
+  border-radius: 3px;
   }
+}
 
-  @media only screen and (min-width: 300px) {
-
-    .watchLog__button__group button{
-      font-size:1em;
-      margin-right: 10px;
-    }
-
-    #watchingLog{
-      position:fixed;
-      width: 85%;
-      height: 80vh;
-      left: 5%;
-      top: 15vh;
-      background-color: #F5EBC9 !important;
-      border: 3px solid black;
-      border-radius: 3px;
-      }
-
-   
-      
-  }
-
-  @media only screen and (min-width: 350px) {
+@media only screen and (min-width: 350px) {
 
     .watchLog__button__group button{
       font-size:1em;

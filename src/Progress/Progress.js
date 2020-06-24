@@ -9,7 +9,7 @@ export default class Progress extends React.Component {
 
   constructor(props) {
     super(props);
-    let id = this.props.id
+    let id = this.props.id;
     this.state = {
       id: id,
       currentseason: ""
@@ -22,7 +22,7 @@ export default class Progress extends React.Component {
     let show = this.context.getShow(this.props.id);
     show.currentseason = season;
     this.context.updateShow(show, this.props.id)
-    this.props.history.push('/watching')
+    this.props.history.push('/watching');
   }
 
   render() {
@@ -30,8 +30,8 @@ export default class Progress extends React.Component {
       <div className='Progress__button-container'>
         <h2>Current Season</h2>
         <form className="folder" onSubmit={(event) => {
-          event.preventDefault()
-          this.updateCurrentSeason(this.state.currentSeason)
+          event.preventDefault();
+          this.updateCurrentSeason(this.state.currentSeason);
         }}>
           <input type="number" min="1" max={this.context.getShow(this.state.id).seasons + ""} placeholder="current season you're on" className="folder__control"
             name="currentSeason" id="currentSeason" onChange={(e) => this.setState({ currentSeason: e.target.value })} />
