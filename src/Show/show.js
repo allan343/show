@@ -1,9 +1,9 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import ApiContext from '../ApiContext/ApiContext'
-import StartShow from '../StartShow/StartShow'
-import FinishShow from '../FinishShow/FinishShow'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import ApiContext from '../ApiContext/ApiContext';
+import StartShow from '../StartShow/StartShow';
+import FinishShow from '../FinishShow/FinishShow';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { faFilm } from "@fortawesome/free-solid-svg-icons";
 import { faVideo } from "@fortawesome/free-solid-svg-icons";

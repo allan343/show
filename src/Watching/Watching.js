@@ -1,7 +1,7 @@
-import React from 'react'
-import ShowListNav from '../ShowListNav/ShowListNav'
-import ApiContext from '../ApiContext/ApiContext'
-import FooterNav from '../FooterNav/FooterNav'
+import React from 'react';
+import ShowListNav from '../ShowListNav/ShowListNav';
+import ApiContext from '../ApiContext/ApiContext';
+import FooterNav from '../FooterNav/FooterNav';
 
 export default class Finished extends React.Component {
   static contextType = ApiContext;

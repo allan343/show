@@ -1,5 +1,5 @@
 import React from 'react';
-import ApiContext from '../ApiContext/ApiContext'
+import ApiContext from '../ApiContext/ApiContext';
 
 class FinishShow extends React.Component {
   static contextType = ApiContext;

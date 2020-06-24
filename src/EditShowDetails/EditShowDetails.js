@@ -1,6 +1,6 @@
 import React from 'react';
-import ApiContext from '../ApiContext/ApiContext'
-import './EditShowDetails.css'
+import ApiContext from '../ApiContext/ApiContext';
+import './EditShowDetails.css';
 
 class EditShowDetails extends React.Component {
   static contextType = ApiContext

@@ -1,10 +1,10 @@
-import React from 'react'
-import { NavLink, Link } from 'react-router-dom'
-import ApiContext from '../ApiContext/ApiContext'
-import Show from '../Show/show'
-import Placeholder from '../Placeholder/Placeholder'
-import '../main.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import React from 'react';
+import { NavLink, Link } from 'react-router-dom';
+import ApiContext from '../ApiContext/ApiContext';
+import Show from '../Show/show';
+import Placeholder from '../Placeholder/Placeholder';
+import '../main.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFilm } from "@fortawesome/free-solid-svg-icons";
 
 export default class ShowListNav extends React.Component {

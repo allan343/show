@@ -1,7 +1,7 @@
-import React from 'react'
-import ApiContext from '../ApiContext/ApiContext'
-import Progress from '../Progress/Progress'
-import './WatchingLog.css'
+import React from 'react';
+import ApiContext from '../ApiContext/ApiContext';
+import Progress from '../Progress/Progress';
+import './WatchingLog.css';
 
 export default class WatchingLog extends React.Component {
   static contextType = ApiContext;

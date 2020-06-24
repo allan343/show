@@ -1,6 +1,6 @@
-import React from 'react'
-import ApiContext from '../ApiContext/ApiContext'
-import './Progress.css'
+import React from 'react';
+import ApiContext from '../ApiContext/ApiContext';
+import './Progress.css';
 
 export default class Progress extends React.Component {
   static contextType = ApiContext;

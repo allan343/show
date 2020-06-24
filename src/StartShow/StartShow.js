@@ -1,6 +1,6 @@
 import React from 'react';
-import ApiContext from '../ApiContext/ApiContext'
-import './startShow.css'
+import ApiContext from '../ApiContext/ApiContext';
+import './startShow.css';
 
 class StartShow extends React.Component {
   static contextType = ApiContext;
