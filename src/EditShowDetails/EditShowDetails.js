@@ -100,7 +100,7 @@ class EditShowDetails extends React.Component {
       <div id="edit-details">
         <form className="folder" onSubmit={(event) => {
           event.preventDefault();
-          this.setState({ showSubmitted: true })
+          this.setState({ showSubmitted: true });
           let show = {
             id: this.state.id,
             showname: this.state.showname.value,
@@ -125,7 +125,7 @@ class EditShowDetails extends React.Component {
           this.context.updateShow(show, show.id);
           this.setState({
             id: show.id
-          })
+          });
           this.props.history.goBack();
         }}>
           <h2>Edit Show Details</h2>

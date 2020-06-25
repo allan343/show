@@ -29,7 +29,7 @@ class FinishShow extends React.Component {
       {
         show: currentShow
       }
-    )
+    );
     this.props.history.push("/finish");
   }
 

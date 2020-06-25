@@ -105,7 +105,7 @@ class ShowDetails extends React.Component {
           this.context.addShow(show, (newid) => {
             this.setState({ id: newid });
             this.props.history.push(`/WatchingLog/${newid}`);
-          })
+          });
         }}>
           <h2 className="showDetailsHeading"> Show Details</h2>
           <button type="cancel" className="cancelShowButton" onClick={this.cancelHandle}>

@@ -42,7 +42,7 @@ class App extends Component {
                 this.setState({
                     shows: this.state.shows.filter(show => show.id != showId)
                 });
-            })
+            });
     };
 
     //adds a showObject to backend based on id
@@ -66,7 +66,7 @@ class App extends Component {
                         shows: this.state.shows,
                         id:responseJson.id
                     });
-                    newId(newid)
+                    newId(newid);
                 }
             })
     };
@@ -104,7 +104,7 @@ class App extends Component {
                         shows: this.state.shows
                     });
                 }
-            })
+            });
     };
 
    
