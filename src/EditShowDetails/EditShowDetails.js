@@ -3,7 +3,7 @@ import ApiContext from '../ApiContext/ApiContext';
 import './EditShowDetails.css';
 
 class EditShowDetails extends React.Component {
-  static contextType = ApiContext
+  static contextType = ApiContext;
 
   constructor(props) {
 
