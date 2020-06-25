@@ -7,7 +7,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import FooterNav from './FooterNav';
 
-library.add(faPlus, faChevronLeft, faTrashAlt, faCheckDouble)
+library.add(faPlus, faChevronLeft, faTrashAlt, faCheckDouble);
 
 it('renders without crashing', () => {
   const div = document.createElement('div');

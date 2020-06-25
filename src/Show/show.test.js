@@ -5,7 +5,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import {
   faPlus, faChevronLeft, faTrashAlt, faCheckDouble
 } from '@fortawesome/free-solid-svg-icons';
-import Show from './Show';
+
 
 library.add(faPlus, faChevronLeft, faTrashAlt, faCheckDouble);
 
