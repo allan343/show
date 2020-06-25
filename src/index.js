@@ -7,7 +7,7 @@ import {
 import { BrowserRouter } from 'react-router-dom';
 import 'typeface-roboto';
 
-import App from './App/App'
+import App from './App/App';
 
 library.add(faPlus, faChevronLeft, faTrashAlt, faCheckDouble);
 

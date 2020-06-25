@@ -11,13 +11,13 @@ export default class WatchingLog extends React.Component {
     this.state = {
       watching: false,
       id: id
-    }
+    };
   }
 
   //method to set the show to watching state
   setWatching = () => {
-    this.setState({ watching: true })
-    let show = this.context.getShow(this.state.id)
+    this.setState({ watching: true });
+    let show = this.context.getShow(this.state.id);
     //show set to watching state
     //towatch and finish states set to false
     show.towatch = false;

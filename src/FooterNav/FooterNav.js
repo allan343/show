@@ -13,7 +13,6 @@ export default class FooterNav extends React.Component {
 
   render() {
     const { shows = [] } = this.context;
-    //const element = <FontAwesomeIcon icon={fatv} />
     return (
       <div className='FooterListNav'>
         <NavLink

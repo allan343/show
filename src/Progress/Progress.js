@@ -21,7 +21,7 @@ export default class Progress extends React.Component {
     // and updates the current season
     let show = this.context.getShow(this.props.id);
     show.currentseason = season;
-    this.context.updateShow(show, this.props.id)
+    this.context.updateShow(show, this.props.id);
     this.props.history.push('/watching');
   }
 

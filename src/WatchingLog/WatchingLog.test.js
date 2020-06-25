@@ -7,7 +7,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import WatchingLog from './WatchingLog';
 
-library.add(faPlus, faChevronLeft, faTrashAlt, faCheckDouble)
+library.add(faPlus, faChevronLeft, faTrashAlt, faCheckDouble);
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
