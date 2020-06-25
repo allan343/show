@@ -113,7 +113,7 @@ class EditShowDetails extends React.Component {
             finish: this.props.finish,
             watching: this.props.watching,
             towatch: this.props.toWatch,
-          }
+          };
           {
             //gets a existing show from context
             //calls context update method to update show
