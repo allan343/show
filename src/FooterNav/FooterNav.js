@@ -3,7 +3,6 @@ import { NavLink, Link } from 'react-router-dom';
 import ApiContext from '../ApiContext/ApiContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
-import { faFilm } from "@fortawesome/free-solid-svg-icons";
 import { faVideo } from "@fortawesome/free-solid-svg-icons";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
 import './FooterListNav.css';
