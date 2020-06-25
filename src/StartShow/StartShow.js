@@ -9,7 +9,7 @@ class StartShow extends React.Component {
 
     this.state = {
       show: []
-    }
+    };
   }
 
   //a component who's only purpose is to start the show

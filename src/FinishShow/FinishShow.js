@@ -8,7 +8,7 @@ class FinishShow extends React.Component {
 
     this.state = {
       show: []
-    }
+    };
   }
 
   //this is a component that lets the user set the show from 

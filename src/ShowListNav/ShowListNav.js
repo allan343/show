@@ -19,7 +19,7 @@ export default class ShowListNav extends React.Component {
         touched: false
       },
       clicked: false
-    }
+    };
   }
    getHeading() {
    let heading = this.props.name;
