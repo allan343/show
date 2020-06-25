@@ -3,7 +3,7 @@ import ApiContext from '../ApiContext/ApiContext';
 import './ShowDetails.css';
 
 class ShowDetails extends React.Component {
-  static contextType = ApiContext
+  static contextType = ApiContext;
   // component that allows user
   // to fill in show details
   static defaultProps = {

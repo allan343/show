@@ -13,7 +13,7 @@ export default class Progress extends React.Component {
     this.state = {
       id: id,
       currentseason: ""
-    }
+    };
   }
 
   updateCurrentSeason(season) {
