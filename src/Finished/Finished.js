@@ -1,5 +1,5 @@
 import React from 'react';
-import ShowListNav from '../ShowListNav/ShowListNav'
+import ShowListNav from '../ShowListNav/ShowListNav';
 import ApiContext from '../ApiContext/ApiContext';
 import FooterNav from '../FooterNav/FooterNav';
 
